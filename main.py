@@ -1,14 +1,13 @@
 #!/usr/bin/env python3
 """
-RSS Feed Processor — Longread Pipeline
+RSS Feed Processor — Geopolitics Pipeline
 
 All articles from all feeds go to one Mistral call.
-Mistral classifies each headline into signal, longread, or noise.
+Mistral classifies each headline into signal or noise.
 A Gemini call deduplicates near-identical signal titles.
 
 Outputs:
   curated_feed.xml  - signal articles
-  longread.xml      - longread articles
 Stats:
   fetch_stats.json
 """
@@ -18,7 +17,6 @@ import json
 import os
 import time
 import re
-import sys
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 import xml.etree.ElementTree as ET
@@ -37,79 +35,187 @@ except Exception:
 # -- FEEDS ---------------------------------------------------------------------
 
 FEED_URLS = [
-    "https://www.newyorker.com/feed/rss",
-
-"https://feeds2.feedburner.com/businessinsider",
-    "https://feeds.feedburner.com/TheAtlantic",
-    "https://evilgodfahim.github.io/tm/feeds/feed.xml",
-    "https://evilgodfahim.github.io/ftint/combined.xml",
-    "https://evilgodfahim.github.io/gd/merged.xml",
-    "https://evilgodfahim.github.io/nytint/combined.xml",
-    "https://evilgodfahim.github.io/wpint/combined.xml",
-    "https://evilgodfahim.github.io/wsjint/combined.xml",
-
-"https://theweek.com/rss.xml",
-
-"https://www.wired.com/feed/rss",
-
-"https://www.newstatesman.com/feed",
-
-"https://www.thenation.com/rss/articles",
-
-"https://evilgodfahim.github.io/sp/feeds/spectator_en.xml",
-
-"https://evilgodfahim.github.io/sp/feeds/spectator_us.xml",
-
-"https://evilgodfahim.github.io/fto/combined.xml",
+    "https://asiatimes.com/feed/",
+    "https://politepaul.com/fd/TefnRxuxFzO0.xml",
+    "https://evilgodfahim.github.io/csis/rss.xml",
+    "https://evilgodfahim.github.io/intop/filtered.xml",
+    "https://politepaul.com/fd/M8QukWfUPWR4.xml",
+    "https://politepaul.com/fd/BI4f9BiCvoed.xml",
+    "https://www.thecipherbrief.com/feed",
+    "https://www.bellingcat.com/feed/",
+    "https://rusi.org/rss/latest-publications.xml",
+    "https://www.spytalk.co/feed/",
+    "https://www.defenseone.com/rss/all/",
+    "https://politepaul.com/fd/9RMAFvRRGLst.xml",
+    "https://www.globalpolicyjournal.com/blog/author/%2A/feed",
+    "https://www.e-ir.info/feed/",
+    "https://www.theglobalist.com/feed/",
+    "https://responsiblestatecraft.org/feed/",
+    "https://politepaul.com/fd/ffERiOdKxWlq.xml",
+    "https://politepaul.com/fd/dCWMZKe7BJqi.xml",
+    "https://politepaul.com/fd/YJRa9YOT7CyB.xml",
+    "https://meduza.io/rss/en/all",
+    "https://politepaul.com/fd/JsMAwSx6Pkbr.xml",
+    "https://evilgodfahim.github.io/alm/combined.xml",
+    "https://evilgodfahim.github.io/start/combined.xml",
+    "https://politepaul.com/fd/GbcosKoaAE22.xml",
+    "https://www.noemamag.com/article-topic/geopolitics-globalization/feed/",
+    "https://zeihan.com/feed/",
+    "https://politepaul.com/fd/ELc5hcluIkDO.xml",
+    "https://original.antiwar.com/feed/",
+    "https://www.atlanticcouncil.org/feed/",
+    "https://warontherocks.com/feed/",
+    "https://www.thehindu.com/opinion/editorial/?service=rss",
+    "https://politepaul.com/fd/aCEp2lWYu3Jn.xml",
+    "https://evilgodfahim.github.io/fto/combined.xml",
     "https://evilgodfahim.github.io/nytop/combined.xml",
-    "https://evilgodfahim.github.io/wpo/combined.xml",
-    "https://evilgodfahim.github.io/wsjop/combined.xml",
-
-"https://evilgodfahim.github.io/lemonde/combined.xml",
-
-"https://www.thewirechina.com/feed/",
-
-"https://evilgodfahim.github.io/intop/filtered.xml",
-
-"https://evilgodfahim.github.io/fpolicy/feed/geopolitics.xml"
+    "https://theconversation.com/global/home-page.atom",
+    "https://politepaul.com/fd/R39To2fYhqqO.xml",
+    "https://evilgodfahim.github.io/lemonde/combined.xml",
+    "https://eurasiantimes.com/feed/",
+    "http://www.irinnews.org/rss/conflict.xml",
+    "https://www.bloomberg.com/politics/feeds/site.xml",
+    "https://saiia.org.za/thematic-area/foreign-policy/feed/",
+    "https://www.vtforeignpolicy.com/feed/",
+    "https://medium.com/feed/tag/foreign-policy",
+    "https://www.hrw.org/taxonomy/term/9653/feed",
+    "https://theconversation.com/us/topics/geopolitics-4230/articles.atom",
+    "https://geopoliticaleconomy.substack.com/feed",
+    "https://www.newgeopolitics.org/feed/",
+    "https://ipdefenseforum.com/feed/",
+    "https://www.nytimes.com/svc/collections/v1/publish/",
+    "https://www.thenewhumanitarian.org/rss/all.xml",
+    "https://feeds.feedburner.com/LongWarJournalSiteWide",
+    "https://gulfif.org/feed/",
+    "https://ecfr.eu/feed/",
+    "https://www.spiegel.de/international/index.rss",
+    "https://mondediplo.com/backend",
+    "https://eng.globalaffairs.ru/rss",
+    "https://www.ft.com/geopolitics",
+    "https://ddgeopolitics.substack.com/feed",
+    "https://knowledge.skema.edu/tag/geopolitics/feed/",
+    "https://lansinginstitute.org/category/geopolitics/feed/",
+    "https://geopolitics.co/feed/",
+    "https://feeds.feedburner.com/worldpoliticsreview",
+    "https://www.rand.org/blog.xml",
+    "https://thegeopolitics.com/feed/",
+    "https://fpif.org/feed/",
+    "https://www.fpri.org/feed/",
+    "https://www.chathamhouse.org/path/whatsnew.xml",
+    "https://www.politico.eu/section/foreign-affairs/feed/",
+    "https://www.moonofalabama.org/atom.xml",
+    "https://southfront.press/feed/",
+    "https://geopoliticaleconomy.com/feed/",
+    "https://geopoliticsreport.substack.com/feed",
+    "https://www.modadgeopolitics.com/feed",
+    "https://geopoliticsagi.substack.com/feed",
+    "https://katehon.com/en/rss.xml",
+    "https://www.theguardian.com/us/commentisfree/rss",
+    "https://evilgodfahim.github.io/intop/filtered.xml",
+    "https://blogs.timesofindia.indiatimes.com/feed/defaultrss",
+    "https://indianexpress.com/section/explained/feed/",
+    "https://indianexpress.com/section/opinion/editorials/feed/",
+    "https://indianexpress.com/section/opinion/feed/",
+    "https://www.thehindu.com/opinion/?service=rss",
+    "https://www.thehindu.com/opinion/editorial/?service=rss",
+    "https://www.hindustantimes.com/feeds/rss/opinion/rssfeed.xml",
+    "https://feeds.feedburner.com/Consortiumnewscom",
+    "https://evilgodfahim.github.io/org/daily_feed.xml",
+    "https://www.eiu.com/n/feed/",
+    "https://www.lowyinstitute.org/the-interpreter/rss.xml",
+    "https://feeds.feedburner.com/AtlanticInternational",
 ]
 
 EXISTING_API_FEEDS = {
-    "https://www.newyorker.com/feed/rss",
-
-"https://feeds2.feedburner.com/businessinsider",
-    "https://feeds.feedburner.com/TheAtlantic",
-    "https://evilgodfahim.github.io/tm/feeds/feed.xml",
-    "https://evilgodfahim.github.io/ftint/combined.xml",
-    "https://evilgodfahim.github.io/gd/merged.xml",
-    "https://evilgodfahim.github.io/nytint/combined.xml",
-    "https://evilgodfahim.github.io/wpint/combined.xml",
-    "https://evilgodfahim.github.io/wsjint/combined.xml",
-
-"https://theweek.com/rss.xml",
-
-"https://www.wired.com/feed/rss",
-
-"https://www.newstatesman.com/feed",
-
-"https://www.thenation.com/rss/articles",
-
-"https://evilgodfahim.github.io/sp/feeds/spectator_en.xml",
-
-"https://evilgodfahim.github.io/sp/feeds/spectator_us.xml",
-
-"https://evilgodfahim.github.io/fto/combined.xml",
+    "https://asiatimes.com/feed/",
+    "https://politepaul.com/fd/TefnRxuxFzO0.xml",
+    "https://evilgodfahim.github.io/csis/rss.xml",
+    "https://evilgodfahim.github.io/intop/filtered.xml",
+    "https://politepaul.com/fd/M8QukWfUPWR4.xml",
+    "https://politepaul.com/fd/BI4f9BiCvoed.xml",
+    "https://www.thecipherbrief.com/feed",
+    "https://www.bellingcat.com/feed/",
+    "https://rusi.org/rss/latest-publications.xml",
+    "https://www.spytalk.co/feed/",
+    "https://www.defenseone.com/rss/all/",
+    "https://politepaul.com/fd/9RMAFvRRGLst.xml",
+    "https://www.globalpolicyjournal.com/blog/author/%2A/feed",
+    "https://www.e-ir.info/feed/",
+    "https://www.theglobalist.com/feed/",
+    "https://responsiblestatecraft.org/feed/",
+    "https://politepaul.com/fd/ffERiOdKxWlq.xml",
+    "https://politepaul.com/fd/dCWMZKe7BJqi.xml",
+    "https://politepaul.com/fd/YJRa9YOT7CyB.xml",
+    "https://meduza.io/rss/en/all",
+    "https://politepaul.com/fd/JsMAwSx6Pkbr.xml",
+    "https://evilgodfahim.github.io/alm/combined.xml",
+    "https://evilgodfahim.github.io/start/combined.xml",
+    "https://politepaul.com/fd/GbcosKoaAE22.xml",
+    "https://www.noemamag.com/article-topic/geopolitics-globalization/feed/",
+    "https://zeihan.com/feed/",
+    "https://politepaul.com/fd/ELc5hcluIkDO.xml",
+    "https://original.antiwar.com/feed/",
+    "https://www.atlanticcouncil.org/feed/",
+    "https://warontherocks.com/feed/",
+    "https://www.thehindu.com/opinion/editorial/?service=rss",
+    "https://politepaul.com/fd/aCEp2lWYu3Jn.xml",
+    "https://evilgodfahim.github.io/fto/combined.xml",
     "https://evilgodfahim.github.io/nytop/combined.xml",
-    "https://evilgodfahim.github.io/wpo/combined.xml",
-    "https://evilgodfahim.github.io/wsjop/combined.xml",
-
-"https://evilgodfahim.github.io/lemonde/combined.xml",
-
-"https://www.thewirechina.com/feed/",
-
-"https://evilgodfahim.github.io/intop/filtered.xml"
-
-"https://evilgodfahim.github.io/fpolicy/feed/geopolitics.xml"
+    "https://theconversation.com/global/home-page.atom",
+    "https://politepaul.com/fd/R39To2fYhqqO.xml",
+    "https://evilgodfahim.github.io/lemonde/combined.xml",
+    "https://eurasiantimes.com/feed/",
+    "http://www.irinnews.org/rss/conflict.xml",
+    "https://www.bloomberg.com/politics/feeds/site.xml",
+    "https://saiia.org.za/thematic-area/foreign-policy/feed/",
+    "https://www.vtforeignpolicy.com/feed/",
+    "https://medium.com/feed/tag/foreign-policy",
+    "https://www.hrw.org/taxonomy/term/9653/feed",
+    "https://theconversation.com/us/topics/geopolitics-4230/articles.atom",
+    "https://geopoliticaleconomy.substack.com/feed",
+    "https://www.newgeopolitics.org/feed/",
+    "https://ipdefenseforum.com/feed/",
+    "https://www.nytimes.com/svc/collections/v1/publish/",
+    "https://www.thenewhumanitarian.org/rss/all.xml",
+    "https://feeds.feedburner.com/LongWarJournalSiteWide",
+    "https://gulfif.org/feed/",
+    "https://ecfr.eu/feed/",
+    "https://www.spiegel.de/international/index.rss",
+    "https://mondediplo.com/backend",
+    "https://eng.globalaffairs.ru/rss",
+    "https://www.ft.com/geopolitics",
+    "https://ddgeopolitics.substack.com/feed",
+    "https://knowledge.skema.edu/tag/geopolitics/feed/",
+    "https://lansinginstitute.org/category/geopolitics/feed/",
+    "https://geopolitics.co/feed/",
+    "https://feeds.feedburner.com/worldpoliticsreview",
+    "https://www.rand.org/blog.xml",
+    "https://thegeopolitics.com/feed/",
+    "https://fpif.org/feed/",
+    "https://www.fpri.org/feed/",
+    "https://www.chathamhouse.org/path/whatsnew.xml",
+    "https://www.politico.eu/section/foreign-affairs/feed/",
+    "https://www.moonofalabama.org/atom.xml",
+    "https://southfront.press/feed/",
+    "https://geopoliticaleconomy.com/feed/",
+    "https://geopoliticsreport.substack.com/feed",
+    "https://www.modadgeopolitics.com/feed",
+    "https://geopoliticsagi.substack.com/feed",
+    "https://katehon.com/en/rss.xml",
+    "https://www.theguardian.com/us/commentisfree/rss",
+    "https://evilgodfahim.github.io/intop/filtered.xml",
+    "https://blogs.timesofindia.indiatimes.com/feed/defaultrss",
+    "https://indianexpress.com/section/explained/feed/",
+    "https://indianexpress.com/section/opinion/editorials/feed/",
+    "https://indianexpress.com/section/opinion/feed/",
+    "https://www.thehindu.com/opinion/?service=rss",
+    "https://www.thehindu.com/opinion/editorial/?service=rss",
+    "https://www.hindustantimes.com/feeds/rss/opinion/rssfeed.xml",
+    "https://feeds.feedburner.com/Consortiumnewscom",
+    "https://evilgodfahim.github.io/org/daily_feed.xml",
+    "https://www.eiu.com/n/feed/",
+    "https://www.lowyinstitute.org/the-interpreter/rss.xml",
+    "https://feeds.feedburner.com/AtlanticInternational",
 }
 
 KL_API_FEEDS = set()
@@ -121,7 +227,6 @@ MISTRAL_MODEL         = "mistral-large-latest"
 PROCESSED_FILE        = "processed_articles.json"
 SELECTED_FILE         = "selected_articles.json"
 OUTPUT_XML            = "curated_feed.xml"
-LONGREAD_XML          = "longread.xml"
 STATS_FILE            = "fetch_stats.json"
 MAX_ARTICLES_PER_FEED = 100
 MAX_AGE_HOURS         = 10
@@ -131,35 +236,39 @@ MAX_FEED_ITEMS        = 500
 
 # -- PROMPT --------------------------------------------------------------------
 
-PROMPT = """You are a news classification engine. Classify each headline into exactly one bucket.
-SIGNAL — news that matters globally or within Bangladesh: major international events, geopolitical developments involving multiple countries, or Bangladesh developments that meaningfully affect a large portion of the population (major policy shifts, economic crises, political upheaval, governance changes). Isolated incidents, local events, or routine Bangladesh news do not qualify. The bar is HIGH; (LOWEST < LOWER < LOW < AVERAGE < HIGH < SUPER HIGH < ULTRA HIGH < EXTREME).
-LONGREAD — worth reading but not urgent: high-quality in-depth reporting, investigations, features, or thoughtful essays on culture, science, history, or society that reward careful reading. Excludes celebrity profiles, trend pieces, and routine human-interest stories. Single person reladed titles are strictly prohibited, unless the person holds or held a position that can/could affect the concurrent situation of the world. 
-In the case of longreads, the bar is between ULTRA HIGH and EXTREME 
-NOISE — everything else: any non-Bangladesh country's internal politics, elections, policy disputes, business news, or market moves — plus isolated Bangladesh incidents, sports, entertainment, celebrity gossip, lifestyle, routine official statements, and clickbait.
-Rules:
-- If a headline could fit both SIGNAL and LONGREAD, always choose SIGNAL.
-- Use only the headline text. Indices are 0-based.
-- Omit all noise indices from the output entirely.
+PROMPT = """You are a strict geopolitics-only headline filter.
+
+Classify each headline into exactly one bucket:
+- SIGNAL: only core geopolitical significance.
+- NOISE: everything else.
+
+Use the HIGHEST possible bar. Be conservative. Prefer NOISE unless the headline clearly and directly matters to international power, conflict, diplomacy, security, alliances, sanctions, war, deterrence, borders, major regime change, or major cross-border economic/strategic shifts.
+
+SIGNAL rules:
+- Must be core geopolitical significance, not just “important news”.
+- Must involve major states, alliances, wars, crises, sanctions, diplomacy, intelligence, defense, strategic competition, energy security, trade war with major global impact, or Bangladesh only when it has clear national-scale geopolitical consequence.
+- Local incidents, routine statements, domestic politics, routine elections, business, markets, culture, lifestyle, sports, celebrity, crime, and human-interest stories are NOISE.
+- Opinion, commentary, explainers, or analysis are SIGNAL only if they are clearly about a major geopolitical issue with broad international relevance.
+- Any non-Bangladesh country’s internal politics or policy is NOISE unless it directly affects a major geopolitical balance or cross-border crisis.
+- Do not mark something as SIGNAL just because it mentions a country, a conflict, or a famous person.
+
+Hard exclusions:
+- If the title is only about domestic politics, domestic policy, routine diplomatic remarks, market commentary, business updates, protests, accidents, crime, disasters without cross-border strategic meaning, or general opinion writing, classify as NOISE.
+- If uncertain, choose NOISE.
+- Omit all NOISE indices entirely.
+- Use only the headline text.
+- Indices are 0-based.
 - Return only valid JSON. No markdown, no backticks, no preamble.
-Tricky cases to guide you:
-- Bangladesh policy or economic decision with broad national impact → SIGNAL.
-- An isolated Bangladesh incident or local event → NOISE, not SIGNAL.
-- A routine Bangladesh government statement with no new development → NOISE.
-- Any other country's domestic politics or policy with no cross-border impact → NOISE.
-- A geopolitical event involving multiple countries or international bodies → SIGNAL.
-- National business or market news from any non-Bangladesh country → NOISE unless it signals a global crisis.
-- A think-piece on an international subject with genuine global scope → SIGNAL, not LONGREAD.
-- A detailed profile or feature on a person with no global or broad Bangladesh consequence → LONGREAD, not SIGNAL.
 
 Examples:
 Input: ["US and China sign landmark trade agreement", "Premier League club sacks manager", "How the Ottoman Empire collapsed", "Bangladesh central bank raises interest rates amid inflation crisis", "UK Conservative Party elects new leader", "UN warns of imminent famine across the Horn of Africa"]
-Output: {{"signal": [0, 3, 5], "longread": [2]}}
+Output: {{"signal": [0, 3, 5]}}
 
 Input: ["India and Pakistan exchange fire across Line of Control", "Dhaka garment workers strike shuts down hundreds of factories", "The secret history of Antarctic exploration", "Australia holds federal election", "Celebrity couple announces divorce", "IMF approves emergency loan for Bangladesh"]
-Output: {{"signal": [0, 1, 5], "longread": [2]}}
+Output: {{"signal": [0, 1, 5]}}
 
 Input: ["Gaza ceasefire collapses as fighting resumes", "Bangladesh government slashes fuel subsidies nationwide", "A deep dive into the life of a Sundarbans honey collector", "France passes new immigration law", "How microplastics are entering the human bloodstream", "Local man wins national baking competition"]
-Output: {{"signal": [0, 1], "longread": [2, 4]}}
+Output: {{"signal": [0, 1]}}
 
 Article titles:
 {titles}
@@ -188,16 +297,14 @@ ET.register_namespace("media", MEDIA_NS)
 BD_TZ = timezone(timedelta(hours=6))
 
 STATS = {
-    "per_feed":              {},
-    "per_method":            {"KL": 0, "DIRECT": 0},
-    "total_fetched":         0,
-    "total_passed_age":      0,
-    "total_new":             0,
-    "total_signal":          0,
-    "total_longread":        0,
-    "total_signal_deduped":  0,
-    "total_longread_deduped":0,
-    "timestamp":             None,
+    "per_feed":             {},
+    "per_method":           {"KL": 0, "DIRECT": 0},
+    "total_fetched":        0,
+    "total_passed_age":     0,
+    "total_new":            0,
+    "total_signal":         0,
+    "total_signal_deduped": 0,
+    "timestamp":            None,
 }
 
 # -- I/O -----------------------------------------------------------------------
@@ -316,10 +423,14 @@ def get_mime_for_url(url):
     if not url:
         return "image/jpeg"
     path = urlparse(url).path.lower()
-    if path.endswith(".png"):  return "image/png"
-    if path.endswith(".gif"):  return "image/gif"
-    if path.endswith(".webp"): return "image/webp"
-    if path.endswith(".svg"):  return "image/svg+xml"
+    if path.endswith(".png"):
+        return "image/png"
+    if path.endswith(".gif"):
+        return "image/gif"
+    if path.endswith(".webp"):
+        return "image/webp"
+    if path.endswith(".svg"):
+        return "image/svg+xml"
     return "image/jpeg"
 
 
@@ -404,20 +515,20 @@ def fetch_feed(url):
     method_used = "DIRECT"
 
     if url_norm in EXISTING_API_FEEDS:
-        feed        = feedparser.parse(url_norm)
+        feed = feedparser.parse(url_norm)
         method_used = "DIRECT"
     elif url_norm in KL_API_FEEDS:
         kl_endpoint = os.environ.get("KL")
-        feed        = None
+        feed = None
         if kl_endpoint:
             feed = fetch_via_kl(kl_endpoint, url_norm)
             if feed:
                 method_used = "KL"
         if not feed:
-            feed        = feedparser.parse(url_norm)
+            feed = feedparser.parse(url_norm)
             method_used = "DIRECT"
     else:
-        feed        = feedparser.parse(url_norm)
+        feed = feedparser.parse(url_norm)
         method_used = "DIRECT"
 
     entries_count = len(getattr(feed, "entries", []))
@@ -425,7 +536,7 @@ def fetch_feed(url):
     STATS["per_feed"][url_norm]["fetched"] += entries_count
     STATS["per_method"].setdefault(method_used, 0)
     STATS["per_method"][method_used] += entries_count
-    STATS["total_fetched"]            += entries_count
+    STATS["total_fetched"] += entries_count
 
     return feed
 
@@ -438,7 +549,7 @@ def fetch_all_feeds():
     all_articles = []
 
     for url in FEED_URLS:
-        feed       = fetch_feed(url)
+        feed = fetch_feed(url)
         feed_items = []
 
         for e in feed.entries:
@@ -506,7 +617,7 @@ def get_new_articles(all_articles, processed_data):
 # -- CLASSIFICATION ------------------------------------------------------------
 
 def extract_json_object(text):
-    """Parse {"signal": [...], "longread": [...]} from Mistral response."""
+    """Parse {"signal": [...]} from Mistral response."""
     text = text.replace("```json", "").replace("```", "").strip()
     match = re.search(r"\{.*\}", text, flags=re.DOTALL)
     if match:
@@ -514,27 +625,25 @@ def extract_json_object(text):
             obj = json.loads(match.group(0))
             if isinstance(obj, dict):
                 return {
-                    "signal":   [i for i in obj.get("signal",   []) if isinstance(i, int)],
-                    "longread": [i for i in obj.get("longread", []) if isinstance(i, int)],
+                    "signal": [i for i in obj.get("signal", []) if isinstance(i, int)],
                 }
         except Exception:
             pass
-    result = {"signal": [], "longread": []}
-    for key in ("signal", "longread"):
-        m = re.search(rf'"{key}"\s*:\s*(\[.*?\])', text, flags=re.DOTALL)
-        if m:
-            try:
-                result[key] = [i for i in json.loads(m.group(1)) if isinstance(i, int)]
-            except Exception:
-                pass
+    result = {"signal": []}
+    m = re.search(r'"signal"\s*:\s*(\[.*?\])', text, flags=re.DOTALL)
+    if m:
+        try:
+            result["signal"] = [i for i in json.loads(m.group(1)) if isinstance(i, int)]
+        except Exception:
+            pass
     return result
 
 
 def send_to_mistral(articles):
-    """Single Mistral call. Returns {"signal": [...], "longread": [...]}."""
+    """Single Mistral call. Returns {"signal": [...]}."""
     api_key = os.environ.get("MS")
     if not api_key or not articles:
-        return {"signal": [], "longread": []}
+        return {"signal": []}
 
     try:
         client      = Mistral(api_key=api_key)
@@ -551,7 +660,7 @@ def send_to_mistral(articles):
 
     except Exception as e:
         print(f"Mistral classification error: {e}")
-        return {"signal": [], "longread": []}
+        return {"signal": []}
 
 
 def deduplicate_articles(articles):
@@ -646,7 +755,7 @@ def generate_xml_feed(articles, output_file, feed_title=None, feed_description=N
 
     tree, root, channel = _load_or_create(output_file, feed_title, feed_description)
 
-    existing_links: set[str] = set()
+    existing_links = set()
     for item in channel.findall("item"):
         link_el = item.find("link")
         if link_el is not None and link_el.text:
@@ -715,8 +824,6 @@ def print_stats():
     print(f"  New (unseen):          {STATS['total_new']}")
     print(f"  Signal (classified):   {STATS['total_signal']}")
     print(f"  Signal (after dedup):  {STATS['total_signal_deduped']}  -> {OUTPUT_XML}")
-    print(f"  Longread (classified): {STATS['total_longread']}")
-    print(f"  Longread (after dedup):{STATS['total_longread_deduped']}  -> {LONGREAD_XML}")
     print("  Per-method (raw fetch):")
     for method, cnt in STATS["per_method"].items():
         print(f"    {method}: {cnt}")
@@ -737,46 +844,34 @@ def main():
 
     result = send_to_mistral(new_articles)
 
-    signal_indices   = [i for i in result.get("signal",   []) if isinstance(i, int) and 0 <= i < len(new_articles)]
-    longread_indices = [i for i in result.get("longread", []) if isinstance(i, int) and 0 <= i < len(new_articles)]
+    signal_indices = [
+        i for i in result.get("signal", [])
+        if isinstance(i, int) and 0 <= i < len(new_articles)
+    ]
 
-    # Signal wins on overlap
-    signal_set       = set(signal_indices)
-    longread_indices = [i for i in longread_indices if i not in signal_set]
+    signal_articles = [new_articles[i] for i in signal_indices]
+    STATS["total_signal"] = len(signal_articles)
 
-    signal_articles   = [new_articles[i] for i in signal_indices]
-    longread_articles = [new_articles[i] for i in longread_indices]
-
-    STATS["total_signal"]   = len(signal_articles)
-    STATS["total_longread"] = len(longread_articles)
-
-    if not signal_articles and not longread_articles:
-        print("No signal or longread articles this run. Skipping all file writes.")
+    if not signal_articles:
+        print("No signal articles this run. Skipping all file writes.")
         print_stats()
         return
 
     print(f"Deduplicating {len(signal_articles)} signal article(s)...")
     signal_articles = deduplicate_articles(signal_articles)
 
-    STATS["total_signal_deduped"]   = len(signal_articles)
-    STATS["total_longread_deduped"] = len(longread_articles)
+    STATS["total_signal_deduped"] = len(signal_articles)
 
     generate_xml_feed(
         signal_articles,
         output_file=OUTPUT_XML,
         feed_title="Curated News",
-        feed_description="AI-curated signal: international affairs and Bangladesh news",
-    )
-    generate_xml_feed(
-        longread_articles,
-        output_file=LONGREAD_XML,
-        feed_title="Longread",
-        feed_description="Quality in-depth reading: features, analysis, investigations",
+        feed_description="AI-curated signal: core geopolitical news",
     )
 
-    save_selected_articles(signal_articles + longread_articles)
+    save_selected_articles(signal_articles)
 
-    processed_data.setdefault("article_ids",   []).extend([a["id"]   for a in new_articles if a.get("id")])
+    processed_data.setdefault("article_ids", []).extend([a["id"] for a in new_articles if a.get("id")])
     processed_data.setdefault("article_links", []).extend([a["link"] for a in new_articles if a.get("link")])
     save_processed_articles(processed_data)
 
