@@ -2,8 +2,8 @@
   "per_feed": {
     "https://asiatimes.com/feed/": {
       "fetched": 20,
-      "passed_age": 3,
-      "capped": 3
+      "passed_age": 4,
+      "capped": 4
     },
     "https://politepaul.com/fd/TefnRxuxFzO0.xml": {
       "fetched": 1,
@@ -11,14 +11,14 @@
       "capped": 1
     },
     "https://evilgodfahim.github.io/csis/rss.xml": {
-      "fetched": 6,
+      "fetched": 7,
       "passed_age": 0,
       "capped": 0
     },
     "https://evilgodfahim.github.io/intop/filtered.xml": {
       "fetched": 1000,
-      "passed_age": 21,
-      "capped": 21
+      "passed_age": 18,
+      "capped": 18
     },
     "https://politepaul.com/fd/M8QukWfUPWR4.xml": {
       "fetched": 10,
@@ -52,8 +52,8 @@
     },
     "https://www.defenseone.com/rss/all/": {
       "fetched": 21,
-      "passed_age": 0,
-      "capped": 0
+      "passed_age": 1,
+      "capped": 1
     },
     "https://politepaul.com/fd/9RMAFvRRGLst.xml": {
       "fetched": 0,
@@ -77,8 +77,8 @@
     },
     "https://responsiblestatecraft.org/feed/": {
       "fetched": 30,
-      "passed_age": 3,
-      "capped": 3
+      "passed_age": 2,
+      "capped": 2
     },
     "https://politepaul.com/fd/ffERiOdKxWlq.xml": {
       "fetched": 2,
@@ -97,13 +97,13 @@
     },
     "https://meduza.io/rss/en/all": {
       "fetched": 30,
-      "passed_age": 13,
-      "capped": 13
+      "passed_age": 8,
+      "capped": 8
     },
     "https://politepaul.com/fd/JsMAwSx6Pkbr.xml": {
       "fetched": 70,
-      "passed_age": 11,
-      "capped": 11
+      "passed_age": 3,
+      "capped": 3
     },
     "https://evilgodfahim.github.io/alm/combined.xml": {
       "fetched": 20,
@@ -142,8 +142,8 @@
     },
     "https://www.atlanticcouncil.org/feed/": {
       "fetched": 100,
-      "passed_age": 1,
-      "capped": 1
+      "passed_age": 2,
+      "capped": 2
     },
     "https://warontherocks.com/feed/": {
       "fetched": 100,
@@ -152,23 +152,23 @@
     },
     "https://www.thehindu.com/opinion/editorial/?service=rss": {
       "fetched": 120,
-      "passed_age": 0,
-      "capped": 0
-    },
-    "https://politepaul.com/fd/aCEp2lWYu3Jn.xml": {
-      "fetched": 9,
       "passed_age": 2,
       "capped": 2
     },
+    "https://politepaul.com/fd/aCEp2lWYu3Jn.xml": {
+      "fetched": 9,
+      "passed_age": 1,
+      "capped": 1
+    },
     "https://evilgodfahim.github.io/fto/combined.xml": {
       "fetched": 25,
-      "passed_age": 3,
-      "capped": 3
+      "passed_age": 5,
+      "capped": 5
     },
     "https://evilgodfahim.github.io/nytop/combined.xml": {
       "fetched": 68,
-      "passed_age": 9,
-      "capped": 9
+      "passed_age": 15,
+      "capped": 15
     },
     "https://theconversation.com/global/home-page.atom": {
       "fetched": 25,
@@ -177,8 +177,8 @@
     },
     "https://politepaul.com/fd/R39To2fYhqqO.xml": {
       "fetched": 14,
-      "passed_age": 4,
-      "capped": 4
+      "passed_age": 3,
+      "capped": 3
     },
     "https://evilgodfahim.github.io/lemonde/combined.xml": {
       "fetched": 0,
@@ -187,8 +187,8 @@
     },
     "https://eurasiantimes.com/feed/": {
       "fetched": 25,
-      "passed_age": 3,
-      "capped": 3
+      "passed_age": 2,
+      "capped": 2
     },
     "http://www.irinnews.org/rss/conflict.xml": {
       "fetched": 10,
@@ -212,8 +212,8 @@
     },
     "https://medium.com/feed/tag/foreign-policy": {
       "fetched": 9,
-      "passed_age": 1,
-      "capped": 1
+      "passed_age": 0,
+      "capped": 0
     },
     "https://www.hrw.org/taxonomy/term/9653/feed": {
       "fetched": 0,
@@ -256,12 +256,12 @@
       "capped": 0
     },
     "https://gulfif.org/feed/": {
-      "fetched": 10,
+      "fetched": 0,
       "passed_age": 0,
       "capped": 0
     },
     "https://ecfr.eu/feed/": {
-      "fetched": 25,
+      "fetched": 0,
       "passed_age": 0,
       "capped": 0
     },
@@ -307,8 +307,8 @@
     },
     "https://feeds.feedburner.com/worldpoliticsreview": {
       "fetched": 10,
-      "passed_age": 2,
-      "capped": 2
+      "passed_age": 3,
+      "capped": 3
     },
     "https://www.rand.org/blog.xml": {
       "fetched": 20,
@@ -351,7 +351,7 @@
       "capped": 0
     },
     "https://geopoliticaleconomy.com/feed/": {
-      "fetched": 10,
+      "fetched": 0,
       "passed_age": 0,
       "capped": 0
     },
@@ -377,13 +377,13 @@
     },
     "https://www.theguardian.com/us/commentisfree/rss": {
       "fetched": 36,
-      "passed_age": 10,
-      "capped": 10
+      "passed_age": 7,
+      "capped": 7
     },
     "https://blogs.timesofindia.indiatimes.com/feed/defaultrss": {
       "fetched": 20,
-      "passed_age": 3,
-      "capped": 3
+      "passed_age": 1,
+      "capped": 1
     },
     "https://indianexpress.com/section/explained/feed/": {
       "fetched": 0,
@@ -402,8 +402,8 @@
     },
     "https://www.thehindu.com/opinion/?service=rss": {
       "fetched": 60,
-      "passed_age": 0,
-      "capped": 0
+      "passed_age": 9,
+      "capped": 9
     },
     "https://www.hindustantimes.com/feeds/rss/opinion/rssfeed.xml": {
       "fetched": 6,
@@ -412,8 +412,8 @@
     },
     "https://feeds.feedburner.com/Consortiumnewscom": {
       "fetched": 10,
-      "passed_age": 0,
-      "capped": 0
+      "passed_age": 2,
+      "capped": 2
     },
     "https://evilgodfahim.github.io/org/daily_feed.xml": {
       "fetched": 9,
@@ -432,20 +432,20 @@
     },
     "https://feeds.feedburner.com/AtlanticInternational": {
       "fetched": 25,
-      "passed_age": 1,
-      "capped": 1
+      "passed_age": 0,
+      "capped": 0
     }
   },
   "per_method": {
     "KL": 0,
-    "DIRECT": 2446
+    "DIRECT": 2402
   },
-  "total_fetched": 2446,
-  "total_passed_age": 151,
-  "total_new": 64,
-  "total_signal": 22,
+  "total_fetched": 2402,
+  "total_passed_age": 148,
+  "total_new": 45,
+  "total_signal": 13,
   "total_longread": 16,
-  "timestamp": "2026-08-05T17:35:00.184639",
-  "total_signal_deduped": 22,
+  "timestamp": "2026-08-05T21:12:39.671813",
+  "total_signal_deduped": 13,
   "total_longread_deduped": 16
 }
