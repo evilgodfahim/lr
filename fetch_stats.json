@@ -2,8 +2,8 @@
   "per_feed": {
     "https://asiatimes.com/feed/": {
       "fetched": 20,
-      "passed_age": 4,
-      "capped": 4
+      "passed_age": 3,
+      "capped": 3
     },
     "https://politepaul.com/fd/TefnRxuxFzO0.xml": {
       "fetched": 1,
@@ -17,18 +17,18 @@
     },
     "https://evilgodfahim.github.io/intop/filtered.xml": {
       "fetched": 1000,
-      "passed_age": 7,
-      "capped": 7
+      "passed_age": 17,
+      "capped": 17
     },
     "https://politepaul.com/fd/M8QukWfUPWR4.xml": {
       "fetched": 10,
-      "passed_age": 0,
-      "capped": 0
+      "passed_age": 2,
+      "capped": 2
     },
     "https://politepaul.com/fd/BI4f9BiCvoed.xml": {
       "fetched": 2,
-      "passed_age": 0,
-      "capped": 0
+      "passed_age": 2,
+      "capped": 2
     },
     "https://www.thecipherbrief.com/feed": {
       "fetched": 30,
@@ -77,8 +77,8 @@
     },
     "https://responsiblestatecraft.org/feed/": {
       "fetched": 30,
-      "passed_age": 3,
-      "capped": 3
+      "passed_age": 0,
+      "capped": 0
     },
     "https://politepaul.com/fd/ffERiOdKxWlq.xml": {
       "fetched": 2,
@@ -97,18 +97,18 @@
     },
     "https://meduza.io/rss/en/all": {
       "fetched": 30,
-      "passed_age": 6,
-      "capped": 6
+      "passed_age": 8,
+      "capped": 8
     },
     "https://politepaul.com/fd/JsMAwSx6Pkbr.xml": {
       "fetched": 70,
-      "passed_age": 25,
-      "capped": 25
+      "passed_age": 22,
+      "capped": 22
     },
     "https://evilgodfahim.github.io/alm/combined.xml": {
       "fetched": 20,
-      "passed_age": 8,
-      "capped": 8
+      "passed_age": 14,
+      "capped": 14
     },
     "https://evilgodfahim.github.io/start/combined.xml": {
       "fetched": 0,
@@ -152,8 +152,8 @@
     },
     "https://www.thehindu.com/opinion/editorial/?service=rss": {
       "fetched": 120,
-      "passed_age": 1,
-      "capped": 1
+      "passed_age": 0,
+      "capped": 0
     },
     "https://politepaul.com/fd/aCEp2lWYu3Jn.xml": {
       "fetched": 9,
@@ -162,13 +162,13 @@
     },
     "https://evilgodfahim.github.io/fto/combined.xml": {
       "fetched": 25,
-      "passed_age": 10,
-      "capped": 10
+      "passed_age": 4,
+      "capped": 4
     },
     "https://evilgodfahim.github.io/nytop/combined.xml": {
       "fetched": 68,
-      "passed_age": 6,
-      "capped": 6
+      "passed_age": 7,
+      "capped": 7
     },
     "https://theconversation.com/global/home-page.atom": {
       "fetched": 25,
@@ -177,8 +177,8 @@
     },
     "https://politepaul.com/fd/R39To2fYhqqO.xml": {
       "fetched": 14,
-      "passed_age": 1,
-      "capped": 1
+      "passed_age": 3,
+      "capped": 3
     },
     "https://evilgodfahim.github.io/lemonde/combined.xml": {
       "fetched": 0,
@@ -236,7 +236,7 @@
       "capped": 0
     },
     "https://ipdefenseforum.com/feed/": {
-      "fetched": 4,
+      "fetched": 0,
       "passed_age": 0,
       "capped": 0
     },
@@ -307,8 +307,8 @@
     },
     "https://feeds.feedburner.com/worldpoliticsreview": {
       "fetched": 10,
-      "passed_age": 0,
-      "capped": 0
+      "passed_age": 2,
+      "capped": 2
     },
     "https://www.rand.org/blog.xml": {
       "fetched": 20,
@@ -322,8 +322,8 @@
     },
     "https://fpif.org/feed/": {
       "fetched": 10,
-      "passed_age": 1,
-      "capped": 1
+      "passed_age": 2,
+      "capped": 2
     },
     "https://www.fpri.org/feed/": {
       "fetched": 0,
@@ -362,8 +362,8 @@
     },
     "https://www.modadgeopolitics.com/feed": {
       "fetched": 20,
-      "passed_age": 1,
-      "capped": 1
+      "passed_age": 0,
+      "capped": 0
     },
     "https://geopoliticsagi.substack.com/feed": {
       "fetched": 0,
@@ -377,13 +377,13 @@
     },
     "https://www.theguardian.com/us/commentisfree/rss": {
       "fetched": 36,
-      "passed_age": 4,
-      "capped": 4
+      "passed_age": 6,
+      "capped": 6
     },
     "https://blogs.timesofindia.indiatimes.com/feed/defaultrss": {
       "fetched": 20,
-      "passed_age": 0,
-      "capped": 0
+      "passed_age": 1,
+      "capped": 1
     },
     "https://indianexpress.com/section/explained/feed/": {
       "fetched": 0,
@@ -402,18 +402,18 @@
     },
     "https://www.thehindu.com/opinion/?service=rss": {
       "fetched": 60,
-      "passed_age": 2,
-      "capped": 2
+      "passed_age": 0,
+      "capped": 0
     },
     "https://www.hindustantimes.com/feeds/rss/opinion/rssfeed.xml": {
       "fetched": 7,
-      "passed_age": 4,
-      "capped": 4
+      "passed_age": 0,
+      "capped": 0
     },
     "https://feeds.feedburner.com/Consortiumnewscom": {
       "fetched": 10,
-      "passed_age": 1,
-      "capped": 1
+      "passed_age": 0,
+      "capped": 0
     },
     "https://evilgodfahim.github.io/org/daily_feed.xml": {
       "fetched": 11,
@@ -438,14 +438,14 @@
   },
   "per_method": {
     "KL": 0,
-    "DIRECT": 2471
+    "DIRECT": 2467
   },
-  "total_fetched": 2471,
-  "total_passed_age": 110,
-  "total_new": 46,
-  "total_signal": 10,
+  "total_fetched": 2467,
+  "total_passed_age": 128,
+  "total_new": 64,
+  "total_signal": 29,
   "total_longread": 16,
-  "timestamp": "2026-08-19T12:48:41.482669",
-  "total_signal_deduped": 10,
+  "timestamp": "2026-08-19T16:35:54.299390",
+  "total_signal_deduped": 29,
   "total_longread_deduped": 16
 }
