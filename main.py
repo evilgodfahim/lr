@@ -22,7 +22,7 @@ from pathlib import Path
 import xml.etree.ElementTree as ET
 from google import genai
 from mistralai.client import Mistral
-from email.utils import parsedate_to_datetime
+from email.utils import parsedate_to_datetime, format_datetime
 from urllib.parse import urljoin, urlparse
 
 import requests
@@ -97,6 +97,7 @@ FEED_URLS = [
     "https://lansinginstitute.org/category/geopolitics/feed/",
     "https://geopolitics.co/feed/",
     "https://feeds.feedburner.com/worldpoliticsreview",
+    "https://www.worldpoliticsreview.com/feed/",   # added
     "https://www.rand.org/blog.xml",
     "https://thegeopolitics.com/feed/",
     "https://fpif.org/feed/",
@@ -189,6 +190,7 @@ EXISTING_API_FEEDS = {
     "https://lansinginstitute.org/category/geopolitics/feed/",
     "https://geopolitics.co/feed/",
     "https://feeds.feedburner.com/worldpoliticsreview",
+    "https://www.worldpoliticsreview.com/feed/",   # added
     "https://www.rand.org/blog.xml",
     "https://thegeopolitics.com/feed/",
     "https://fpif.org/feed/",
@@ -233,6 +235,9 @@ MAX_AGE_HOURS         = 10
 ALLOW_MISSING_DATES   = True
 ALLOW_OLDER           = False
 MAX_FEED_ITEMS        = 500
+# Set this env var to your deployed feed URL to add atom:link self-reference
+# e.g. https://user.github.io/repo/curated_feed.xml
+FEED_SELF_URL         = os.environ.get("FEED_SELF_URL", "")
 
 # -- PROMPT --------------------------------------------------------------------
 
@@ -245,11 +250,11 @@ Classify each headline into exactly one bucket:
 Use the HIGHEST possible bar. Be conservative. Prefer NOISE unless the headline clearly and directly matters to international power, conflict, diplomacy, security, alliances, sanctions, war, deterrence, borders, major regime change, or major cross-border economic/strategic shifts.
 
 SIGNAL rules:
-- Must be core geopolitical significance, not just “important news”.
+- Must be core geopolitical significance, not just "important news".
 - Must involve major states, alliances, wars, crises, sanctions, diplomacy, intelligence, defense, strategic competition, energy security, trade war with major global impact, or Bangladesh only when it has clear national-scale geopolitical consequence.
 - Local incidents, routine statements, domestic politics, routine elections, business, markets, culture, lifestyle, sports, celebrity, crime, and human-interest stories are NOISE.
 - Opinion, commentary, explainers, or analysis are SIGNAL only if they are clearly about a major geopolitical issue with broad international relevance.
-- Any non-Bangladesh country’s internal politics or policy is NOISE unless it directly affects a major geopolitical balance or cross-border crisis.
+- Any non-Bangladesh country's internal politics or policy is NOISE unless it directly affects a major geopolitical balance or cross-border crisis.
 - Do not mark something as SIGNAL just because it mentions a country, a conflict, or a famous person.
 
 Hard exclusions:
@@ -290,11 +295,13 @@ Article titles:
 
 # -- CONSTANTS -----------------------------------------------------------------
 
-MEDIA_NS    = "http://search.yahoo.com/mrss/"
-MEDIA_TAG   = "{%s}" % MEDIA_NS
+MEDIA_NS  = "http://search.yahoo.com/mrss/"
+MEDIA_TAG = "{%s}" % MEDIA_NS
 ET.register_namespace("media", MEDIA_NS)
 
-BD_TZ = timezone(timedelta(hours=6))
+ATOM_NS  = "http://www.w3.org/2005/Atom"
+ATOM_TAG = "{%s}" % ATOM_NS
+ET.register_namespace("atom", ATOM_NS)
 
 STATS = {
     "per_feed":             {},
@@ -376,32 +383,83 @@ def normalize_link(link, base=None):
 
 
 def parse_date(entry):
+    """
+    Super-robust date parser. Tries, in order:
+      1. feedparser's pre-parsed time structs (most reliable)
+      2. RFC 2822 string parsing
+      3. ISO 8601 with various suffix/offset fixes
+      4. dateutil fuzzy parsing (handles nearly any human-readable format)
+      5. Unix timestamp as a bare string
+    Falls back to now() if ALLOW_MISSING_DATES is True.
+    """
+    # 1. Structured time tuples — feedparser already validated these
     for key in ("published_parsed", "updated_parsed", "created_parsed", "issued_parsed"):
         st = entry.get(key)
         if st:
             try:
                 dt = datetime.fromtimestamp(time.mktime(st), tz=timezone.utc)
-                return dt, False
+                if dt.year > 1970:  # reject accidental epoch defaults
+                    return dt, False
             except Exception:
                 pass
-    for key in ("published", "updated", "created", "dc_date", "issued"):
+
+    # 2-5. String fields — try multiple parsers
+    for key in ("published", "updated", "created", "dc_date", "issued",
+                "date", "pubdate", "modified", "atom_updated", "atom_published"):
         val = entry.get(key)
-        if isinstance(val, str) and val.strip():
+        # Some feedparser fields are dicts (summary_detail etc.)
+        if isinstance(val, dict):
+            val = val.get("value") or val.get("#text") or ""
+        if not isinstance(val, str) or not val.strip():
+            continue
+        val = val.strip()
+
+        # 2. RFC 2822 — the canonical RSS date format
+        try:
+            dt = parsedate_to_datetime(val)
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=timezone.utc)
+            return dt.astimezone(timezone.utc), False
+        except Exception:
+            pass
+
+        # 3. ISO 8601 — fix the common variants Python <3.11 can't parse natively
+        try:
+            clean = val
+            # Replace trailing Z with +00:00
+            clean = re.sub(r"Z$", "+00:00", clean)
+            # +HHMM → +HH:MM  (Python fromisoformat needs the colon)
+            clean = re.sub(r"([+-])(\d{2})(\d{2})$", r"\1\2:\3", clean)
+            # Truncate sub-second precision beyond 6 digits
+            clean = re.sub(r"(\.\d{6})\d+", r"\1", clean)
+            # Replace space separator with T if it looks like a datetime
+            if re.match(r"\d{4}-\d{2}-\d{2} \d{2}:\d{2}", clean):
+                clean = clean.replace(" ", "T", 1)
+            dt = datetime.fromisoformat(clean)
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=timezone.utc)
+            return dt.astimezone(timezone.utc), False
+        except Exception:
+            pass
+
+        # 4. dateutil — fuzzy, handles almost any human-readable format
+        if dateutil_parser:
             try:
-                dt = parsedate_to_datetime(val)
+                dt = dateutil_parser.parse(val, fuzzy=True)
                 if dt.tzinfo is None:
                     dt = dt.replace(tzinfo=timezone.utc)
                 return dt.astimezone(timezone.utc), False
             except Exception:
                 pass
-            if dateutil_parser:
-                try:
-                    dt = dateutil_parser.parse(val)
-                    if dt.tzinfo is None:
-                        dt = dt.replace(tzinfo=timezone.utc)
-                    return dt.astimezone(timezone.utc), False
-                except Exception:
-                    pass
+
+        # 5. Unix timestamp as a bare string (some Atom feeds use this)
+        try:
+            ts = float(val)
+            if 1e8 < ts < 2e9:  # sanity range: ~1973 – ~2033
+                return datetime.fromtimestamp(ts, tz=timezone.utc), False
+        except Exception:
+            pass
+
     if ALLOW_MISSING_DATES:
         return datetime.now(timezone.utc), True
     return None, False
@@ -542,10 +600,8 @@ def fetch_feed(url):
 
 
 def fetch_all_feeds():
-    now        = datetime.now(timezone.utc)
-    cutoff     = now - timedelta(hours=MAX_AGE_HOURS)
-    bd_now     = datetime.now(BD_TZ)
-    bd_now_str = bd_now.strftime("%a, %d %b %Y %H:%M:%S +0600")
+    now      = datetime.now(timezone.utc)
+    cutoff   = now - timedelta(hours=MAX_AGE_HOURS)
     all_articles = []
 
     for url in FEED_URLS:
@@ -580,7 +636,8 @@ def fetch_all_feeds():
                 "title":       e.get("title", "") or "",
                 "link":        link,
                 "description": desc or "",
-                "published":   bd_now_str,
+                # RFC 2822 of the actual article date (or now() if inferred)
+                "published":   format_datetime(dt),
                 "source":      url,
             }
             if inferred:
@@ -720,16 +777,25 @@ def deduplicate_articles(articles):
 
 # -- XML -----------------------------------------------------------------------
 
-def _fresh_channel(root, feed_title, feed_description):
+def _fresh_channel(root, feed_title, feed_description, feed_link, self_url=""):
+    """Create a new <channel> inside root with inoReader-friendly metadata."""
     channel = ET.SubElement(root, "channel")
     ET.SubElement(channel, "title").text       = feed_title
-    ET.SubElement(channel, "link").text        = "https://yourusername.github.io/yourrepo/"
+    ET.SubElement(channel, "link").text        = feed_link
     ET.SubElement(channel, "description").text = feed_description
+    ET.SubElement(channel, "language").text    = "en"
+    # atom:link self-reference — helps feed readers track the source URL
+    if self_url:
+        al = ET.SubElement(channel, ATOM_TAG + "link")
+        al.set("href", self_url)
+        al.set("rel", "self")
+        al.set("type", "application/rss+xml")
     return channel
 
 
-def _load_or_create(output_file, feed_title, feed_description):
+def _load_or_create(output_file, feed_title, feed_description, feed_link, self_url=""):
     ET.register_namespace("media", MEDIA_NS)
+    ET.register_namespace("atom", ATOM_NS)
 
     if Path(output_file).exists():
         try:
@@ -738,22 +804,33 @@ def _load_or_create(output_file, feed_title, feed_description):
             channel = root.find("channel")
             if channel is not None:
                 return tree, root, channel
-            channel = _fresh_channel(root, feed_title, feed_description)
+            channel = _fresh_channel(root, feed_title, feed_description, feed_link, self_url)
             return tree, root, channel
         except ET.ParseError:
             pass
 
     root    = ET.Element("rss", {"version": "2.0"})
     tree    = ET.ElementTree(root)
-    channel = _fresh_channel(root, feed_title, feed_description)
+    channel = _fresh_channel(root, feed_title, feed_description, feed_link, self_url)
     return tree, root, channel
 
 
-def generate_xml_feed(articles, output_file, feed_title=None, feed_description=None):
+def generate_xml_feed(
+    articles,
+    output_file,
+    feed_title=None,
+    feed_description=None,
+    feed_link=None,
+    self_url=None,
+):
     feed_title       = feed_title       or "Curated News"
     feed_description = feed_description or "AI-curated news feed"
+    feed_link        = feed_link        or "https://yourusername.github.io/yourrepo/"
+    self_url         = self_url         if self_url is not None else FEED_SELF_URL
 
-    tree, root, channel = _load_or_create(output_file, feed_title, feed_description)
+    tree, root, channel = _load_or_create(
+        output_file, feed_title, feed_description, feed_link, self_url
+    )
 
     existing_links = set()
     for item in channel.findall("item"):
@@ -774,6 +851,7 @@ def generate_xml_feed(articles, output_file, feed_title=None, feed_description=N
         is_permalink = "true" if guid_val.startswith("http") else "false"
         ET.SubElement(item, "guid", {"isPermaLink": is_permalink}).text = guid_val
         ET.SubElement(item, "description").text = a.get("description", "") or ""
+        # pubDate is already RFC 2822 — written as-is
         if a.get("published"):
             ET.SubElement(item, "pubDate").text = a["published"]
 
@@ -792,12 +870,13 @@ def generate_xml_feed(articles, output_file, feed_title=None, feed_description=N
         for old_item in all_items[:overflow]:
             channel.remove(old_item)
 
-    now_text   = datetime.utcnow().strftime("%a, %d %b %Y %H:%M:%S +0000")
+    # lastBuildDate in RFC 2822 format
+    now_rfc = format_datetime(datetime.now(timezone.utc))
     last_build = channel.find("lastBuildDate")
     if last_build is None:
-        ET.SubElement(channel, "lastBuildDate").text = now_text
+        ET.SubElement(channel, "lastBuildDate").text = now_rfc
     else:
-        last_build.text = now_text
+        last_build.text = now_rfc
 
     try:
         ET.indent(tree, space="  ")
