@@ -2,8 +2,8 @@
 """
 RSS Feed Processor — Geopolitics Pipeline
 
-All articles from all feeds go to one Mistral call.
-Mistral classifies each headline into signal or noise.
+All articles from all feeds go to one Gemini call.
+Gemini classifies each headline into signal or noise.
 A Gemini call deduplicates near-identical signal titles.
 
 Outputs:
@@ -225,7 +225,7 @@ KL_API_FEEDS = set()
 # -- CONFIG --------------------------------------------------------------------
 
 DEDUP_MODEL           = "gemini-3-flash-preview"
-MISTRAL_MODEL         = "mistral-large-latest"
+MISTRAL_MODEL         = "gemini-3.6-flash"
 PROCESSED_FILE        = "processed_articles.json"
 SELECTED_FILE         = "selected_articles.json"
 OUTPUT_XML            = "curated_feed.xml"
@@ -269,11 +269,11 @@ Examples:
 Input: ["US and China sign landmark trade agreement", "Premier League club sacks manager", "How the Ottoman Empire collapsed", "Bangladesh central bank raises interest rates amid inflation crisis", "UK Conservative Party elects new leader", "UN warns of imminent famine across the Horn of Africa"]
 Output: {{"signal": [0, 3, 5]}}
 
-Input: ["India and Pakistan exchange fire across Line of Control", "Dhaka garment workers strike shuts down hundreds of factories", "The secret history of Antarctic exploration", "Australia holds federal election", "Celebrity couple announces divorce", "IMF approves emergency loan for Bangladesh"]
-Output: {{"signal": [0, 1, 5]}}
+Input: ["India and Pakistan exchange fire across Line of Control", "Dhaka garment workers strike shuts down hundreds of factories", "Australia holds federal election", "Celebrity couple announces divorce", "IMF approves emergency loan for Bangladesh", "NATO approves new eastern flank forces"]
+Output: {{"signal": [0, 1, 4, 5]}}
 
-Input: ["Gaza ceasefire collapses as fighting resumes", "Bangladesh government slashes fuel subsidies nationwide", "A deep dive into the life of a Sundarbans honey collector", "France passes new immigration law", "How microplastics are entering the human bloodstream", "Local man wins national baking competition"]
-Output: {{"signal": [0, 1]}}
+Input: ["Gaza ceasefire collapses as fighting resumes", "Bangladesh government slashes fuel subsidies nationwide", "A deep dive into the life of a Sundarbans honey collector", "France passes new immigration law", "How microplastics are entering the human bloodstream", "US imposes sanctions on Iranian oil exports"]
+Output: {{"signal": [0, 1, 5]}}
 
 Article titles:
 {titles}
@@ -383,83 +383,32 @@ def normalize_link(link, base=None):
 
 
 def parse_date(entry):
-    """
-    Super-robust date parser. Tries, in order:
-      1. feedparser's pre-parsed time structs (most reliable)
-      2. RFC 2822 string parsing
-      3. ISO 8601 with various suffix/offset fixes
-      4. dateutil fuzzy parsing (handles nearly any human-readable format)
-      5. Unix timestamp as a bare string
-    Falls back to now() if ALLOW_MISSING_DATES is True.
-    """
-    # 1. Structured time tuples — feedparser already validated these
     for key in ("published_parsed", "updated_parsed", "created_parsed", "issued_parsed"):
         st = entry.get(key)
         if st:
             try:
                 dt = datetime.fromtimestamp(time.mktime(st), tz=timezone.utc)
-                if dt.year > 1970:  # reject accidental epoch defaults
-                    return dt, False
+                return dt, False
             except Exception:
                 pass
-
-    # 2-5. String fields — try multiple parsers
-    for key in ("published", "updated", "created", "dc_date", "issued",
-                "date", "pubdate", "modified", "atom_updated", "atom_published"):
+    for key in ("published", "updated", "created", "dc_date", "issued"):
         val = entry.get(key)
-        # Some feedparser fields are dicts (summary_detail etc.)
-        if isinstance(val, dict):
-            val = val.get("value") or val.get("#text") or ""
-        if not isinstance(val, str) or not val.strip():
-            continue
-        val = val.strip()
-
-        # 2. RFC 2822 — the canonical RSS date format
-        try:
-            dt = parsedate_to_datetime(val)
-            if dt.tzinfo is None:
-                dt = dt.replace(tzinfo=timezone.utc)
-            return dt.astimezone(timezone.utc), False
-        except Exception:
-            pass
-
-        # 3. ISO 8601 — fix the common variants Python <3.11 can't parse natively
-        try:
-            clean = val
-            # Replace trailing Z with +00:00
-            clean = re.sub(r"Z$", "+00:00", clean)
-            # +HHMM → +HH:MM  (Python fromisoformat needs the colon)
-            clean = re.sub(r"([+-])(\d{2})(\d{2})$", r"\1\2:\3", clean)
-            # Truncate sub-second precision beyond 6 digits
-            clean = re.sub(r"(\.\d{6})\d+", r"\1", clean)
-            # Replace space separator with T if it looks like a datetime
-            if re.match(r"\d{4}-\d{2}-\d{2} \d{2}:\d{2}", clean):
-                clean = clean.replace(" ", "T", 1)
-            dt = datetime.fromisoformat(clean)
-            if dt.tzinfo is None:
-                dt = dt.replace(tzinfo=timezone.utc)
-            return dt.astimezone(timezone.utc), False
-        except Exception:
-            pass
-
-        # 4. dateutil — fuzzy, handles almost any human-readable format
-        if dateutil_parser:
+        if isinstance(val, str) and val.strip():
             try:
-                dt = dateutil_parser.parse(val, fuzzy=True)
+                dt = parsedate_to_datetime(val)
                 if dt.tzinfo is None:
                     dt = dt.replace(tzinfo=timezone.utc)
                 return dt.astimezone(timezone.utc), False
             except Exception:
                 pass
-
-        # 5. Unix timestamp as a bare string (some Atom feeds use this)
-        try:
-            ts = float(val)
-            if 1e8 < ts < 2e9:  # sanity range: ~1973 – ~2033
-                return datetime.fromtimestamp(ts, tz=timezone.utc), False
-        except Exception:
-            pass
-
+            if dateutil_parser:
+                try:
+                    dt = dateutil_parser.parse(val)
+                    if dt.tzinfo is None:
+                        dt = dt.replace(tzinfo=timezone.utc)
+                    return dt.astimezone(timezone.utc), False
+                except Exception:
+                    pass
     if ALLOW_MISSING_DATES:
         return datetime.now(timezone.utc), True
     return None, False
@@ -481,14 +430,10 @@ def get_mime_for_url(url):
     if not url:
         return "image/jpeg"
     path = urlparse(url).path.lower()
-    if path.endswith(".png"):
-        return "image/png"
-    if path.endswith(".gif"):
-        return "image/gif"
-    if path.endswith(".webp"):
-        return "image/webp"
-    if path.endswith(".svg"):
-        return "image/svg+xml"
+    if path.endswith(".png"):  return "image/png"
+    if path.endswith(".gif"):  return "image/gif"
+    if path.endswith(".webp"): return "image/webp"
+    if path.endswith(".svg"):  return "image/svg+xml"
     return "image/jpeg"
 
 
@@ -573,20 +518,20 @@ def fetch_feed(url):
     method_used = "DIRECT"
 
     if url_norm in EXISTING_API_FEEDS:
-        feed = feedparser.parse(url_norm)
+        feed        = feedparser.parse(url_norm)
         method_used = "DIRECT"
     elif url_norm in KL_API_FEEDS:
         kl_endpoint = os.environ.get("KL")
-        feed = None
+        feed        = None
         if kl_endpoint:
             feed = fetch_via_kl(kl_endpoint, url_norm)
             if feed:
                 method_used = "KL"
         if not feed:
-            feed = feedparser.parse(url_norm)
+            feed        = feedparser.parse(url_norm)
             method_used = "DIRECT"
     else:
-        feed = feedparser.parse(url_norm)
+        feed        = feedparser.parse(url_norm)
         method_used = "DIRECT"
 
     entries_count = len(getattr(feed, "entries", []))
@@ -594,18 +539,19 @@ def fetch_feed(url):
     STATS["per_feed"][url_norm]["fetched"] += entries_count
     STATS["per_method"].setdefault(method_used, 0)
     STATS["per_method"][method_used] += entries_count
-    STATS["total_fetched"] += entries_count
+    STATS["total_fetched"]            += entries_count
 
     return feed
 
 
 def fetch_all_feeds():
-    now      = datetime.now(timezone.utc)
-    cutoff   = now - timedelta(hours=MAX_AGE_HOURS)
+    now        = datetime.now(timezone.utc)
+    cutoff     = now - timedelta(hours=MAX_AGE_HOURS)
+    bd_now     = datetime.now(timezone(timedelta(hours=6)))
     all_articles = []
 
     for url in FEED_URLS:
-        feed = fetch_feed(url)
+        feed       = fetch_feed(url)
         feed_items = []
 
         for e in feed.entries:
@@ -636,7 +582,6 @@ def fetch_all_feeds():
                 "title":       e.get("title", "") or "",
                 "link":        link,
                 "description": desc or "",
-                # RFC 2822 of the actual article date (or now() if inferred)
                 "published":   format_datetime(dt),
                 "source":      url,
             }
@@ -674,7 +619,6 @@ def get_new_articles(all_articles, processed_data):
 # -- CLASSIFICATION ------------------------------------------------------------
 
 def extract_json_object(text):
-    """Parse {"signal": [...]} from Mistral response."""
     text = text.replace("```json", "").replace("```", "").strip()
     match = re.search(r"\{.*\}", text, flags=re.DOTALL)
     if match:
@@ -697,26 +641,25 @@ def extract_json_object(text):
 
 
 def send_to_mistral(articles):
-    """Single Mistral call. Returns {"signal": [...]}."""
-    api_key = os.environ.get("MS")
+    api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key or not articles:
         return {"signal": []}
 
     try:
-        client      = Mistral(api_key=api_key)
+        client      = genai.Client(api_key=api_key)
         titles_text = "\n".join([f"{i}. {a.get('title', '')}" for i, a in enumerate(articles)])
 
-        response = client.chat.complete(
+        response = client.models.generate_content(
             model=MISTRAL_MODEL,
-            messages=[{"role": "user", "content": PROMPT.format(titles=titles_text)}],
-            response_format={"type": "json_object"},
+            contents=PROMPT.format(titles=titles_text),
+            config={"response_mime_type": "application/json"},
         )
 
-        text = response.choices[0].message.content or ""
+        text = response.text if hasattr(response, "text") else ""
         return extract_json_object(text)
 
     except Exception as e:
-        print(f"Mistral classification error: {e}")
+        print(f"Gemini classification error: {e}")
         return {"signal": []}
 
 
@@ -777,25 +720,16 @@ def deduplicate_articles(articles):
 
 # -- XML -----------------------------------------------------------------------
 
-def _fresh_channel(root, feed_title, feed_description, feed_link, self_url=""):
-    """Create a new <channel> inside root with inoReader-friendly metadata."""
+def _fresh_channel(root, feed_title, feed_description):
     channel = ET.SubElement(root, "channel")
     ET.SubElement(channel, "title").text       = feed_title
-    ET.SubElement(channel, "link").text        = feed_link
+    ET.SubElement(channel, "link").text        = "https://yourusername.github.io/yourrepo/"
     ET.SubElement(channel, "description").text = feed_description
-    ET.SubElement(channel, "language").text    = "en"
-    # atom:link self-reference — helps feed readers track the source URL
-    if self_url:
-        al = ET.SubElement(channel, ATOM_TAG + "link")
-        al.set("href", self_url)
-        al.set("rel", "self")
-        al.set("type", "application/rss+xml")
     return channel
 
 
-def _load_or_create(output_file, feed_title, feed_description, feed_link, self_url=""):
+def _load_or_create(output_file, feed_title, feed_description):
     ET.register_namespace("media", MEDIA_NS)
-    ET.register_namespace("atom", ATOM_NS)
 
     if Path(output_file).exists():
         try:
@@ -804,35 +738,24 @@ def _load_or_create(output_file, feed_title, feed_description, feed_link, self_u
             channel = root.find("channel")
             if channel is not None:
                 return tree, root, channel
-            channel = _fresh_channel(root, feed_title, feed_description, feed_link, self_url)
+            channel = _fresh_channel(root, feed_title, feed_description)
             return tree, root, channel
         except ET.ParseError:
             pass
 
     root    = ET.Element("rss", {"version": "2.0"})
     tree    = ET.ElementTree(root)
-    channel = _fresh_channel(root, feed_title, feed_description, feed_link, self_url)
+    channel = _fresh_channel(root, feed_title, feed_description)
     return tree, root, channel
 
 
-def generate_xml_feed(
-    articles,
-    output_file,
-    feed_title=None,
-    feed_description=None,
-    feed_link=None,
-    self_url=None,
-):
+def generate_xml_feed(articles, output_file, feed_title=None, feed_description=None):
     feed_title       = feed_title       or "Curated News"
     feed_description = feed_description or "AI-curated news feed"
-    feed_link        = feed_link        or "https://yourusername.github.io/yourrepo/"
-    self_url         = self_url         if self_url is not None else FEED_SELF_URL
 
-    tree, root, channel = _load_or_create(
-        output_file, feed_title, feed_description, feed_link, self_url
-    )
+    tree, root, channel = _load_or_create(output_file, feed_title, feed_description)
 
-    existing_links = set()
+    existing_links: set[str] = set()
     for item in channel.findall("item"):
         link_el = item.find("link")
         if link_el is not None and link_el.text:
@@ -851,7 +774,6 @@ def generate_xml_feed(
         is_permalink = "true" if guid_val.startswith("http") else "false"
         ET.SubElement(item, "guid", {"isPermaLink": is_permalink}).text = guid_val
         ET.SubElement(item, "description").text = a.get("description", "") or ""
-        # pubDate is already RFC 2822 — written as-is
         if a.get("published"):
             ET.SubElement(item, "pubDate").text = a["published"]
 
@@ -870,13 +792,12 @@ def generate_xml_feed(
         for old_item in all_items[:overflow]:
             channel.remove(old_item)
 
-    # lastBuildDate in RFC 2822 format
-    now_rfc = format_datetime(datetime.now(timezone.utc))
+    now_text   = format_datetime(datetime.now(timezone.utc))
     last_build = channel.find("lastBuildDate")
     if last_build is None:
-        ET.SubElement(channel, "lastBuildDate").text = now_rfc
+        ET.SubElement(channel, "lastBuildDate").text = now_text
     else:
-        last_build.text = now_rfc
+        last_build.text = now_text
 
     try:
         ET.indent(tree, space="  ")
