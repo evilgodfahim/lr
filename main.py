@@ -387,8 +387,7 @@ def parse_date(entry):
         st = entry.get(key)
         if st:
             try:
-                dt = datetime.fromtimestamp(time.mktime(st), tz=timezone.utc)
-                return dt, False
+                return datetime.fromtimestamp(time.mktime(st), tz=timezone.utc), False
             except Exception:
                 pass
     for key in ("published", "updated", "created", "dc_date", "issued"):
@@ -688,7 +687,10 @@ def deduplicate_articles(articles):
         try:
             parsed = json.loads(raw)
             if isinstance(parsed, list):
-                keep_indices = [i for i in parsed if isinstance(i, int) and 0 <= i < len(articles)]
+                keep_indices = [
+                    i for i in parsed
+                    if isinstance(i, int) and 0 <= i < len(articles)
+                ]
         except Exception:
             pass
 
@@ -710,8 +712,10 @@ def deduplicate_articles(articles):
         keep_indices = sorted(set(keep_indices))
         deduped = [articles[i] for i in keep_indices]
         dropped = len(articles) - len(deduped)
+
         if dropped:
             print(f"Dedup: removed {dropped} near-duplicate title(s).")
+
         return deduped
 
     except Exception as e:
@@ -736,66 +740,125 @@ def _load_or_create(output_file, feed_title, feed_description):
             tree    = ET.parse(output_file)
             root    = tree.getroot()
             channel = root.find("channel")
+
             if channel is not None:
                 return tree, root, channel
+
             channel = _fresh_channel(root, feed_title, feed_description)
             return tree, root, channel
+
         except ET.ParseError:
             pass
 
     root    = ET.Element("rss", {"version": "2.0"})
     tree    = ET.ElementTree(root)
     channel = _fresh_channel(root, feed_title, feed_description)
+
     return tree, root, channel
 
 
 def generate_xml_feed(articles, output_file, feed_title=None, feed_description=None):
-    feed_title       = feed_title       or "Curated News"
+    feed_title       = feed_title or "Curated News"
     feed_description = feed_description or "AI-curated news feed"
 
-    tree, root, channel = _load_or_create(output_file, feed_title, feed_description)
+    tree, root, channel = _load_or_create(
+        output_file,
+        feed_title,
+        feed_description
+    )
 
     existing_links: set[str] = set()
+
     for item in channel.findall("item"):
         link_el = item.find("link")
+
         if link_el is not None and link_el.text:
             existing_links.add(link_el.text.strip())
 
     added = 0
+
     for a in articles:
         link = (a.get("link") or "").strip()
+
         if not link or link in existing_links:
             continue
 
         item = ET.SubElement(channel, "item")
-        ET.SubElement(item, "title").text       = a.get("title", "") or ""
-        ET.SubElement(item, "link").text        = link
-        guid_val     = a.get("id") or link
-        is_permalink = "true" if guid_val.startswith("http") else "false"
-        ET.SubElement(item, "guid", {"isPermaLink": is_permalink}).text = guid_val
-        ET.SubElement(item, "description").text = a.get("description", "") or ""
+
+        ET.SubElement(item, "title").text = (
+            a.get("title", "") or ""
+        )
+
+        ET.SubElement(item, "link").text = link
+
+        guid_val = a.get("id") or link
+        is_permalink = (
+            "true"
+            if guid_val.startswith("http")
+            else "false"
+        )
+
+        ET.SubElement(
+            item,
+            "guid",
+            {"isPermaLink": is_permalink}
+        ).text = guid_val
+
+        ET.SubElement(item, "description").text = (
+            a.get("description", "") or ""
+        )
+
         if a.get("published"):
-            ET.SubElement(item, "pubDate").text = a["published"]
+            ET.SubElement(
+                item,
+                "pubDate"
+            ).text = a["published"]
 
         thumb = a.get("thumbnail")
+
         if thumb:
-            ET.SubElement(item, MEDIA_TAG + "thumbnail", {"url": thumb})
-            mime = a.get("thumbnail_type") or get_mime_for_url(thumb)
-            ET.SubElement(item, "enclosure", {"url": thumb, "type": mime, "length": "0"})
+            ET.SubElement(
+                item,
+                MEDIA_TAG + "thumbnail",
+                {"url": thumb}
+            )
+
+            mime = (
+                a.get("thumbnail_type")
+                or get_mime_for_url(thumb)
+            )
+
+            ET.SubElement(
+                item,
+                "enclosure",
+                {
+                    "url": thumb,
+                    "type": mime,
+                    "length": "0"
+                }
+            )
 
         existing_links.add(link)
         added += 1
 
     all_items = channel.findall("item")
     overflow  = len(all_items) - MAX_FEED_ITEMS
+
     if overflow > 0:
         for old_item in all_items[:overflow]:
             channel.remove(old_item)
 
-    now_text   = format_datetime(datetime.now(timezone.utc))
+    now_text = format_datetime(
+        datetime.now(timezone.utc)
+    )
+
     last_build = channel.find("lastBuildDate")
+
     if last_build is None:
-        ET.SubElement(channel, "lastBuildDate").text = now_text
+        ET.SubElement(
+            channel,
+            "lastBuildDate"
+        ).text = now_text
     else:
         last_build.text = now_text
 
@@ -804,12 +867,25 @@ def generate_xml_feed(articles, output_file, feed_title=None, feed_description=N
     except AttributeError:
         pass
 
-    tree.write(output_file, encoding="unicode", xml_declaration=False)
+    tree.write(
+        output_file,
+        encoding="unicode",
+        xml_declaration=False
+    )
 
-    with open(output_file, "r+", encoding="utf-8") as fh:
+    with open(
+        output_file,
+        "r+",
+        encoding="utf-8"
+    ) as fh:
         body = fh.read()
         fh.seek(0)
-        fh.write('<?xml version="1.0" encoding="UTF-8"?>\n' + body)
+
+        fh.write(
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            + body
+        )
+
         fh.truncate()
 
     return added
@@ -818,65 +894,139 @@ def generate_xml_feed(articles, output_file, feed_title=None, feed_description=N
 
 def print_stats():
     print("\nFetch statistics:")
-    print(f"  Timestamp:             {STATS.get('timestamp')}")
-    print(f"  Total fetched:         {STATS['total_fetched']}  (raw entries from all feeds)")
-    print(f"  Passed age cut:        {STATS['total_passed_age']}  (within {MAX_AGE_HOURS}h window)")
-    print(f"  New (unseen):          {STATS['total_new']}")
-    print(f"  Signal (classified):   {STATS['total_signal']}")
-    print(f"  Signal (after dedup):  {STATS['total_signal_deduped']}  -> {OUTPUT_XML}")
+    print(
+        f"  Timestamp:             "
+        f"{STATS.get('timestamp')}"
+    )
+    print(
+        f"  Total fetched:         "
+        f"{STATS['total_fetched']}  "
+        f"(raw entries from all feeds)"
+    )
+    print(
+        f"  Passed age cut:        "
+        f"{STATS['total_passed_age']}  "
+        f"(within {MAX_AGE_HOURS}h window)"
+    )
+    print(
+        f"  New (unseen):          "
+        f"{STATS['total_new']}"
+    )
+    print(
+        f"  Signal (classified):   "
+        f"{STATS['total_signal']}"
+    )
+    print(
+        f"  Signal (after dedup):  "
+        f"{STATS['total_signal_deduped']}  "
+        f"-> {OUTPUT_XML}"
+    )
+
     print("  Per-method (raw fetch):")
+
     for method, cnt in STATS["per_method"].items():
         print(f"    {method}: {cnt}")
+
     print("  Per-feed breakdown:")
+
     for feed, d in STATS["per_feed"].items():
         print(f"    {feed}")
-        print(f"      fetched={d.get('fetched',0)}  passed_age={d.get('passed_age',0)}  sent_to_pipeline={d.get('capped',0)}")
+        print(
+            f"      fetched={d.get('fetched', 0)}  "
+            f"passed_age={d.get('passed_age', 0)}  "
+            f"sent_to_pipeline={d.get('capped', 0)}"
+        )
+
     print("")
 
 # -- MAIN ----------------------------------------------------------------------
 
 def main():
     processed_data = load_processed_articles()
-    all_articles   = fetch_all_feeds()
-    new_articles   = get_new_articles(all_articles, processed_data)
+
+    all_articles = fetch_all_feeds()
+
+    new_articles = get_new_articles(
+        all_articles,
+        processed_data
+    )
 
     STATS["total_new"] = len(new_articles)
 
     result = send_to_mistral(new_articles)
 
     signal_indices = [
-        i for i in result.get("signal", [])
-        if isinstance(i, int) and 0 <= i < len(new_articles)
+        i
+        for i in result.get("signal", [])
+        if isinstance(i, int)
+        and 0 <= i < len(new_articles)
     ]
 
-    signal_articles = [new_articles[i] for i in signal_indices]
+    signal_articles = [
+        new_articles[i]
+        for i in signal_indices
+    ]
+
     STATS["total_signal"] = len(signal_articles)
 
     if not signal_articles:
-        print("No signal articles this run. Skipping all file writes.")
+        print(
+            "No signal articles this run. "
+            "Skipping all file writes."
+        )
         print_stats()
         return
 
-    print(f"Deduplicating {len(signal_articles)} signal article(s)...")
-    signal_articles = deduplicate_articles(signal_articles)
+    print(
+        f"Deduplicating {len(signal_articles)} "
+        f"signal article(s)..."
+    )
 
-    STATS["total_signal_deduped"] = len(signal_articles)
+    signal_articles = deduplicate_articles(
+        signal_articles
+    )
+
+    STATS["total_signal_deduped"] = len(
+        signal_articles
+    )
 
     generate_xml_feed(
         signal_articles,
         output_file=OUTPUT_XML,
         feed_title="Curated News",
-        feed_description="AI-curated signal: core geopolitical news",
+        feed_description=(
+            "AI-curated signal: core geopolitical news"
+        ),
     )
 
     save_selected_articles(signal_articles)
 
-    processed_data.setdefault("article_ids", []).extend([a["id"] for a in new_articles if a.get("id")])
-    processed_data.setdefault("article_links", []).extend([a["link"] for a in new_articles if a.get("link")])
+    processed_data.setdefault(
+        "article_ids", []
+    ).extend(
+        [
+            a["id"]
+            for a in new_articles
+            if a.get("id")
+        ]
+    )
+
+    processed_data.setdefault(
+        "article_links", []
+    ).extend(
+        [
+            a["link"]
+            for a in new_articles
+            if a.get("link")
+        ]
+    )
+
     save_processed_articles(processed_data)
 
     STATS["timestamp"] = datetime.utcnow().isoformat()
+
     save_stats()
+
     print_stats()
 
 
