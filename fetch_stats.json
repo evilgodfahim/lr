@@ -17,8 +17,8 @@
     },
     "https://evilgodfahim.github.io/intop/filtered.xml": {
       "fetched": 1000,
-      "passed_age": 19,
-      "capped": 19
+      "passed_age": 21,
+      "capped": 21
     },
     "https://politepaul.com/fd/M8QukWfUPWR4.xml": {
       "fetched": 0,
@@ -97,8 +97,8 @@
     },
     "https://meduza.io/rss/en/all": {
       "fetched": 30,
-      "passed_age": 0,
-      "capped": 0
+      "passed_age": 3,
+      "capped": 3
     },
     "https://politepaul.com/fd/JsMAwSx6Pkbr.xml": {
       "fetched": 0,
@@ -162,8 +162,8 @@
     },
     "https://evilgodfahim.github.io/fto/combined.xml": {
       "fetched": 25,
-      "passed_age": 7,
-      "capped": 7
+      "passed_age": 8,
+      "capped": 8
     },
     "https://evilgodfahim.github.io/nytop/combined.xml": {
       "fetched": 69,
@@ -212,8 +212,8 @@
     },
     "https://medium.com/feed/tag/foreign-policy": {
       "fetched": 10,
-      "passed_age": 8,
-      "capped": 8
+      "passed_age": 6,
+      "capped": 6
     },
     "https://www.hrw.org/taxonomy/term/9653/feed": {
       "fetched": 0,
@@ -236,9 +236,9 @@
       "capped": 0
     },
     "https://ipdefenseforum.com/feed/": {
-      "fetched": 0,
-      "passed_age": 0,
-      "capped": 0
+      "fetched": 4,
+      "passed_age": 1,
+      "capped": 1
     },
     "https://www.nytimes.com/svc/collections/v1/publish/": {
       "fetched": 0,
@@ -432,8 +432,8 @@
     },
     "https://www.lowyinstitute.org/the-interpreter/rss.xml": {
       "fetched": 50,
-      "passed_age": 0,
-      "capped": 0
+      "passed_age": 2,
+      "capped": 2
     },
     "https://feeds.feedburner.com/AtlanticInternational": {
       "fetched": 25,
@@ -443,14 +443,14 @@
   },
   "per_method": {
     "KL": 0,
-    "DIRECT": 2333
+    "DIRECT": 2337
   },
-  "total_fetched": 2333,
-  "total_passed_age": 102,
-  "total_new": 7,
-  "total_signal": 5,
+  "total_fetched": 2337,
+  "total_passed_age": 111,
+  "total_new": 10,
+  "total_signal": 3,
   "total_longread": 16,
-  "timestamp": "2026-09-06T22:56:52.763617",
-  "total_signal_deduped": 5,
+  "timestamp": "2026-09-07T00:51:29.690022",
+  "total_signal_deduped": 2,
   "total_longread_deduped": 16
 }
