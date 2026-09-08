@@ -205876,5 +205876,203 @@
     "source": "https://feeds.feedburner.com/AtlanticInternational",
     "thumbnail": "https://cdn.theatlantic.com/thumbor/wBbOB5B2VvPheQGbHZXFPQvWeJM=/0x208:2000x1333/media/img/2026/08/WEL_Shuster_TaiwanOpenerHP/original.png",
     "thumbnail_type": "image/png"
+  },
+  {
+    "id": "https://www.csis.org/analysis/polysilicon-and-merits-trade-measures-industrial-policy",
+    "title": "Polysilicon and the Merits of Trade Measures as Industrial Policy",
+    "link": "https://www.csis.org/analysis/polysilicon-and-merits-trade-measures-industrial-policy",
+    "description": "Trade measures alone are unlikely to rebuild U.S. capacity without domestic incentives and a coordinated ex-China global market.",
+    "published": "Tue, 08 Sep 2026 00:00:00 +0000",
+    "source": "https://evilgodfahim.github.io/csis/rss.xml"
+  },
+  {
+    "id": "https://www.thecipherbrief.com/the-ai-we-cannot-deploy-and-what-is-at-stake",
+    "title": "The AI We Cannot Deploy — And What Is at Stake",
+    "link": "https://www.thecipherbrief.com/the-ai-we-cannot-deploy-and-what-is-at-stake",
+    "description": "<p>Last week, I argued in these pages that the United States is buying an army it cannot command — writing procurement checks at a scale its adversaries cannot match, without writing the doctrine or arbitration to decide how the capability behind those checks gets used. Not everyone agreed. The sharpest pushback came from readers with institutional equity in the current procurement path — those with the most to lose if the diagnosis is right. Fair question they kept asking: what is at stake if we get this wrong?</p><p>The answer arrived this week, and it is not what most observers are watching.</p><p>Beijing is pursuing a two-pronged strategy against the American artificial-intelligence industry, and neither prong depends on beating American laboratories on model capability. The first prong attacks the market instrument that finances the industry: paid enterprise access to closed frontier models at premium margins. The weapon is state-backed open-source saturation of the global developer market. When Chinese laboratories release high-performing models at zero marginal cost, the price American laboratories can charge collapses — and with it, the revenue that funds tens of billions in specialized compute committed to their pipelines.</p><p>The second prong is architectural. American frontier laboratories run closed models in centralized data centers connected to their customers via fiber. The Pentagon has awarded contracts for missions that cannot use that architecture — drone swarms, autonomous undersea platforms, cognitive attack detection, and tactical multi-sensor fusion. Consider a drone swarm over the Taiwan Strait that must identify and engage a hostile target in seconds. It cannot query a compute cluster in Virginia and get an answer in time. The bandwidth needed in a denied, degraded, intermittent, or limited spectrum environment is unavailable. Chinese research has shifted toward Large Concept Models — smaller, edge-resident, multi-sensor — that run on the platform and fuse light-detection-and-ranging, radiofrequency, electro-optical and infrared, and acoustic inputs at the edge, without a network dependency an adversary can touch.</p><p>This is not a theoretical architecture. Ukraine is running it now. Ukrainian drone units operate with organic, edge-resident targeting within seconds of adversary contact, without a reliable network back to headquarters. Ukrainian schools graduate thousands of drone specialists each year. The country teaching NATO the most about the next fight is doing so in the register the American AI stack cannot yet operate in. The contracts are being placed. The integration doctrine has not yet been written.</p><p>Beijing has run this playbook before. Western economies depend on China for rare-earth and critical-minerals processing — the industry that supplies permanent magnets, batteries, and defense electronics. Every F-35 electric-actuation system, every Virginia-class submarine drivetrain, and every Patriot interceptor guidance package relies on rare-earth processing capacity the United States cannot reconstitute within a decade. That capacity was lost not because the deposits lie under Chinese soil but because Beijing sustained state-subsidized processing for twenty years at prices that broke the private-sector cost of capital in every alternative jurisdiction. Open-source artificial intelligence is the same instrument, aimed at a different substrate.</p><div class=\"embed-related\"></div><p><strong>What is at stake?</strong></p><p>First, America's most consequential capital-expenditure cycle. Roughly $400 billion a year in AI infrastructure is financed against a revenue model an opposing state has organized its economy to defeat. If that model breaks on Beijing's timeline, the compute pipelines carrying a meaningful share of American growth do not close.</p><p>Second, Pentagon operational readiness. Contracts placed today for missions the Pentagon needs to field in three to five years cannot be executed by an AI stack designed for centralized data centers. Platforms that cannot operate in a multidomain and joint-force environment at wartime tempo are not a deterrent. They are procurement projects.</p><p>Third, alliance credibility. Sovereign AI programs in Korea, Japan, and the Gulf price today against the American premium-margin model. If it breaks, those programs re-price against Chinese open-weight tooling, and the alliance's technological dependency structure shifts.</p><p>Fourth, deterrence. The Taiwan Strait scenario is not theoretical. The platforms that would decide it are being contracted for now, on an architecture that cannot execute the mission at wartime tempo.</p><p>What needs to happen requires an integration authority the American sovereign apparatus does not yet exercise. Two responses.</p><p>A state-capacity capital response to the first prong. Some form of federal instrument that bridges the compute-to-market pipeline so a Chinese-organized collapse in AI pricing does not take the compute build-out with it. Export-import financing, defense production authorities, and strategic stockpiles are the precedent. No current U.S. government office owns this problem.</p><p>A Pentagon-led investment in a distributed inference substrate — the shape of what the Joint Fires Network concept was originally designed to be. Edge-native, platform-resident, multi-sensor, doctrinally integrated. This is procurement of an integration architecture as much as procurement of a technology. The Pentagon has placed the contracts for the platforms. It has not placed the contract for the integration.</p><p>Last week I wrote that America is buying an army it cannot command. The diagnosis has evolved: America is also buying an artificial intelligence it cannot deploy. Ukraine is teaching the doctrine the American AI stack has not been designed to run. Beijing is engineering the collapse of the revenue model that stack is financed against.</p><p>Coordination assigns. Integration arbitrates. What is at stake is whether the American sovereign apparatus can find the integrator — for the capital response and the operational doctrine — before the platforms the Pentagon is buying arrive without an architecture capable of commanding them.</p><p><strong></strong><em><strong>The Cipher Brief is committed to publishing a range of perspectives on </strong></em><a href=\"https://www.thecipherbrief.com/national-security\" target=\"_self\"><em><strong><u><em>national security</em></u></strong></em></a><em><strong> issues submitted by deeply experienced </strong></em><a href=\"https://www.thecipherbrief.com/national-security\" target=\"_self\"><em><strong><u><em>national security</em></u></strong></em></a><em><strong> professionals. Opinions expressed are those of the author and do not represent the views or opinions of The Cipher Brief.</strong></em></p><p><em><strong>Have a perspective to share based on your experience in the <a href=\"https://www.thecipherbrief.com/national-security\" target=\"_self\">national security</a> field? Send it to </strong></em><em><strong><u><em>Editor@thecipherbrief.com</em></u></strong></em><em><strong> for publication consideration.</strong></em></p><p><em><strong>Read more expert-driven national security insights, perspective and analysis in </strong></em><a href=\"https://www.thecipherbrief.com/\" target=\"_self\"><em><strong><u><em>The Cipher Brief</em></u></strong></em></a></p>",
+    "published": "Tue, 08 Sep 2026 12:49:56 +0000",
+    "source": "https://www.thecipherbrief.com/feed"
+  },
+  {
+    "id": "https://meduza.io/en/news/2026/09/08/69-russians-return-home-as-professor-molchanov-remains-impounded-in-norway-over-a-claim-by-ukraine-s-naftogaz",
+    "title": "69 Russians return home as ‘Professor Molchanov’ remains impounded in Norway over a claim by Ukraine’s Naftogaz",
+    "link": "https://meduza.io/en/news/2026/09/08/69-russians-return-home-as-professor-molchanov-remains-impounded-in-norway-over-a-claim-by-ukraine-s-naftogaz",
+    "description": "<p>Sixty-nine Russian citizens who were aboard the Professor Molchanov, which was impounded in Norway several days ago, have returned home, the governor of Svalbard said.<p>",
+    "published": "Tue, 08 Sep 2026 17:38:08 +0000",
+    "source": "https://meduza.io/rss/en/all",
+    "thumbnail": "https://meduza.io/imgly/share/1788889088/en/news/2026/09/08/69-russians-return-home-as-professor-molchanov-remains-impounded-in-norway-over-a-claim-by-ukraine-s-naftogaz",
+    "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "https://meduza.io/en/news/2026/09/08/germany-to-send-ukraine-pac-2-missiles-from-its-own-stockpile-as-kyiv-says-most-of-the-roughly-1-000-patriot-missiles-it-is-ordering-will-take-years-to-arrive",
+    "title": "Germany to send Ukraine PAC-2 missiles from its own stockpile, as Kyiv says most of the roughly 1,000 Patriot missiles it is ordering will take years to arrive",
+    "link": "https://meduza.io/en/news/2026/09/08/germany-to-send-ukraine-pac-2-missiles-from-its-own-stockpile-as-kyiv-says-most-of-the-roughly-1-000-patriot-missiles-it-is-ordering-will-take-years-to-arrive",
+    "description": "<p>Germany will send Ukraine PAC-2 air defense missiles from its own stockpiles for use in American-made Patriot systems.<p>",
+    "published": "Tue, 08 Sep 2026 17:29:33 +0000",
+    "source": "https://meduza.io/rss/en/all",
+    "thumbnail": "https://meduza.io/imgly/share/1788888573/en/news/2026/09/08/germany-to-send-ukraine-pac-2-missiles-from-its-own-stockpile-as-kyiv-says-most-of-the-roughly-1-000-patriot-missiles-it-is-ordering-will-take-years-to-arrive",
+    "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "https://meduza.io/en/feature/2026/09/08/u-s-negotiators-think-russia-may-return-to-peace-talks-after-its-parliamentary-elections-zelensky-expects-moscow-s-rhetoric-to-change-then-too",
+    "title": "U.S. negotiators think Russia may return to peace talks after its parliamentary elections. Zelensky expects Moscow’s rhetoric to change then, too.",
+    "link": "https://meduza.io/en/feature/2026/09/08/u-s-negotiators-think-russia-may-return-to-peace-talks-after-its-parliamentary-elections-zelensky-expects-moscow-s-rhetoric-to-change-then-too",
+    "description": "<p>Russia has shown a new willingness to resume peace talks, according to the French newspaper Le Figaro and the German broadcaster Deutsche Welle, citing sources in French President Emmanuel Macron’s administration. American negotiators conveyed that assessment to Paris.<p>",
+    "published": "Tue, 08 Sep 2026 17:20:59 +0000",
+    "source": "https://meduza.io/rss/en/all",
+    "thumbnail": "https://meduza.io/image/attachments/images/012/727/553/small/kasB8CON1Iqc6NBHCAhnDQ",
+    "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "https://meduza.io/en/news/2026/09/08/putin-and-trump-discussed-u-s-negotiators-trips-to-moscow-and-kyiv-in-one-hour-call-kremlin-says",
+    "title": "Putin and Trump discussed U.S. negotiators’ trips to Moscow and Kyiv in one-hour call, Kremlin says",
+    "link": "https://meduza.io/en/news/2026/09/08/putin-and-trump-discussed-u-s-negotiators-trips-to-moscow-and-kyiv-in-one-hour-call-kremlin-says",
+    "description": "<p>Vladimir Putin spoke by phone with Donald Trump for exactly one hour in a conversation that was “constructive and candid,” Russian presidential aide Yuri Ushakov said. According to Ushakov, the two leaders discussed Steve Witkoff and Jared Kushner’s trips to Moscow and Kyiv.<p>",
+    "published": "Tue, 08 Sep 2026 17:03:52 +0000",
+    "source": "https://meduza.io/rss/en/all",
+    "thumbnail": "https://meduza.io/imgly/share/1788887032/en/news/2026/09/08/putin-and-trump-discussed-u-s-negotiators-trips-to-moscow-and-kyiv-in-one-hour-call-kremlin-says",
+    "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "https://meduza.io/en/news/2026/09/08/russian-drone-damages-we-are-ukraine-tv-newsroom-in-kyiv-during-live-broadcast-of-ukraine-s-joint-united-news-program",
+    "title": "Russian drone damages ‘We Are Ukraine’ TV newsroom in Kyiv during live broadcast of Ukraine’s joint United News program",
+    "link": "https://meduza.io/en/news/2026/09/08/russian-drone-damages-we-are-ukraine-tv-newsroom-in-kyiv-during-live-broadcast-of-ukraine-s-joint-united-news-program",
+    "description": "<p>A Russian drone damaged the building of the television channel We Are Ukraine during the September 8 attack on Kyiv.<p>",
+    "published": "Tue, 08 Sep 2026 16:12:10 +0000",
+    "source": "https://meduza.io/rss/en/all",
+    "thumbnail": "https://meduza.io/imgly/share/1788883930/en/news/2026/09/08/russian-drone-damages-we-are-ukraine-tv-newsroom-in-kyiv-during-live-broadcast-of-ukraine-s-joint-united-news-program",
+    "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "https://meduza.io/en/news/2026/09/08/russia-to-open-11-more-russian-houses-worldwide-as-germany-closes-one-in-berlin",
+    "title": "Russia to open 11 more ‘Russian Houses’ worldwide — as Germany closes one in Berlin",
+    "link": "https://meduza.io/en/news/2026/09/08/russia-to-open-11-more-russian-houses-worldwide-as-germany-closes-one-in-berlin",
+    "description": "<p>Rossotrudnichestvo has agreed to open 11 new “Russian Houses” abroad, agency head Igor Chaika announced.<p>",
+    "published": "Tue, 08 Sep 2026 15:46:15 +0000",
+    "source": "https://meduza.io/rss/en/all",
+    "thumbnail": "https://meduza.io/imgly/share/1788882375/en/news/2026/09/08/russia-to-open-11-more-russian-houses-worldwide-as-germany-closes-one-in-berlin",
+    "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/09/uk-france-canada-ban-imports-israeli-settlements",
+    "title": "UK, France, Canada to ban imports from Israeli settlements",
+    "link": "https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/09/uk-france-canada-ban-imports-israeli-settlements",
+    "description": "<p>Britain, France and Canada said Tuesday they will ban imports from Israeli settlements in the occupied West Bank, with a UK minister accusing Israel of turning a blind eye to the \"ethnic cleansing\" of Palestinians there.</p>  \n            <p>The moves prompted a furious Israel to unveil immediate counter-measures targeting Britain.</p>  \n            <p>The trio of Western allies revealed the trade curbs in response to Israel's West Bank settlements policy and reports of increasing attacks by settlers there against Palestinians.</p>",
+    "published": "Tue, 08 Sep 2026 17:30:33 +0000",
+    "source": "https://evilgodfahim.github.io/alm/combined.xml"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/09/egypts-sisi-hosts-greece-cyprus-leaders-energy-talks-what-know",
+    "title": "Egypt's Sisi hosts Greece, Cyprus leaders for energy talks: What to know",
+    "link": "https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/09/egypts-sisi-hosts-greece-cyprus-leaders-energy-talks-what-know",
+    "description": "The three-way summit in Cairo follows electricity and gas deals between the three countries as Egypt addresses its gas production struggles.",
+    "published": "Tue, 08 Sep 2026 15:47:05 +0000",
+    "source": "https://evilgodfahim.github.io/alm/combined.xml"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/09/egypts-sisi-hosts-greece-cyprus-leaders-energy-talks-what-know",
+    "title": "Egypt's Sisi hosts Greece, Cyprus leaders for energy talks: What to know",
+    "link": "https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/09/egypts-sisi-hosts-greece-cyprus-leaders-energy-talks-what-know",
+    "description": "The three-way summit in Cairo follows electricity and gas deals between the three countries as Egypt addresses its gas production struggles.",
+    "published": "Tue, 08 Sep 2026 15:47:05 +0000",
+    "source": "https://evilgodfahim.github.io/alm/combined.xml"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/09/egypts-sisi-hosts-greece-cyprus-leaders-energy-talks-what-know",
+    "title": "Egypt's Sisi hosts Greece, Cyprus leaders for energy talks: What to know",
+    "link": "https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/09/egypts-sisi-hosts-greece-cyprus-leaders-energy-talks-what-know",
+    "description": "The three-way summit in Cairo follows electricity and gas deals between the three countries as Egypt addresses its gas production struggles.",
+    "published": "Tue, 08 Sep 2026 15:47:05 +0000",
+    "source": "https://evilgodfahim.github.io/alm/combined.xml"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/09/egypts-sisi-hosts-greece-cyprus-leaders-energy-talks-what-know",
+    "title": "Egypt's Sisi hosts Greece, Cyprus leaders for energy talks: What to know",
+    "link": "https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/09/egypts-sisi-hosts-greece-cyprus-leaders-energy-talks-what-know",
+    "description": "The three-way summit in Cairo follows electricity and gas deals between the three countries as Egypt addresses its gas production struggles.",
+    "published": "Tue, 08 Sep 2026 15:47:05 +0000",
+    "source": "https://evilgodfahim.github.io/alm/combined.xml"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/09/israels-foreign-minister-says-it-closing-british-consulate-east-jerusalem",
+    "title": "Israel's foreign minister says it is closing British consulate in East Jerusalem",
+    "link": "https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/09/israels-foreign-minister-says-it-closing-british-consulate-east-jerusalem",
+    "description": "<p>TEL AVIV, Sept 8 (Reuters) - Israeli Foreign Minister Gideon Saar on Tuesday said that it was closing Britain's consulate in East Jerusalem, accredited to the Palestinian Authority in the West Bank, after London announced it was imposing sanctions on goods from Israeli settlements. </p>",
+    "published": "Tue, 08 Sep 2026 15:46:39 +0000",
+    "source": "https://evilgodfahim.github.io/alm/combined.xml"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/09/drone-strike-near-courthouse-central-sudan-kills-13",
+    "title": "Drone strike near courthouse in central Sudan kills 13",
+    "link": "https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/09/drone-strike-near-courthouse-central-sudan-kills-13",
+    "description": "<p>A drone strike blamed on Sudan's paramilitary Rapid Support Forces killed 13 people outside a courthouse in the army-held central town of Umm Rawaba on Tuesday, a medical source and witnesses told AFP.</p>  \n            <p>The attack is the latest in an escalating wave of drone attacks by both the RSF and the Sudanese army, which have been at war since April 2023.</p>  \n            <p>\"There are now 13 killed and 22 injured being treated at the hospital,\" a medical source at the local hospital told AFP, revising an earlier toll of 12 after one more person succumbed to their injuries.</p>",
+    "published": "Tue, 08 Sep 2026 15:30:29 +0000",
+    "source": "https://evilgodfahim.github.io/alm/combined.xml"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/09/south-korea-sends-team-assess-situation-strait-hormuz",
+    "title": "South Korea sends team to assess situation in Strait of Hormuz",
+    "link": "https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/09/south-korea-sends-team-assess-situation-strait-hormuz",
+    "description": "<p>Sept 8 (Reuters) - South Korea has sent an inspection team to assess the security situation in the Strait of Hormuz but no decision has been taken on sending troops, the defence ministry said on Tuesday.</p><p>The announcement follows a decision by U.S. President Donald Trump in August to scale back U.S.-South Korea joint military exercises, in part because South Korea had declined to help Washington in the U.S.-Iran war.</p>",
+    "published": "Tue, 08 Sep 2026 14:46:42 +0000",
+    "source": "https://evilgodfahim.github.io/alm/combined.xml"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/09/russia-give-turkey-preferential-fertilizer-access-amid-hormuz-supply-crunch",
+    "title": "Russia to give Turkey preferential fertilizer access amid Hormuz supply crunch",
+    "link": "https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/09/russia-give-turkey-preferential-fertilizer-access-amid-hormuz-supply-crunch",
+    "description": "Ankara is expected to secure easier access to Russian fertilizer exports as the Iran war disrupts supplies from key Gulf producers.",
+    "published": "Tue, 08 Sep 2026 13:34:34 +0000",
+    "source": "https://evilgodfahim.github.io/alm/combined.xml"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/09/russia-give-turkey-preferential-fertilizer-access-amid-hormuz-supply-crunch",
+    "title": "Russia to give Turkey preferential fertilizer access amid Hormuz supply crunch",
+    "link": "https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/09/russia-give-turkey-preferential-fertilizer-access-amid-hormuz-supply-crunch",
+    "description": "Ankara is expected to secure easier access to Russian fertilizer exports as the Iran war disrupts supplies from key Gulf producers.",
+    "published": "Tue, 08 Sep 2026 13:34:34 +0000",
+    "source": "https://evilgodfahim.github.io/alm/combined.xml"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/09/russia-give-turkey-preferential-fertilizer-access-amid-hormuz-supply-crunch",
+    "title": "Russia to give Turkey preferential fertilizer access amid Hormuz supply crunch",
+    "link": "https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/09/russia-give-turkey-preferential-fertilizer-access-amid-hormuz-supply-crunch",
+    "description": "Ankara is expected to secure easier access to Russian fertilizer exports as the Iran war disrupts supplies from key Gulf producers.",
+    "published": "Tue, 08 Sep 2026 13:34:34 +0000",
+    "source": "https://evilgodfahim.github.io/alm/combined.xml"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/09/russia-give-turkey-preferential-fertilizer-access-amid-hormuz-supply-crunch",
+    "title": "Russia to give Turkey preferential fertilizer access amid Hormuz supply crunch",
+    "link": "https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/09/russia-give-turkey-preferential-fertilizer-access-amid-hormuz-supply-crunch",
+    "description": "Ankara is expected to secure easier access to Russian fertilizer exports as the Iran war disrupts supplies from key Gulf producers.",
+    "published": "Tue, 08 Sep 2026 13:34:34 +0000",
+    "source": "https://evilgodfahim.github.io/alm/combined.xml"
+  },
+  {
+    "id": "https://ipdefenseforum.com/?p=219089",
+    "title": "China’s Taiwan Strait traffic control scheme part of ‘salami slicing’ strategy",
+    "link": "https://ipdefenseforum.com/2026/09/chinas-taiwan-strait-traffic-control-scheme-part-of-salami-slicing-strategy/?&",
+    "description": "Lt. Col. Uilisone F. Tua/U.S. Army In early August 2026, China’s Guangdong Maritime Safety Administration (MSA) announced and sought to enforce a dayslong “traffic control scheme” for northbound vessels entering the Taiwan Strait. The MSA asserted that passing vessels must “strictly comply with traffic control requirements” and “obey the instructions of on-site maritime management agencies.” &#8230;",
+    "published": "Tue, 08 Sep 2026 14:00:13 +0000",
+    "source": "https://ipdefenseforum.com/feed/"
+  },
+  {
+    "id": "https://www.worldpoliticsreview.com/?p=433758",
+    "title": "The Saudis and Houthis Inch Closer to War",
+    "link": "https://www.worldpoliticsreview.com/saudi-houthi-yemen-bal-el-mandeb/",
+    "description": "<p>A Houthi attack on Saudi oil facilities makes a return to full-scale conflict, including direct Saudi involvement in Yemen, appear increasingly unavoidable.</p>\n<p>The post <a href=\"https://www.worldpoliticsreview.com/saudi-houthi-yemen-bal-el-mandeb/\">The Saudis and Houthis Inch Closer to War</a> appeared first on <a href=\"https://www.worldpoliticsreview.com\">World Politics Review</a>.</p>",
+    "published": "Tue, 08 Sep 2026 18:21:26 +0000",
+    "source": "https://www.worldpoliticsreview.com/feed/"
+  },
+  {
+    "id": "https://www.lowyinstitute.org/the-interpreter/a-small-thai-satellite-tests-china-s-next-big-space-export",
+    "title": "A small Thai satellite tests China’s next big space export",
+    "link": "https://www.lowyinstitute.org/the-interpreter/a-small-thai-satellite-tests-china-s-next-big-space-export",
+    "description": "A Chinese cubesat launch for Thailand offers a case study in the contest over Southeast Asia’s potential US$100 billion space economy.",
+    "published": "Tue, 08 Sep 2026 14:00:00 +0000",
+    "source": "https://www.lowyinstitute.org/the-interpreter/rss.xml",
+    "thumbnail": "https://cdn.sanity.io/images/5dcouzig/production/6bbb82594fb9b390312721771ca6137b7e7b3e8d-5000x3333.jpg?rect=0,355,5000,2625&w=1200&h=630&fm=webp&q=85&fit=crop",
+    "thumbnail_type": "image/jpeg"
   }
 ]
