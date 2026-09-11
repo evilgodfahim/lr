@@ -209424,5 +209424,125 @@
     "description": "",
     "published": "Fri, 11 Sep 2026 10:24:28 +0000",
     "source": "https://evilgodfahim.github.io/intop/filtered.xml"
+  },
+  {
+    "id": "https://www.csis.org/analysis/how-do-latest-black-sea-attacks-affect-global-food-security",
+    "title": "How Do the Latest Black Sea Attacks Affect Global Food Security?",
+    "link": "https://www.csis.org/analysis/how-do-latest-black-sea-attacks-affect-global-food-security",
+    "description": "For the first time since 2022, attacks on agricultural infrastructure and cargo vessels are limiting grain exports from Russia and Ukraine at the same time. CSIS experts examine the latest attacks, their food-security impacts, and how the Iran war is worsening the crisis.",
+    "published": "Fri, 11 Sep 2026 00:00:00 +0000",
+    "source": "https://evilgodfahim.github.io/csis/rss.xml"
+  },
+  {
+    "id": "https://www.csis.org/analysis/hormuz-needs-community-not-condominium",
+    "title": "Hormuz Needs a Community, Not a Condominium",
+    "link": "https://www.csis.org/analysis/hormuz-needs-community-not-condominium",
+    "description": "A deal to reopen the Strait of Hormuz that sidelines Gulf states would entrench coercion and invite a new conflict. Postwar Europe offers a better model: a shared governance mechanism that dilutes leverage and fosters long-term cooperation.",
+    "published": "Fri, 11 Sep 2026 00:00:00 +0000",
+    "source": "https://evilgodfahim.github.io/csis/rss.xml"
+  },
+  {
+    "id": "https://www.csis.org/analysis/billion-dollar-chip-who-can-afford-design-future",
+    "title": "The Billion-Dollar Chip: Who Can Afford to Design the Future?",
+    "link": "https://www.csis.org/analysis/billion-dollar-chip-who-can-afford-design-future",
+    "description": "As the cost of designing leading-edge chips approaches $1 billion, frontier semiconductor design is becoming accessible to fewer firms. The United States must reduce the underlying cost of design to preserve innovation and competitiveness across critical industries.",
+    "published": "Fri, 11 Sep 2026 00:00:00 +0000",
+    "source": "https://evilgodfahim.github.io/csis/rss.xml"
+  },
+  {
+    "id": "https://www.defenseone.com/threats/2026/09/25-years-after-911-spy-agencies-face-old-lessons-and-new-threats/415941/",
+    "title": "25 years after 9/11, spy agencies face old lessons and new threats",
+    "link": "https://www.defenseone.com/threats/2026/09/25-years-after-911-spy-agencies-face-old-lessons-and-new-threats/415941/",
+    "description": "Former intelligence officials describe a nation better equipped to disrupt terrorist plots, but still wrestling with the costs.",
+    "published": "Fri, 11 Sep 2026 15:00:00 +0000",
+    "source": "https://www.defenseone.com/rss/all/",
+    "thumbnail": "https://cdn.defenseone.com/media/img/cd/2026/09/11/091126NG-1/thumb.jpg",
+    "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/09/thats-why-we-fight-trump-links-911-iran-conflict",
+    "title": "'That's why we fight': Trump links 9/11 to Iran conflict",
+    "link": "https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/09/thats-why-we-fight-trump-links-911-iran-conflict",
+    "description": "<p>President Donald Trump vowed Friday that the United States would never forget the September 11, 2001 attacks and suggested the country was continuing the \"war on terror\" 25 years later by fighting Iran.</p>  \n            <p>Speaking at the Pentagon after skipping the main 9/11 commemorations in New York, Republican Trump also hit out at domestic \"fanatics\" in an apparent swipe at Democrats.</p>  \n            <p>\"Today we renew the sacred oath that we first swore in their names a quarter of a century ago. We will never, ever forget. That's why we fight today,\" Trump said in a speech.</p>",
+    "published": "Fri, 11 Sep 2026 16:30:38 +0000",
+    "source": "https://evilgodfahim.github.io/alm/combined.xml"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/09/yemens-houthis-take-over-strait-vital-global-shipping-0",
+    "title": "Yemen's Houthis take over strait vital to global shipping",
+    "link": "https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/09/yemens-houthis-take-over-strait-vital-global-shipping-0",
+    "description": "<p>The Iran-backed Houthis seized control of Yemen's entire Red Sea coast and captured three strategic islands on Friday, in a lightning offensive that cemented their hold on a vital shipping corridor linking Europe and Asia.</p>  \n            <p>The developments are likely to deepen the Middle East war's impact on international commerce, months after the Strait of Hormuz was blockaded by Iran, which hailed its Yemeni allies' advance on Friday.</p>",
+    "published": "Fri, 11 Sep 2026 15:30:29 +0000",
+    "source": "https://evilgodfahim.github.io/alm/combined.xml"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/09/how-houthi-gains-near-bab-al-mandeb-raise-threat-saudi-oil-flows",
+    "title": "How Houthi gains near Bab al-Mandeb raise threat to Saudi oil flows",
+    "link": "https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/09/how-houthi-gains-near-bab-al-mandeb-raise-threat-saudi-oil-flows",
+    "description": "The Iran-linked militants are advancing on the Red Sea coast following the capture of the strategic port of Mokha, bringing the group closer to full control of the Bab al-Mandeb Strait.",
+    "published": "Fri, 11 Sep 2026 14:44:29 +0000",
+    "source": "https://evilgodfahim.github.io/alm/combined.xml"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/09/centcom-chief-saudi-arabia-yemens-houthis-seize-bab-al-mandeb",
+    "title": "CENTCOM chief in Saudi Arabia as Yemen's Houthis seize Bab al-Mandeb",
+    "link": "https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/09/centcom-chief-saudi-arabia-yemens-houthis-seize-bab-al-mandeb",
+    "description": "The Houthis' seizure of Mocha and Perim Island effectively puts them in a position to close the Bab al-Mandeb.",
+    "published": "Fri, 11 Sep 2026 11:57:36 +0000",
+    "source": "https://evilgodfahim.github.io/alm/combined.xml"
+  },
+  {
+    "id": "https://www.noemamag.com/the-gen-z-revolt-sweeping-south-asia",
+    "title": "The Gen Z Revolt Sweeping South Asia",
+    "link": "https://www.noemamag.com/the-gen-z-revolt-sweeping-south-asia",
+    "description": "<p>The post <a href=\"https://www.noemamag.com/the-gen-z-revolt-sweeping-south-asia\">The Gen Z Revolt Sweeping South Asia</a> appeared first on <a href=\"https://www.noemamag.com\">NOEMA</a>.</p>",
+    "published": "Fri, 11 Sep 2026 16:31:14 +0000",
+    "source": "https://www.noemamag.com/article-topic/geopolitics-globalization/feed/",
+    "thumbnail": "https://noemamag.imgix.net/2026/09/Gen-Z-Revolts-Final-RGB.jpg?fm=pjpg&ixlib=php-3.3.1&s=e8cbcd61af4ad978ca9efa62b5ccddd1",
+    "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "https://www.atlanticcouncil.org/?p=946091",
+    "title": "What Rubio’s Latin America tour means for Colombia, Ecuador, and Peru",
+    "link": "https://www.atlanticcouncil.org/dispatches/what-rubios-tour-means-for-colombia-ecuador-and-peru/",
+    "description": "<p>Experts look at what Rubio's tour signals about the US push for closer cooperation with Latin America's new crop of conservatives.</p>\n<p>The post <a href=\"https://www.atlanticcouncil.org/dispatches/what-rubios-tour-means-for-colombia-ecuador-and-peru/\">What Rubio’s Latin America tour means for Colombia, Ecuador, and Peru</a> appeared first on <a href=\"https://www.atlanticcouncil.org\">Atlantic Council</a>.</p>",
+    "published": "Fri, 11 Sep 2026 16:37:40 +0000",
+    "source": "https://www.atlanticcouncil.org/feed/"
+  },
+  {
+    "id": "https://www.ft.com/content/d7f197dd-a39a-43dc-a2f9-6204c5876e76?syn-25a6b1a6=1",
+    "title": "How both sides lost after 9/11",
+    "link": "https://archive.is/qWySo/https://www.ft.com/content/d7f197dd-a39a-43dc-a2f9-6204c5876e76?syn-25a6b1a6=1",
+    "description": "America lost wars and Osama bin Laden lost Saudi Arabia",
+    "published": "Fri, 11 Sep 2026 15:34:39 +0000",
+    "source": "https://evilgodfahim.github.io/fto/combined.xml"
+  },
+  {
+    "id": "https://medium.com/p/4f24d91bdb0b",
+    "title": "From 9/11 to Gaza",
+    "link": "https://medium.com/@wasayy9/from-9-11-to-gaza-4f24d91bdb0b?source=rss------foreign_policy-5",
+    "description": "<div class=\"medium-feed-item\"><p class=\"medium-feed-image\"><a href=\"https://medium.com/@wasayy9/from-9-11-to-gaza-4f24d91bdb0b?source=rss------foreign_policy-5\"><img src=\"https://cdn-images-1.medium.com/max/2600/1*aGXj6ZxKJwP9E4jtc91HAg.jpeg\" width=\"2752\" /></a></p><p class=\"medium-feed-snippet\">September 11, 2001, was not merely a moment of tragic global rupture.</p><p class=\"medium-feed-link\"><a href=\"https://medium.com/@wasayy9/from-9-11-to-gaza-4f24d91bdb0b?source=rss------foreign_policy-5\">Continue reading on Medium »</a></p></div>",
+    "published": "Fri, 11 Sep 2026 15:21:28 +0000",
+    "source": "https://medium.com/feed/tag/foreign-policy",
+    "thumbnail": "https://cdn-images-1.medium.com/max/2600/1*aGXj6ZxKJwP9E4jtc91HAg.jpeg",
+    "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "https://fpif.org/?p=53137",
+    "title": "The Long Shadow of Osama bin Laden",
+    "link": "https://fpif.org/the-long-shadow-of-osama-bin-laden/",
+    "description": "<p>The attacks of 9/11 were designed to push the United States into overextending itself militarily and enter an imperial tailspin.</p>\n<p>The post <a href=\"https://fpif.org/the-long-shadow-of-osama-bin-laden/\">The Long Shadow of Osama bin Laden</a> appeared first on <a href=\"https://fpif.org\">Foreign Policy In Focus</a>.</p>",
+    "published": "Fri, 11 Sep 2026 16:00:43 +0000",
+    "source": "https://fpif.org/feed/"
+  },
+  {
+    "id": "tag:theatlantic.com,2026:50-688592",
+    "title": "Trump Loses the Other Strait",
+    "link": "https://www.theatlantic.com/international/2026/09/trump-iran-houthis-yemen/688592/",
+    "description": "The Houthi advance is bad news for the U.S., and even worse news for Saudi Arabia.",
+    "published": "Fri, 11 Sep 2026 14:40:00 +0000",
+    "source": "https://feeds.feedburner.com/AtlanticInternational",
+    "thumbnail": "https://cdn.theatlantic.com/thumbor/okioMUevjQVStUL7wepc73Lhqy0=/media/img/mt/2026/09/2026_09_11_Houthis/original.jpg",
+    "thumbnail_type": "image/jpeg"
   }
 ]
