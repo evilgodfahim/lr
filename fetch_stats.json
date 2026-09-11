@@ -12,13 +12,13 @@
     },
     "https://evilgodfahim.github.io/csis/rss.xml": {
       "fetched": 10,
-      "passed_age": 3,
-      "capped": 3
+      "passed_age": 4,
+      "capped": 4
     },
     "https://evilgodfahim.github.io/intop/filtered.xml": {
       "fetched": 1000,
-      "passed_age": 46,
-      "capped": 46
+      "passed_age": 52,
+      "capped": 52
     },
     "https://politepaul.com/fd/M8QukWfUPWR4.xml": {
       "fetched": 0,
@@ -51,9 +51,9 @@
       "capped": 0
     },
     "https://www.defenseone.com/rss/all/": {
-      "fetched": 23,
-      "passed_age": 5,
-      "capped": 5
+      "fetched": 22,
+      "passed_age": 4,
+      "capped": 4
     },
     "https://politepaul.com/fd/9RMAFvRRGLst.xml": {
       "fetched": 0,
@@ -77,8 +77,8 @@
     },
     "https://responsiblestatecraft.org/feed/": {
       "fetched": 30,
-      "passed_age": 3,
-      "capped": 3
+      "passed_age": 4,
+      "capped": 4
     },
     "https://politepaul.com/fd/ffERiOdKxWlq.xml": {
       "fetched": 0,
@@ -142,13 +142,13 @@
     },
     "https://www.atlanticcouncil.org/feed/": {
       "fetched": 100,
-      "passed_age": 5,
-      "capped": 5
+      "passed_age": 4,
+      "capped": 4
     },
     "https://warontherocks.com/feed/": {
       "fetched": 100,
-      "passed_age": 2,
-      "capped": 2
+      "passed_age": 1,
+      "capped": 1
     },
     "https://www.thehindu.com/opinion/editorial/?service=rss": {
       "fetched": 120,
@@ -162,18 +162,18 @@
     },
     "https://evilgodfahim.github.io/fto/combined.xml": {
       "fetched": 25,
-      "passed_age": 13,
-      "capped": 13
+      "passed_age": 14,
+      "capped": 14
     },
     "https://evilgodfahim.github.io/nytop/combined.xml": {
       "fetched": 70,
-      "passed_age": 23,
-      "capped": 23
+      "passed_age": 21,
+      "capped": 21
     },
     "https://theconversation.com/global/home-page.atom": {
       "fetched": 25,
-      "passed_age": 1,
-      "capped": 1
+      "passed_age": 0,
+      "capped": 0
     },
     "https://politepaul.com/fd/R39To2fYhqqO.xml": {
       "fetched": 0,
@@ -212,8 +212,8 @@
     },
     "https://medium.com/feed/tag/foreign-policy": {
       "fetched": 10,
-      "passed_age": 6,
-      "capped": 6
+      "passed_age": 3,
+      "capped": 3
     },
     "https://www.hrw.org/taxonomy/term/9653/feed": {
       "fetched": 0,
@@ -232,13 +232,13 @@
     },
     "https://www.newgeopolitics.org/feed/": {
       "fetched": 10,
-      "passed_age": 0,
-      "capped": 0
+      "passed_age": 1,
+      "capped": 1
     },
     "https://ipdefenseforum.com/feed/": {
-      "fetched": 0,
-      "passed_age": 0,
-      "capped": 0
+      "fetched": 4,
+      "passed_age": 1,
+      "capped": 1
     },
     "https://www.nytimes.com/svc/collections/v1/publish/": {
       "fetched": 0,
@@ -272,8 +272,8 @@
     },
     "https://mondediplo.com/backend": {
       "fetched": 10,
-      "passed_age": 0,
-      "capped": 0
+      "passed_age": 1,
+      "capped": 1
     },
     "https://eng.globalaffairs.ru/rss": {
       "fetched": 0,
@@ -317,8 +317,8 @@
     },
     "https://www.rand.org/blog.xml": {
       "fetched": 20,
-      "passed_age": 1,
-      "capped": 1
+      "passed_age": 2,
+      "capped": 2
     },
     "https://thegeopolitics.com/feed/": {
       "fetched": 10,
@@ -407,8 +407,8 @@
     },
     "https://www.thehindu.com/opinion/?service=rss": {
       "fetched": 60,
-      "passed_age": 7,
-      "capped": 7
+      "passed_age": 8,
+      "capped": 8
     },
     "https://www.hindustantimes.com/feeds/rss/opinion/rssfeed.xml": {
       "fetched": 7,
@@ -417,8 +417,8 @@
     },
     "https://feeds.feedburner.com/Consortiumnewscom": {
       "fetched": 10,
-      "passed_age": 4,
-      "capped": 4
+      "passed_age": 3,
+      "capped": 3
     },
     "https://evilgodfahim.github.io/org/daily_feed.xml": {
       "fetched": 9,
@@ -443,14 +443,14 @@
   },
   "per_method": {
     "KL": 0,
-    "DIRECT": 2344
+    "DIRECT": 2347
   },
-  "total_fetched": 2344,
-  "total_passed_age": 275,
-  "total_new": 35,
-  "total_signal": 21,
+  "total_fetched": 2347,
+  "total_passed_age": 285,
+  "total_new": 63,
+  "total_signal": 38,
   "total_longread": 16,
-  "timestamp": "2026-09-11T18:21:27.223283",
-  "total_signal_deduped": 14,
+  "timestamp": "2026-09-11T21:41:57.338897",
+  "total_signal_deduped": 38,
   "total_longread_deduped": 16
 }
