@@ -208910,5 +208910,151 @@
     "source": "https://www.lowyinstitute.org/the-interpreter/rss.xml",
     "thumbnail": "https://cdn.sanity.io/images/5dcouzig/production/a25b31b5db3f1ce8c39b07f03db9c411736d1a27-5621x3740.jpg?rect=0,395,5621,2951&w=1200&h=630&fm=webp&q=85&fit=crop",
     "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "https://www.middleeasteye.net/live-blog/live-blog-update/iran-faces-strategic-dilemma-war-attrition-drags",
+    "title": "Iran faces strategic dilemma as war of attrition drags on",
+    "link": "https://www.middleeasteye.net/live-blog/live-blog-update/iran-faces-strategic-dilemma-war-attrition-drags",
+    "description": "",
+    "published": "Fri, 11 Sep 2026 09:46:58 +0000",
+    "source": "https://evilgodfahim.github.io/intop/filtered.xml"
+  },
+  {
+    "id": "https://archive.is/o/N6yE6/https://www.nytimes.com/2026/09/11/world/asia/china-india-brics-summit.html",
+    "title": "At BRICS Summit, China and India Vie for Influence",
+    "link": "https://archive.is/o/N6yE6/https://www.nytimes.com/2026/09/11/world/asia/china-india-brics-summit.html",
+    "description": "",
+    "published": "Fri, 11 Sep 2026 04:22:12 +0000",
+    "source": "https://evilgodfahim.github.io/intop/filtered.xml"
+  },
+  {
+    "id": "https://www.rt.com/india/645437-india-brics-russia-initiatives/?&",
+    "title": "India advanced Russia-backed BRICS initiatives – Russian envoy",
+    "link": "https://www.rt.com/india/645437-india-brics-russia-initiatives/?&",
+    "description": "",
+    "published": "Fri, 11 Sep 2026 08:33:58 +0000",
+    "source": "https://evilgodfahim.github.io/intop/filtered.xml"
+  },
+  {
+    "id": "https://www.aljazeera.com/news/2026/9/11/settlers-soldiers-and-israeli-impunity-in-the-west-bank?traffic_source=rss",
+    "title": "Settlers, soldiers, and Israeli impunity in the West Bank",
+    "link": "https://www.aljazeera.com/news/2026/9/11/settlers-soldiers-and-israeli-impunity-in-the-west-bank?traffic_source=rss",
+    "description": "",
+    "published": "Fri, 11 Sep 2026 07:36:43 +0000",
+    "source": "https://evilgodfahim.github.io/intop/filtered.xml"
+  },
+  {
+    "id": "https://abcnews.com/International/wireStory/myanmars-min-aung-hlaing-visits-cambodia-seeks-restore-136354958",
+    "title": "Myanmars Min Aung Hlaing visits Cambodia as he seeks to restore ASEAN engagement",
+    "link": "https://abcnews.com/International/wireStory/myanmars-min-aung-hlaing-visits-cambodia-seeks-restore-136354958",
+    "description": "",
+    "published": "Fri, 11 Sep 2026 06:36:14 +0000",
+    "source": "https://evilgodfahim.github.io/intop/filtered.xml"
+  },
+  {
+    "id": "https://www.straitstimes.com/world/europe/behind-the-killer-robots-of-ukraines-new-warfare-revolution",
+    "title": "Behind the killer robots of Ukraines new warfare revolution",
+    "link": "https://www.straitstimes.com/world/europe/behind-the-killer-robots-of-ukraines-new-warfare-revolution",
+    "description": "",
+    "published": "Fri, 11 Sep 2026 06:06:05 +0000",
+    "source": "https://evilgodfahim.github.io/intop/filtered.xml"
+  },
+  {
+    "id": "https://meduza.io/en/news/2026/09/11/russia-screens-soviet-film-the-defeat-of-militarist-japan-in-taipei-taiwan-accuses-moscow-of-trying-to-sow-discord-with-tokyo",
+    "title": "Russia screens Soviet film ‘The Defeat of Militarist Japan’ in Taipei. Taiwan accuses Moscow of trying to sow discord with Tokyo.",
+    "link": "https://meduza.io/en/news/2026/09/11/russia-screens-soviet-film-the-defeat-of-militarist-japan-in-taipei-taiwan-accuses-moscow-of-trying-to-sow-discord-with-tokyo",
+    "description": "<p>The Russian representative office in Taiwan screened the Soviet documentary “The Defeat of Militarist Japan” for about 20 Taiwanese guests in Taipei about a week ago.<p>",
+    "published": "Fri, 11 Sep 2026 10:26:05 +0000",
+    "source": "https://meduza.io/rss/en/all",
+    "thumbnail": "https://meduza.io/imgly/share/1789122365/en/news/2026/09/11/russia-screens-soviet-film-the-defeat-of-militarist-japan-in-taipei-taiwan-accuses-moscow-of-trying-to-sow-discord-with-tokyo",
+    "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "https://meduza.io/en/news/2026/09/11/ukrainian-drones-strike-multiple-russian-regions-hitting-ozon-warehouse-and-residential-building-casualties-reported",
+    "title": "Ukrainian drones strike multiple Russian regions, hitting Ozon warehouse and residential building. Casualties reported.",
+    "link": "https://meduza.io/en/news/2026/09/11/ukrainian-drones-strike-multiple-russian-regions-hitting-ozon-warehouse-and-residential-building-casualties-reported",
+    "description": "<p>Ukrainian drones hit an Ozon logistics center in Saratov, sparking a fire.<p>",
+    "published": "Fri, 11 Sep 2026 07:32:05 +0000",
+    "source": "https://meduza.io/rss/en/all",
+    "thumbnail": "https://meduza.io/imgly/share/1789111925/en/news/2026/09/11/ukrainian-drones-strike-multiple-russian-regions-hitting-ozon-warehouse-and-residential-building-casualties-reported",
+    "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "https://meduza.io/en/news/2026/09/11/russian-strike-on-kyiv-damages-nine-story-apartment-building-leaves-several-injured",
+    "title": "Russian strike on Kyiv damages nine-story apartment building, leaves several injured",
+    "link": "https://meduza.io/en/news/2026/09/11/russian-strike-on-kyiv-damages-nine-story-apartment-building-leaves-several-injured",
+    "description": "<p>Russian forces struck Kyiv, damaging a nine-story residential building in the Ukrainian capital’s Dniprovskyi district.<p>",
+    "published": "Fri, 11 Sep 2026 07:22:32 +0000",
+    "source": "https://meduza.io/rss/en/all",
+    "thumbnail": "https://meduza.io/imgly/share/1789111352/en/news/2026/09/11/russian-strike-on-kyiv-damages-nine-story-apartment-building-leaves-several-injured",
+    "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/09/statecraft-or-scripture-why-pacific-nations-want-jerusalem-embassies",
+    "title": "Statecraft or scripture: Why Pacific nations want Jerusalem embassies",
+    "link": "https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/09/statecraft-or-scripture-why-pacific-nations-want-jerusalem-embassies",
+    "description": "<div class=\"align-center media media--type-image media--view-mode-newsletter\">\n  \n      \n            <div>  <img alt=\"Christian pilgrims from Papua New Guinea joined thousands taking part in an annual support march for Israel in Jerusalem in 2008.\" height=\"579\" src=\"https://www.al-monitor.com/sites/default/files/styles/newsletter/public/2026-09/000_nic299030.jpg?itok=HNO7XRpR\" title=\"Christian pilgrims from Papua New Guinea joined thousands taking part in an annual support march for Israel in Jerusalem in 2008.\" width=\"870\" />\n\n\n</div>\n      \n  </div>\n  \n            <p>An ancient Biblical prophecy lies at </p>",
+    "published": "Fri, 11 Sep 2026 02:30:35 +0000",
+    "source": "https://evilgodfahim.github.io/alm/combined.xml",
+    "thumbnail": "https://www.al-monitor.com/sites/default/files/styles/newsletter/public/2026-09/000_nic299030.jpg?itok=HNO7XRpR",
+    "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "tag:theconversation.com,2011:article/291107",
+    "title": "DRC’s cobalt exports contain unreported uranium – our study estimates the global nuclear risk",
+    "link": "https://theconversation.com/drcs-cobalt-exports-contain-unreported-uranium-our-study-estimates-the-global-nuclear-risk-291107",
+    "description": "The amount of undeclared uranium from the DRC’s cobalt mines could – if processed – produce enough material for 600-1,500 nuclear weapons.",
+    "published": "Thu, 10 Sep 2026 14:08:16 +0000",
+    "source": "https://theconversation.com/global/home-page.atom",
+    "thumbnail": "https://images.theconversation.com/files/757701/original/file-20260903-50-xp0rnh.jpg?ixlib=rb-4.1.1&amp;rect=0%2C168%2C4032%2C2688&amp;q=45&amp;auto=format&amp;w=1050&amp;h=700&amp;fit=crop",
+    "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "https://www.eurasiantimes.com/?p=300983",
+    "title": "Su-57 Deal Back on the Table for IAF as Putin Lands in New Delhi. Kremlin Says India Wants Production Tech",
+    "link": "https://www.eurasiantimes.com/su-57-deal-back-on-table-for-iaf/",
+    "description": "<p>India is likely to evaluate another determined pitch for the Su-57 stealth fighters during Russian President Vladimir Putin’s three-day visit to New Delhi. Putin arrived in New Delhi on September 10 to a red-carpet welcome. He is slated to meet Indian Prime Minister Narendra Modi ahead of the two-day 18th BRICS Summit, scheduled for September [&#8230;]</p>\n<p>The post <a href=\"https://www.eurasiantimes.com/su-57-deal-back-on-table-for-iaf/\">Su-57 Deal Back on the Table for IAF as Putin Lands in New Delhi. Kremlin Says India Wants Production Tech</a> appeared first on <a href=\"https://www.eurasiantimes.com\">EURASIAN TIMES</a>.</p>",
+    "published": "Fri, 11 Sep 2026 10:47:09 +0000",
+    "source": "https://eurasiantimes.com/feed/",
+    "thumbnail": "https://s.w.org/images/core/emoji/17.0.2/72x72/26a1.png",
+    "thumbnail_type": "image/png"
+  },
+  {
+    "id": "https://www.eurasiantimes.com/?p=300976",
+    "title": "Saudi Bypasses Pakistan to Invest in Afghanistan. Are Cracks Appearing in the Makkah Defense Pact? OPED",
+    "link": "https://www.eurasiantimes.com/saudi-bypasses-pakistan-to-invest-in-afghanistan-are-cracks-appearing-in-the-makkah-defense-pact-oped/",
+    "description": "<p>OPED by Imran Khurshid, PhD. Saudi Arabia’s Afghanistan deal shows that Riyadh will pursue its interests independently of Pakistan. It could also weaken Pakistan’s traditional gatekeeping role in Afghanistan. Recently, on September 7, Afghanistan’s Taliban-led administration signed a major agreement with Delta International, a Saudi energy firm, in Kabul. The two sides finalized a 25-year, [&#8230;]</p>\n<p>The post <a href=\"https://www.eurasiantimes.com/saudi-bypasses-pakistan-to-invest-in-afghanistan-are-cracks-appearing-in-the-makkah-defense-pact-oped/\">Saudi Bypasses Pakistan to Invest in Afghanistan. Are Cracks Appearing in the Makkah Defense Pact? OPED</a> appeared first on <a href=\"https://www.eurasiantimes.com\">EURASIAN TIMES</a>.</p>",
+    "published": "Fri, 11 Sep 2026 07:05:25 +0000",
+    "source": "https://eurasiantimes.com/feed/",
+    "thumbnail": "https://www.eurasiantimes.com/wp-content/uploads/2026/08/PakArmy.jpg",
+    "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "https://saiia.org.za/?post_type=publication&p=77743",
+    "title": "Partners Across the Divide: South Africa, Japan and Multilateralism in the Post-Aid Era",
+    "link": "https://saiia.org.za/research/partners-across-divide-south-africa-japan-multilateralism-post-aid-era/",
+    "description": "<a href=\"https://saiia.org.za/research/partners-across-divide-south-africa-japan-multilateralism-post-aid-era/\" rel=\"nofollow\" title=\"Partners Across the Divide: South Africa, Japan and Multilateralism in the Post-Aid Era\"><img alt=\"\" class=\"webfeedsFeaturedVisual wp-post-image\" height=\"1167\" src=\"https://saiia.org.za/wp-content/uploads/2026/09/AGDP_PI-178-2231712844.jpg\" width=\"1920\" /></a>Developments around TICAD 9, South Africa’s G20 presidency and subsequent exclusion from the 2026 Summit has signalled a shift in the terms of Africa’s engagement with the world.",
+    "published": "Fri, 11 Sep 2026 08:18:18 +0000",
+    "source": "https://saiia.org.za/thematic-area/foreign-policy/feed/",
+    "thumbnail": "https://saiia.org.za/wp-content/uploads/2026/09/AGDP_PI-178-2231712844.jpg",
+    "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "https://www.theguardian.com/commentisfree/2026/sep/11/trump-carney-canada-imperialism",
+    "title": "Trump’s clash with Canada is his latest imperialistic embarrassment | Sidney Blumenthal",
+    "link": "https://www.theguardian.com/commentisfree/2026/sep/11/trump-carney-canada-imperialism",
+    "description": "<p>The president’s chaotic schemes of aggrandizement, from Venezuela to Iran, have no larger rationale</p><p>Trumpism is the lowest stage of imperialism. “We’re not going to invade Greenland. We’re going to buy it,” Donald Trump reportedly <a href=\"https://www.washingtonpost.com/politics/2026/02/01/trump-alfalfa-club-dinner/\">told</a> the annual black-tie dinner on 1 February of the private Alfalfa Club, an assemblage of prominent Washington figures, a number of whom he had publicly humiliated, and others he was investigating or suing. “It’s never been my intention to make Greenland the 51st state. I want to make Canada the 51st state. Greenland will be the 52nd state. Venezuela can be 53rd.” The room greeted several of his remarks with dead silence. His cosplay as the <a href=\"https://www.youtube.com/watch?v=q2j90qg_5_w\">Pirate King</a> was not received as a good-humored takeoff from a Gilbert and Sullivan opera. He went on. “So many people in the room I hate,” he said in a display of honesty. “Most of you I like,” he claimed. Then, at his peak euphoria, he flew off to Mar-a-Lago to plan his attack on Iran, which took place 27 days later.</p><p>Trump’s imperialism of piracy and plunder is less of a system even than that of the earliest imperialism of 17th century privateers raiding the Spanish Main, the divine right of kings, and monarchs dividing up the spoils as favors to create their lords and earls. His schemes of aggrandizement operating by threat and force are justified by no larger rationale, nothing as exalted as “the white man’s burden”, marauding wherever and however he can to seize resources.</p> <a href=\"https://www.theguardian.com/commentisfree/2026/sep/11/trump-carney-canada-imperialism\">Continue reading...</a>",
+    "published": "Fri, 11 Sep 2026 10:00:03 +0000",
+    "source": "https://www.theguardian.com/us/commentisfree/rss",
+    "thumbnail": "https://i.guim.co.uk/img/media/9284f096b4cb5aeb292bd1b457abb4124d70a1ea/201_0_5998_4800/master/5998.jpg?width=140&quality=85&auto=format&fit=max&s=5bf019b6530b2d72dabc75f872b6a222",
+    "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "https://timesofindia.indiatimes.com/blogs/?p=270427",
+    "title": "China and India can make Greater Brics a force for the Global South",
+    "link": "https://timesofindia.indiatimes.com/blogs/voices/china-and-india-can-make-greater-brics-a-force-for-the-global-south/",
+    "description": "The 18th Brics summit will open in New Delhi on September 12 to 13. India holds the rotating chairmanship this year under the theme “Building for Resilience, Innovation, Cooperation and Sustainability.” The gathering comes as...",
+    "published": "Fri, 11 Sep 2026 08:12:07 +0000",
+    "source": "https://blogs.timesofindia.indiatimes.com/feed/defaultrss"
   }
 ]
