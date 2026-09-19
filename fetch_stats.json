@@ -12,13 +12,13 @@
     },
     "https://evilgodfahim.github.io/csis/rss.xml": {
       "fetched": 8,
-      "passed_age": 2,
-      "capped": 2
+      "passed_age": 3,
+      "capped": 3
     },
     "https://evilgodfahim.github.io/intop/filtered.xml": {
       "fetched": 1000,
-      "passed_age": 30,
-      "capped": 30
+      "passed_age": 33,
+      "capped": 33
     },
     "https://politepaul.com/fd/M8QukWfUPWR4.xml": {
       "fetched": 0,
@@ -52,8 +52,8 @@
     },
     "https://www.defenseone.com/rss/all/": {
       "fetched": 21,
-      "passed_age": 3,
-      "capped": 3
+      "passed_age": 4,
+      "capped": 4
     },
     "https://politepaul.com/fd/9RMAFvRRGLst.xml": {
       "fetched": 0,
@@ -142,8 +142,8 @@
     },
     "https://www.atlanticcouncil.org/feed/": {
       "fetched": 100,
-      "passed_age": 6,
-      "capped": 6
+      "passed_age": 3,
+      "capped": 3
     },
     "https://warontherocks.com/feed/": {
       "fetched": 100,
@@ -167,8 +167,8 @@
     },
     "https://evilgodfahim.github.io/nytop/combined.xml": {
       "fetched": 69,
-      "passed_age": 17,
-      "capped": 17
+      "passed_age": 19,
+      "capped": 19
     },
     "https://theconversation.com/global/home-page.atom": {
       "fetched": 25,
@@ -307,13 +307,13 @@
     },
     "https://feeds.feedburner.com/worldpoliticsreview": {
       "fetched": 10,
-      "passed_age": 4,
-      "capped": 4
+      "passed_age": 3,
+      "capped": 3
     },
     "https://www.worldpoliticsreview.com/feed/": {
       "fetched": 10,
-      "passed_age": 4,
-      "capped": 4
+      "passed_age": 3,
+      "capped": 3
     },
     "https://www.rand.org/blog.xml": {
       "fetched": 20,
@@ -382,8 +382,8 @@
     },
     "https://www.theguardian.com/us/commentisfree/rss": {
       "fetched": 36,
-      "passed_age": 13,
-      "capped": 13
+      "passed_age": 12,
+      "capped": 12
     },
     "https://blogs.timesofindia.indiatimes.com/feed/defaultrss": {
       "fetched": 20,
@@ -446,11 +446,11 @@
     "DIRECT": 2317
   },
   "total_fetched": 2317,
-  "total_passed_age": 241,
-  "total_new": 47,
-  "total_signal": 24,
+  "total_passed_age": 245,
+  "total_new": 20,
+  "total_signal": 12,
   "total_longread": 16,
-  "timestamp": "2026-09-18T21:35:07.905483",
-  "total_signal_deduped": 13,
+  "timestamp": "2026-09-19T00:03:59.368453",
+  "total_signal_deduped": 12,
   "total_longread_deduped": 16
 }
