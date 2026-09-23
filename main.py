@@ -17,6 +17,7 @@ import json
 import os
 import time
 import re
+import sys
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 import xml.etree.ElementTree as ET
@@ -660,7 +661,7 @@ def send_to_mistral(articles):
 
     except Exception as e:
         print(f"Gemini classification error: {e}")
-        return {"signal": []}
+        sys.exit(1)
 
 
 def deduplicate_articles(articles):
