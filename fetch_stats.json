@@ -2,8 +2,8 @@
   "per_feed": {
     "https://asiatimes.com/feed/": {
       "fetched": 20,
-      "passed_age": 9,
-      "capped": 9
+      "passed_age": 11,
+      "capped": 11
     },
     "https://politepaul.com/fd/TefnRxuxFzO0.xml": {
       "fetched": 0,
@@ -12,13 +12,13 @@
     },
     "https://evilgodfahim.github.io/csis/rss.xml": {
       "fetched": 7,
-      "passed_age": 5,
-      "capped": 5
+      "passed_age": 0,
+      "capped": 0
     },
     "https://evilgodfahim.github.io/intop/filtered.xml": {
       "fetched": 1000,
-      "passed_age": 29,
-      "capped": 29
+      "passed_age": 31,
+      "capped": 31
     },
     "https://politepaul.com/fd/M8QukWfUPWR4.xml": {
       "fetched": 0,
@@ -32,8 +32,8 @@
     },
     "https://www.thecipherbrief.com/feed": {
       "fetched": 30,
-      "passed_age": 3,
-      "capped": 3
+      "passed_age": 4,
+      "capped": 4
     },
     "https://www.bellingcat.com/feed/": {
       "fetched": 10,
@@ -51,7 +51,7 @@
       "capped": 0
     },
     "https://www.defenseone.com/rss/all/": {
-      "fetched": 21,
+      "fetched": 20,
       "passed_age": 4,
       "capped": 4
     },
@@ -62,8 +62,8 @@
     },
     "https://www.globalpolicyjournal.com/blog/author/%2A/feed": {
       "fetched": 10,
-      "passed_age": 3,
-      "capped": 3
+      "passed_age": 1,
+      "capped": 1
     },
     "https://www.e-ir.info/feed/": {
       "fetched": 0,
@@ -77,8 +77,8 @@
     },
     "https://responsiblestatecraft.org/feed/": {
       "fetched": 30,
-      "passed_age": 6,
-      "capped": 6
+      "passed_age": 5,
+      "capped": 5
     },
     "https://politepaul.com/fd/ffERiOdKxWlq.xml": {
       "fetched": 0,
@@ -137,13 +137,13 @@
     },
     "https://original.antiwar.com/feed/": {
       "fetched": 10,
-      "passed_age": 1,
-      "capped": 1
+      "passed_age": 2,
+      "capped": 2
     },
     "https://www.atlanticcouncil.org/feed/": {
       "fetched": 100,
-      "passed_age": 6,
-      "capped": 6
+      "passed_age": 7,
+      "capped": 7
     },
     "https://warontherocks.com/feed/": {
       "fetched": 100,
@@ -152,8 +152,8 @@
     },
     "https://www.thehindu.com/opinion/editorial/?service=rss": {
       "fetched": 120,
-      "passed_age": 4,
-      "capped": 4
+      "passed_age": 2,
+      "capped": 2
     },
     "https://politepaul.com/fd/aCEp2lWYu3Jn.xml": {
       "fetched": 0,
@@ -162,8 +162,8 @@
     },
     "https://evilgodfahim.github.io/fto/combined.xml": {
       "fetched": 25,
-      "passed_age": 9,
-      "capped": 9
+      "passed_age": 5,
+      "capped": 5
     },
     "https://evilgodfahim.github.io/nytop/combined.xml": {
       "fetched": 70,
@@ -256,7 +256,7 @@
       "capped": 0
     },
     "https://gulfif.org/feed/": {
-      "fetched": 10,
+      "fetched": 0,
       "passed_age": 0,
       "capped": 0
     },
@@ -342,8 +342,8 @@
     },
     "https://www.politico.eu/section/foreign-affairs/feed/": {
       "fetched": 31,
-      "passed_age": 1,
-      "capped": 1
+      "passed_age": 2,
+      "capped": 2
     },
     "https://www.moonofalabama.org/atom.xml": {
       "fetched": 0,
@@ -382,8 +382,8 @@
     },
     "https://www.theguardian.com/us/commentisfree/rss": {
       "fetched": 36,
-      "passed_age": 12,
-      "capped": 12
+      "passed_age": 13,
+      "capped": 13
     },
     "https://blogs.timesofindia.indiatimes.com/feed/defaultrss": {
       "fetched": 20,
@@ -407,23 +407,23 @@
     },
     "https://www.thehindu.com/opinion/?service=rss": {
       "fetched": 60,
-      "passed_age": 16,
-      "capped": 16
+      "passed_age": 14,
+      "capped": 14
     },
     "https://www.hindustantimes.com/feeds/rss/opinion/rssfeed.xml": {
-      "fetched": 10,
+      "fetched": 9,
       "passed_age": 5,
       "capped": 5
     },
     "https://feeds.feedburner.com/Consortiumnewscom": {
       "fetched": 10,
-      "passed_age": 3,
-      "capped": 3
+      "passed_age": 4,
+      "capped": 4
     },
     "https://evilgodfahim.github.io/org/daily_feed.xml": {
-      "fetched": 9,
-      "passed_age": 0,
-      "capped": 0
+      "fetched": 17,
+      "passed_age": 15,
+      "capped": 15
     },
     "https://www.eiu.com/n/feed/": {
       "fetched": 10,
@@ -432,8 +432,8 @@
     },
     "https://www.lowyinstitute.org/the-interpreter/rss.xml": {
       "fetched": 50,
-      "passed_age": 2,
-      "capped": 2
+      "passed_age": 3,
+      "capped": 3
     },
     "https://feeds.feedburner.com/AtlanticInternational": {
       "fetched": 25,
@@ -443,14 +443,14 @@
   },
   "per_method": {
     "KL": 0,
-    "DIRECT": 2317
+    "DIRECT": 2313
   },
-  "total_fetched": 2317,
-  "total_passed_age": 236,
-  "total_new": 20,
-  "total_signal": 15,
+  "total_fetched": 2313,
+  "total_passed_age": 246,
+  "total_new": 55,
+  "total_signal": 32,
   "total_longread": 16,
-  "timestamp": "2026-09-23T00:13:24.315744",
-  "total_signal_deduped": 15,
+  "timestamp": "2026-09-23T05:44:13.509693",
+  "total_signal_deduped": 32,
   "total_longread_deduped": 16
 }
