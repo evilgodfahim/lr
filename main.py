@@ -225,7 +225,7 @@ KL_API_FEEDS = set()
 
 # -- CONFIG --------------------------------------------------------------------
 
-DEDUP_MODEL           = "gemini-3.6-flash"
+DEDUP_MODEL           = "gemini-3.8-flash"
 MISTRAL_MODEL         = "gemini-3-flash-preview"
 PROCESSED_FILE        = "processed_articles.json"
 SELECTED_FILE         = "selected_articles.json"
