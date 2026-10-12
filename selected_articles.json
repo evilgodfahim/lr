@@ -231360,5 +231360,59 @@
     "source": "https://www.spiegel.de/international/index.rss",
     "thumbnail": "https://cdn.prod.www.spiegel.de/images/caa40ce7-f331-4deb-a29d-b0a7cd41a29e_w520_r2.08_fpx33.75_fpy55.01.jpg",
     "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/10/faa-tells-us-airlines-exercise-caution-saudi-arabia-flights-citing-safety-risks",
+    "title": "FAA tells US airlines to exercise caution in Saudi Arabia flights, citing safety risks",
+    "link": "https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/10/faa-tells-us-airlines-exercise-caution-saudi-arabia-flights-citing-safety-risks",
+    "description": "<p>By David Shepardson</p><p>WASHINGTON, Oct 11 (Reuters) - The Federal Aviation Administration told US airlines on Sunday to exercise caution when flying to or over Saudi Arabia, citing safety threats tied to ongoing military activities and navigation system interference.</p><p>The FAA Notice to Airmen, which lasts until December 10, follows strikes on Saturday and Sunday on Riyadh's international airport. The attack on Saturday killed 13 people and wounded more than 300.</p>",
+    "published": "Sun, 11 Oct 2026 22:46:26 +0000",
+    "source": "https://evilgodfahim.github.io/alm/combined.xml"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/10/saudi-iranian-foreign-ministers-discuss-regional-tensions-state-news-agency-says",
+    "title": "Saudi, Iranian foreign ministers discuss regional tensions, state news agency says",
+    "link": "https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/10/saudi-iranian-foreign-ministers-discuss-regional-tensions-state-news-agency-says",
+    "description": "<p>Oct 11 (Reuters) - Saudi Arabia's foreign minister spoke with his Iranian counterpart about the recent escalation of the regional conflict and efforts to lower tensions, the Saudi state news agency reported on Sunday, the officials' first publicly reported contact since Iran-aligned Houthis intensified strikes on the kingdom.</p><p>Iran's foreign minister said Tehran is ready to provide any assistance to facilitate dialogue between Saudi Arabia and Yemen, according to a post on the minister's Telegram account.</p>",
+    "published": "Sun, 11 Oct 2026 21:46:27 +0000",
+    "source": "https://evilgodfahim.github.io/alm/combined.xml"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/10/us-republicans-democrats-want-trump-reverse-course-russia-diesel",
+    "title": "US Republicans, Democrats want Trump to reverse course on Russia diesel",
+    "link": "https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/10/us-republicans-democrats-want-trump-reverse-course-russia-diesel",
+    "description": "<p>By Jan Wolfe and Patricia Zengerle</p><p>Oct 11 (Reuters) - Republican and Democratic US senators called on President Donald Trump on Sunday to \"reverse course\" on his diesel supply deal with Russia, saying it runs counter to US law barring imports of energy until Russia ends its aggression against Ukraine.</p><p>\"Congress explicitly banned Russian energy imports in 2022 to prevent American dollars from financing (Russian President Vladimir) Putin’s brutal war against Ukraine,\" the seven senators - four of Trump's fellow Republicans and three Democrats - said in a statement.</p>",
+    "published": "Sun, 11 Oct 2026 16:46:30 +0000",
+    "source": "https://evilgodfahim.github.io/alm/combined.xml"
+  },
+  {
+    "id": "https://www.hindustantimes.com/opinion/the-middle-power-question-that-new-delhi-faces-today-101791746755502.html",
+    "title": "The middle-power question that New Delhi faces today",
+    "link": "https://www.hindustantimes.com/opinion/the-middle-power-question-that-new-delhi-faces-today-101791746755502.html",
+    "description": "Where does India stand on the middle power conversation? India’s answer to this moment has been ambivalent. New Delhi is both tempted by the idea and resists it",
+    "published": "Mon, 12 Oct 2026 00:40:27 +0000",
+    "source": "https://www.hindustantimes.com/feeds/rss/opinion/rssfeed.xml",
+    "thumbnail": "https://www.hindustantimes.com/ht-img/img/2026/10/11/1600x900/logo/if-the-middle-power-coalitions-turn-into-talk-shop_1791746749485_4g3P.jpg",
+    "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "https://www.lowyinstitute.org/the-interpreter/bilateral-aid-in-retreat-in-southeast-asia-and-the-poorest-will-pay",
+    "title": "Bilateral aid in retreat in Southeast Asia, and the poorest will pay",
+    "link": "https://www.lowyinstitute.org/the-interpreter/bilateral-aid-in-retreat-in-southeast-asia-and-the-poorest-will-pay",
+    "description": "Multilateral banks are stepping into a regional aid gap but their loans don’t suit all.",
+    "published": "Sun, 11 Oct 2026 13:00:00 +0000",
+    "source": "https://www.lowyinstitute.org/the-interpreter/rss.xml",
+    "thumbnail": "https://cdn.sanity.io/images/5dcouzig/production/27880410f80764e0feeb690a47850b8f24648ab4-4818x3212.jpg?rect=0,342,4818,2529&w=1200&h=630&fm=webp&q=85&fit=crop",
+    "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "https://www.lowyinstitute.org/the-interpreter/trump-s-cost-of-living-politics-just-rescued-putin-s-war-chest",
+    "title": "Trump’s cost-of-living politics just rescued Putin’s war chest",
+    "link": "https://www.lowyinstitute.org/the-interpreter/trump-s-cost-of-living-politics-just-rescued-putin-s-war-chest",
+    "description": "A fuel shipment gave Trump the pre-election boost he craved – and made Kyiv’s best tactic newly dangerous.",
+    "published": "Sun, 11 Oct 2026 13:00:00 +0000",
+    "source": "https://www.lowyinstitute.org/the-interpreter/rss.xml",
+    "thumbnail": "https://cdn.sanity.io/images/5dcouzig/production/108cd98c3e2de9055112c6130cb4d0bee06c34df-2048x1365.jpg?rect=0,146,2048,1075&w=1200&h=630&fm=webp&q=85&fit=crop",
+    "thumbnail_type": "image/jpeg"
   }
 ]

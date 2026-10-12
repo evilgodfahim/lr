@@ -107,8 +107,8 @@
     },
     "https://evilgodfahim.github.io/alm/combined.xml": {
       "fetched": 20,
-      "passed_age": 7,
-      "capped": 7
+      "passed_age": 9,
+      "capped": 9
     },
     "https://evilgodfahim.github.io/start/combined.xml": {
       "fetched": 0,
@@ -212,8 +212,8 @@
     },
     "https://medium.com/feed/tag/foreign-policy": {
       "fetched": 10,
-      "passed_age": 8,
-      "capped": 8
+      "passed_age": 7,
+      "capped": 7
     },
     "https://www.hrw.org/taxonomy/term/9653/feed": {
       "fetched": 0,
@@ -256,7 +256,7 @@
       "capped": 0
     },
     "https://gulfif.org/feed/": {
-      "fetched": 0,
+      "fetched": 10,
       "passed_age": 0,
       "capped": 0
     },
@@ -412,8 +412,8 @@
     },
     "https://www.hindustantimes.com/feeds/rss/opinion/rssfeed.xml": {
       "fetched": 7,
-      "passed_age": 4,
-      "capped": 4
+      "passed_age": 7,
+      "capped": 7
     },
     "https://feeds.feedburner.com/Consortiumnewscom": {
       "fetched": 10,
@@ -422,8 +422,8 @@
     },
     "https://evilgodfahim.github.io/org/daily_feed.xml": {
       "fetched": 1,
-      "passed_age": 1,
-      "capped": 1
+      "passed_age": 0,
+      "capped": 0
     },
     "https://www.eiu.com/n/feed/": {
       "fetched": 10,
@@ -432,8 +432,8 @@
     },
     "https://www.lowyinstitute.org/the-interpreter/rss.xml": {
       "fetched": 50,
-      "passed_age": 1,
-      "capped": 1
+      "passed_age": 3,
+      "capped": 3
     },
     "https://feeds.feedburner.com/AtlanticInternational": {
       "fetched": 25,
@@ -443,14 +443,14 @@
   },
   "per_method": {
     "KL": 0,
-    "DIRECT": 2269
+    "DIRECT": 2279
   },
-  "total_fetched": 2269,
-  "total_passed_age": 113,
-  "total_new": 21,
+  "total_fetched": 2279,
+  "total_passed_age": 118,
+  "total_new": 8,
   "total_signal": 6,
   "total_longread": 16,
-  "timestamp": "2026-10-11T22:23:59.232363",
-  "total_signal_deduped": 5,
+  "timestamp": "2026-10-12T01:20:22.610058",
+  "total_signal_deduped": 6,
   "total_longread_deduped": 16
 }
