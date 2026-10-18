@@ -236428,5 +236428,39 @@
     "source": "https://www.lowyinstitute.org/the-interpreter/rss.xml",
     "thumbnail": "https://cdn.sanity.io/images/5dcouzig/production/dffa2b3d904fe8f8abe740426ceeef1191ae008a-4000x2666.jpg?rect=0,283,4000,2100&w=1200&h=630&fm=webp&q=85&fit=crop",
     "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "https://www.aljazeera.com/video/newsfeed/2026/10/18/residents-recount-drone-strikes-in-ethiopias-northern-tigray-region?traffic_source=rss",
+    "title": "Residents recount drone strikes in Ethiopia’s northern Tigray region",
+    "link": "https://www.aljazeera.com/video/newsfeed/2026/10/18/residents-recount-drone-strikes-in-ethiopias-northern-tigray-region?traffic_source=rss",
+    "description": "",
+    "published": "Sun, 18 Oct 2026 17:20:20 +0000",
+    "source": "https://evilgodfahim.github.io/intop/filtered.xml"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/10/us-officials-visit-palestinian-village-after-settler-attacks-diplomats",
+    "title": "US officials visit Palestinian village after settler attacks on diplomats",
+    "link": "https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/10/us-officials-visit-palestinian-village-after-settler-attacks-diplomats",
+    "description": "<p>By Ali Sawafta and Steven Scheer</p><p>TAYBEH, West Bank/JERUSALEM, Oct 18 (Reuters) - US diplomats visited a Christian Palestinian town in the Israeli-occupied West Bank on Sunday following attacks by militant Israeli settlers on European diplomats and an American photojournalist in the previous two days.</p><p>Riley Barnes, assistant secretary of state for democracy, human rights and labor, Brian Burch, US ambassador to the Holy See, and a number of other diplomats visited the Latin Convent church and were expected to meet with members of the Christian community in Taybeh.</p>",
+    "published": "Sun, 18 Oct 2026 15:46:29 +0000",
+    "source": "https://evilgodfahim.github.io/alm/combined.xml"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/10/egypt-says-ready-give-saudi-arabia-necessary-support-amid-houthi-conflict",
+    "title": "Egypt says ready to give Saudi Arabia necessary support amid Houthi conflict",
+    "link": "https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/10/egypt-says-ready-give-saudi-arabia-necessary-support-amid-houthi-conflict",
+    "description": "<p>Oct 18 (Reuters) - Egypt is ready to provide Saudi Arabia with the support it needs to defend its security and stability, the presidency said on Sunday, as Yemen's Iran-aligned Houthis intensify their attacks on the world's largest oil exporter.</p><p>Egyptian President Abdel Fattah al-Sisi requested an urgent parliament session to authorise the military, one of the Arab world's largest, to help defend Saudi Arabia if the kingdom requested its support.</p>",
+    "published": "Sun, 18 Oct 2026 14:46:26 +0000",
+    "source": "https://evilgodfahim.github.io/alm/combined.xml"
+  },
+  {
+    "id": "https://www.eurasiantimes.com/?p=302897",
+    "title": "New U.S. Missile Aims To Outmaneuver Russia’s Maneuvering Missiles: Here’s Patriot’s Evolution to PAC-3 Edge",
+    "link": "https://www.eurasiantimes.com/patriot-lockheed-martin-pac-3-edge/",
+    "description": "<p>Amid global demand for Patriot interceptors, Lockheed Martin recently unveiled its most advanced interceptor, the PAC-3 Edge, which could offer improved performance against ballistic missiles and hypersonic threats. EurAsian Times takes a deep dive into the evolution of Patriot Air Defense Systems, but before that, let&#8217;s start with the news. PAC-3 EDGE The new interceptor [&#8230;]</p>\n<p>The post <a href=\"https://www.eurasiantimes.com/patriot-lockheed-martin-pac-3-edge/\">New U.S. Missile Aims To Outmaneuver Russia’s Maneuvering Missiles: Here&#8217;s Patriot’s Evolution to PAC-3 Edge</a> appeared first on <a href=\"https://www.eurasiantimes.com\">EURASIAN TIMES</a>.</p>",
+    "published": "Sun, 18 Oct 2026 16:56:41 +0000",
+    "source": "https://eurasiantimes.com/feed/",
+    "thumbnail": "https://www.eurasiantimes.com/wp-content/uploads/2026/07/Screenshot-2026-07-22-182247.jpg",
+    "thumbnail_type": "image/jpeg"
   }
 ]
