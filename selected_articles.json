@@ -238978,5 +238978,49 @@
     "source": "https://www.lowyinstitute.org/the-interpreter/rss.xml",
     "thumbnail": "https://cdn.sanity.io/images/5dcouzig/production/6937369c0d99454dc7c9287365145feb471b853b-2200x1426.jpg?rect=0,136,2200,1155&w=1200&h=630&fm=webp&q=85&fit=crop",
     "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "https://tass.com/politics/2205599",
+    "title": "Putin and Witkoff discuss resumption of trilateral talks on Ukraine — Kremlin aide",
+    "link": "https://tass.com/politics/2205599",
+    "description": "",
+    "published": "Wed, 21 Oct 2026 13:58:51 +0000",
+    "source": "https://evilgodfahim.github.io/intop/filtered.xml"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/10/washington-orders-us-embassy-staff-families-leave-saudi-arabia",
+    "title": "Washington orders US embassy staff, families to leave Saudi Arabia",
+    "link": "https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/10/washington-orders-us-embassy-staff-families-leave-saudi-arabia",
+    "description": "<p>The United States has ordered non-essential US embassy staff and their families to leave Saudi Arabia, the State Department said on Wednesday, as the kingdom comes under sustained deadly attacks&nbsp;by Yemen's Houthis.</p>  \n            <p>\"Iranian-supported Houthis have increasingly engaged in hostilities against Saudi Arabia, including attacks on civilian airports and other critical infrastructure resulting in civilian casualties and severe travel disruptions,\" State Department spokesman Tommy Pigott said in a social media post explaining the measure.</p>",
+    "published": "Wed, 21 Oct 2026 21:30:32 +0000",
+    "source": "https://evilgodfahim.github.io/alm/combined.xml"
+  },
+  {
+    "id": "https://tass.com/politics/2205599",
+    "title": "Putin and Witkoff discuss resumption of trilateral talks on Ukraine — Kremlin aide",
+    "link": "https://tass.com/politics/2205599",
+    "description": "",
+    "published": "Wed, 21 Oct 2026 13:58:51 +0000",
+    "source": "https://evilgodfahim.github.io/intop/filtered.xml"
+  },
+  {
+    "id": "https://www.hindustantimes.com/opinion/end-the-unsc-control-on-picking-the-next-un-chief-101792610834110.html",
+    "title": "End the UNSC control on picking the next UN chief",
+    "link": "https://www.hindustantimes.com/opinion/end-the-unsc-control-on-picking-the-next-un-chief-101792610834110.html",
+    "description": "Vetoes blocked two women in the race to lead the UN, exposing P5 dominance and prompting calls to give the General Assembly more power.",
+    "published": "Thu, 22 Oct 2026 00:40:11 +0000",
+    "source": "https://www.hindustantimes.com/feeds/rss/opinion/rssfeed.xml",
+    "thumbnail": "https://www.hindustantimes.com/ht-img/img/2026/10/21/1600x900/logo/UNGA-can-adopt-a-resolution-with-a-simple-majority_1792610821747_Rilz.jpg",
+    "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "https://www.hindustantimes.com/opinion/rules-about-laws-india-must-lead-from-the-front-101792610821642.html",
+    "title": "Rules about LAWS: India must lead from the front",
+    "link": "https://www.hindustantimes.com/opinion/rules-about-laws-india-must-lead-from-the-front-101792610821642.html",
+    "description": "It should work with like-minded countries to build a consensus-based global framework for lethal autonomous weapon systems",
+    "published": "Thu, 22 Oct 2026 00:35:31 +0000",
+    "source": "https://www.hindustantimes.com/feeds/rss/opinion/rssfeed.xml",
+    "thumbnail": "https://www.hindustantimes.com/ht-img/img/2026/10/21/1600x900/logo/Every-technological-revolution-in-warfare-has-test_1792610813617_iI2P.jpg",
+    "thumbnail_type": "image/jpeg"
   }
 ]
