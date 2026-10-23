@@ -12,13 +12,13 @@
     },
     "https://evilgodfahim.github.io/csis/rss.xml": {
       "fetched": 7,
-      "passed_age": 1,
-      "capped": 1
+      "passed_age": 2,
+      "capped": 2
     },
     "https://evilgodfahim.github.io/intop/filtered.xml": {
       "fetched": 1000,
-      "passed_age": 34,
-      "capped": 34
+      "passed_age": 37,
+      "capped": 37
     },
     "https://politepaul.com/fd/M8QukWfUPWR4.xml": {
       "fetched": 0,
@@ -97,8 +97,8 @@
     },
     "https://meduza.io/rss/en/all": {
       "fetched": 30,
-      "passed_age": 30,
-      "capped": 30
+      "passed_age": 29,
+      "capped": 29
     },
     "https://politepaul.com/fd/JsMAwSx6Pkbr.xml": {
       "fetched": 0,
@@ -142,13 +142,13 @@
     },
     "https://www.atlanticcouncil.org/feed/": {
       "fetched": 100,
-      "passed_age": 23,
-      "capped": 23
+      "passed_age": 3,
+      "capped": 3
     },
     "https://warontherocks.com/feed/": {
       "fetched": 100,
-      "passed_age": 2,
-      "capped": 2
+      "passed_age": 1,
+      "capped": 1
     },
     "https://www.thehindu.com/opinion/editorial/?service=rss": {
       "fetched": 120,
@@ -167,8 +167,8 @@
     },
     "https://evilgodfahim.github.io/nytop/combined.xml": {
       "fetched": 69,
-      "passed_age": 22,
-      "capped": 22
+      "passed_age": 24,
+      "capped": 24
     },
     "https://theconversation.com/global/home-page.atom": {
       "fetched": 25,
@@ -417,8 +417,8 @@
     },
     "https://feeds.feedburner.com/Consortiumnewscom": {
       "fetched": 10,
-      "passed_age": 2,
-      "capped": 2
+      "passed_age": 3,
+      "capped": 3
     },
     "https://evilgodfahim.github.io/org/daily_feed.xml": {
       "fetched": 6,
@@ -446,11 +446,11 @@
     "DIRECT": 2345
   },
   "total_fetched": 2345,
-  "total_passed_age": 259,
-  "total_new": 76,
-  "total_signal": 33,
+  "total_passed_age": 247,
+  "total_new": 24,
+  "total_signal": 11,
   "total_longread": 16,
-  "timestamp": "2026-10-23T20:41:11.032153",
-  "total_signal_deduped": 23,
+  "timestamp": "2026-10-23T23:25:20.979547",
+  "total_signal_deduped": 5,
   "total_longread_deduped": 16
 }
