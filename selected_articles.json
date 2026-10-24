@@ -240918,5 +240918,29 @@
     "source": "https://eurasiantimes.com/feed/",
     "thumbnail": "https://www.eurasiantimes.com/wp-content/uploads/2026/10/ERDOGAN.jpg",
     "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "https://www.aljazeera.com/video/newsfeed/2026/10/24/kim-jong-un-crosses-new-bridge-linking-north-korea-and-china?traffic_source=rss",
+    "title": "Kim Jong Un crosses new bridge linking North Korea and China",
+    "link": "https://www.aljazeera.com/video/newsfeed/2026/10/24/kim-jong-un-crosses-new-bridge-linking-north-korea-and-china?traffic_source=rss",
+    "description": "",
+    "published": "Sat, 24 Oct 2026 18:00:20 +0000",
+    "source": "https://evilgodfahim.github.io/intop/filtered.xml"
+  },
+  {
+    "id": "https://www.dw.com/en/why-russia-s-arrest-of-japanese-journalist-is-the-latest-sign-of-deteriorating-ties-between-the-countries/a-79742995?maca=en-rss-en-world-4025-rdf",
+    "title": "Why Russias arrest of Japanese journalist is the latest sign of deteriorating ties between the countries.",
+    "link": "https://www.dw.com/en/why-russia-s-arrest-of-japanese-journalist-is-the-latest-sign-of-deteriorating-ties-between-the-countries/a-79742995?maca=en-rss-en-world-4025-rdf",
+    "description": "",
+    "published": "Sat, 24 Oct 2026 05:29:00 +0000",
+    "source": "https://evilgodfahim.github.io/intop/filtered.xml"
+  },
+  {
+    "id": "https://www.hindustantimes.com/world-news/gaza-strikes-to-iran-war-the-battles-shaping-israel-s-election-101792768948091.html",
+    "title": "Gaza strikes to Iran war: The battles shaping Israel’s election",
+    "link": "https://www.hindustantimes.com/world-news/gaza-strikes-to-iran-war-the-battles-shaping-israel-s-election-101792768948091.html",
+    "description": "",
+    "published": "Sat, 24 Oct 2026 11:14:04 +0000",
+    "source": "https://evilgodfahim.github.io/intop/filtered.xml"
   }
 ]
