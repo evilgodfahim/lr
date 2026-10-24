@@ -240836,5 +240836,37 @@
     "source": "https://eurasiantimes.com/feed/",
     "thumbnail": "https://pbs.twimg.com/media/HVTp3ueWgAAYn9I?format=jpg&amp;name=4096x4096",
     "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "https://www.aljazeera.com/video/newsfeed/2026/10/24/ethiopian-pms-advisor-tigrayan-forces-and-others-hinder-stability?traffic_source=rss",
+    "title": "Ethiopian PM’s advisor: Tigrayan forces and others hinder stability",
+    "link": "https://www.aljazeera.com/video/newsfeed/2026/10/24/ethiopian-pms-advisor-tigrayan-forces-and-others-hinder-stability?traffic_source=rss",
+    "description": "",
+    "published": "Sat, 24 Oct 2026 09:32:22 +0000",
+    "source": "https://evilgodfahim.github.io/intop/filtered.xml"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/10/around-1200-palestinians-are-displaced-hebron-israel-begins-military-operation",
+    "title": "Around 1,200 Palestinians are displaced in Hebron as Israel begins military operation",
+    "link": "https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/10/around-1200-palestinians-are-displaced-hebron-israel-begins-military-operation",
+    "description": "<p>JERUSALEM, Oct 24 (Reuters) - The Israeli military forced around 1,200 Palestinians to leave their homes in Hebron in the occupied West Bank, a Palestinian official said on Saturday, a day after a Palestinian attack killed two Israeli soldiers.</p><p>Israeli Prime Minister Benjamin Netanyahu on Friday had said the military would launch a large-scale operation after the soldiers were killed when when two Palestinian gunmenopened fire at a military checkpoint near the city. The Israeli military said the gunmen were shot dead.</p>",
+    "published": "Sat, 24 Oct 2026 12:46:38 +0000",
+    "source": "https://evilgodfahim.github.io/alm/combined.xml"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/10/us-issues-travel-advisories-across-middle-east-citing-houthi-threat",
+    "title": "US issues travel advisories across Middle East citing Houthi threat",
+    "link": "https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/10/us-issues-travel-advisories-across-middle-east-citing-houthi-threat",
+    "description": "A State Department spokesperson said the travel warnings were \"not indicative\" of new Houthi capabilities.",
+    "published": "Fri, 23 Oct 2026 20:28:11 +0000",
+    "source": "https://evilgodfahim.github.io/alm/combined.xml"
+  },
+  {
+    "id": "https://ipdefenseforum.com/?p=222801",
+    "title": "New Zealand boosting Fiji’s cybersecurity capabilities amid suspected China-linked hacking",
+    "link": "https://ipdefenseforum.com/2026/10/new-zealand-boosting-fijis-cybersecurity-capabilities-amid-suspected-china-linked-hacking/?&",
+    "description": "Reuters New Zealand’s intelligence agency will help enhance Fiji’s security sector after United States warnings of suspected China-linked cyber intrusions highlighted concerns about vulnerabilities in the Pacific Island Country. Fiji said it approved a six-month partnership with the New Zealand Security Intelligence Service (NZSIS), funded by Wellington, to assess its intelligence structure and recommend reforms. &#8230;",
+    "published": "Sat, 24 Oct 2026 14:00:28 +0000",
+    "source": "https://ipdefenseforum.com/feed/"
   }
 ]
