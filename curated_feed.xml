@@ -4,14 +4,7 @@
     <title>Curated News</title>
     <link>https://yourusername.github.io/yourrepo/</link>
     <description>AI-curated signal: international affairs and Bangladesh news</description>
-    <lastBuildDate>Sat, 24 Oct 2026 23:56:09 +0000</lastBuildDate>
-    <item>
-      <title>Kinship and surveillance: The return of Somali piracy</title>
-      <link>https://www.aljazeera.com/news/2026/10/19/kinship-and-surveillance-the-return-of-somali-piracy?traffic_source=rss</link>
-      <guid isPermaLink="true">https://www.aljazeera.com/news/2026/10/19/kinship-and-surveillance-the-return-of-somali-piracy?traffic_source=rss</guid>
-      <description />
-      <pubDate>Mon, 19 Oct 2026 00:56:17 +0000</pubDate>
-    </item>
+    <lastBuildDate>Sun, 25 Oct 2026 02:22:45 +0000</lastBuildDate>
     <item>
       <title>New in SpyWeek: Starlink Chaos, Ukraine Spy Coup, Trump’s Agents in Pro-Russia Balkans</title>
       <link>https://www.spytalk.co/p/new-in-spyweek-starlink-chaos-ukraine</link>
@@ -4575,6 +4568,13 @@
       <guid isPermaLink="true">https://www.straitstimes.com/world/europe/inside-the-trump-administration-campaign-to-return-brazils-bolsonaro-clan-to-power</guid>
       <description />
       <pubDate>Sat, 24 Oct 2026 21:50:22 +0000</pubDate>
+    </item>
+    <item>
+      <title>Putin puts Trump ahead of Iran in bid to mediate war</title>
+      <link>https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/10/putin-puts-trump-ahead-iran-bid-mediate-war</link>
+      <guid isPermaLink="true">https://www.al-monitor.com/originals/2026/10/putin-puts-trump-ahead-iran-bid-mediate-war</guid>
+      <description>Anton Mardosov, reporting from Moscow, and our correspondent in Tehran assess the limits of Russian influence in Iran; Ben Caspit reports that Netanyahu could force a unity government with an attack on Iran after the elections.</description>
+      <pubDate>Sat, 24 Oct 2026 21:20:17 +0000</pubDate>
     </item>
   </channel>
 </rss>
