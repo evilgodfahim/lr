@@ -17,8 +17,8 @@
     },
     "https://evilgodfahim.github.io/intop/filtered.xml": {
       "fetched": 1000,
-      "passed_age": 22,
-      "capped": 22
+      "passed_age": 23,
+      "capped": 23
     },
     "https://politepaul.com/fd/M8QukWfUPWR4.xml": {
       "fetched": 0,
@@ -107,8 +107,8 @@
     },
     "https://evilgodfahim.github.io/alm/combined.xml": {
       "fetched": 20,
-      "passed_age": 18,
-      "capped": 18
+      "passed_age": 17,
+      "capped": 17
     },
     "https://evilgodfahim.github.io/start/combined.xml": {
       "fetched": 0,
@@ -167,8 +167,8 @@
     },
     "https://evilgodfahim.github.io/nytop/combined.xml": {
       "fetched": 69,
-      "passed_age": 18,
-      "capped": 18
+      "passed_age": 17,
+      "capped": 17
     },
     "https://theconversation.com/global/home-page.atom": {
       "fetched": 25,
@@ -382,8 +382,8 @@
     },
     "https://www.theguardian.com/us/commentisfree/rss": {
       "fetched": 36,
-      "passed_age": 6,
-      "capped": 6
+      "passed_age": 5,
+      "capped": 5
     },
     "https://blogs.timesofindia.indiatimes.com/feed/defaultrss": {
       "fetched": 20,
@@ -407,8 +407,8 @@
     },
     "https://www.thehindu.com/opinion/?service=rss": {
       "fetched": 60,
-      "passed_age": 9,
-      "capped": 9
+      "passed_age": 11,
+      "capped": 11
     },
     "https://www.hindustantimes.com/feeds/rss/opinion/rssfeed.xml": {
       "fetched": 7,
@@ -417,8 +417,8 @@
     },
     "https://feeds.feedburner.com/Consortiumnewscom": {
       "fetched": 10,
-      "passed_age": 1,
-      "capped": 1
+      "passed_age": 0,
+      "capped": 0
     },
     "https://evilgodfahim.github.io/org/daily_feed.xml": {
       "fetched": 1,
@@ -447,10 +447,10 @@
   },
   "total_fetched": 2341,
   "total_passed_age": 125,
-  "total_new": 18,
-  "total_signal": 6,
+  "total_new": 12,
+  "total_signal": 4,
   "total_longread": 16,
-  "timestamp": "2026-10-25T19:27:29.675386",
-  "total_signal_deduped": 4,
+  "timestamp": "2026-10-25T22:01:19.476956",
+  "total_signal_deduped": 3,
   "total_longread_deduped": 16
 }
