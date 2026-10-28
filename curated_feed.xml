@@ -4,16 +4,7 @@
     <title>Curated News</title>
     <link>https://yourusername.github.io/yourrepo/</link>
     <description>AI-curated signal: international affairs and Bangladesh news</description>
-    <lastBuildDate>Tue, 27 Oct 2026 22:59:12 +0000</lastBuildDate>
-    <item>
-      <title>Russia’s FSB says it detained German citizen who fought for Ukraine</title>
-      <link>https://meduza.io/en/news/2026/10/21/fsb-says-it-detained-german-citizen-who-fought-for-ukraine</link>
-      <guid isPermaLink="true">https://meduza.io/en/news/2026/10/21/fsb-says-it-detained-german-citizen-who-fought-for-ukraine</guid>
-      <description>&lt;p&gt;Russia’s Federal Security Service (FSB) said Russian law enforcement authorities detained a German citizen who allegedly signed a contract with the Ukrainian army and deserted.&lt;p&gt;</description>
-      <pubDate>Wed, 21 Oct 2026 09:13:19 +0000</pubDate>
-      <media:thumbnail url="https://meduza.io/imgly/share/1792574135/en/news/2026/10/21/fsb-says-it-detained-german-citizen-who-fought-for-ukraine" />
-      <enclosure url="https://meduza.io/imgly/share/1792574135/en/news/2026/10/21/fsb-says-it-detained-german-citizen-who-fought-for-ukraine" type="image/jpeg" length="0" />
-    </item>
+    <lastBuildDate>Wed, 28 Oct 2026 01:59:19 +0000</lastBuildDate>
     <item>
       <title>Kremlin warned Germany after Leipzig airport sabotage that it won’t be the last attack, WSJ reports</title>
       <link>https://meduza.io/en/news/2026/10/21/kremlin-warned-germany-after-leipzig-airport-sabotage-that-it-won-t-be-the-last-attack-wsj-reports</link>
@@ -4749,6 +4740,13 @@
       <pubDate>Tue, 27 Oct 2026 22:26:00 +0000</pubDate>
       <media:thumbnail url="https://cdn.sanity.io/images/5dcouzig/production/ef5adf3c485b1020d35c2d23df91d8762a559203-1268x1600.jpg?rect=0,316,1268,666&amp;w=1200&amp;h=630&amp;fm=webp&amp;q=85&amp;fit=crop" />
       <enclosure url="https://cdn.sanity.io/images/5dcouzig/production/ef5adf3c485b1020d35c2d23df91d8762a559203-1268x1600.jpg?rect=0,316,1268,666&amp;w=1200&amp;h=630&amp;fm=webp&amp;q=85&amp;fit=crop" type="image/jpeg" length="0" />
+    </item>
+    <item>
+      <title>What we know about Ukraine-Russia truce in Oleshky, brokered by Melania Trump</title>
+      <link>https://www.bbc.co.uk/news/videos/c687z5ne1w4ro?at_medium=RSS&amp;at_campaign=rss</link>
+      <guid isPermaLink="true">https://www.bbc.co.uk/news/videos/c687z5ne1w4ro?at_medium=RSS&amp;at_campaign=rss</guid>
+      <description />
+      <pubDate>Tue, 27 Oct 2026 20:42:38 +0000</pubDate>
     </item>
   </channel>
 </rss>

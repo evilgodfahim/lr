@@ -242656,5 +242656,13 @@
     "source": "https://www.lowyinstitute.org/the-interpreter/rss.xml",
     "thumbnail": "https://cdn.sanity.io/images/5dcouzig/production/ef5adf3c485b1020d35c2d23df91d8762a559203-1268x1600.jpg?rect=0,316,1268,666&w=1200&h=630&fm=webp&q=85&fit=crop",
     "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "https://www.bbc.co.uk/news/videos/c687z5ne1w4ro?at_medium=RSS&at_campaign=rss",
+    "title": "What we know about Ukraine-Russia truce in Oleshky, brokered by Melania Trump",
+    "link": "https://www.bbc.co.uk/news/videos/c687z5ne1w4ro?at_medium=RSS&at_campaign=rss",
+    "description": "",
+    "published": "Tue, 27 Oct 2026 20:42:38 +0000",
+    "source": "https://evilgodfahim.github.io/intop/filtered.xml"
   }
 ]
