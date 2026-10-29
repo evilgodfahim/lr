@@ -2,8 +2,8 @@
   "per_feed": {
     "https://asiatimes.com/feed/": {
       "fetched": 20,
-      "passed_age": 13,
-      "capped": 13
+      "passed_age": 11,
+      "capped": 11
     },
     "https://politepaul.com/fd/TefnRxuxFzO0.xml": {
       "fetched": 0,
@@ -12,13 +12,13 @@
     },
     "https://evilgodfahim.github.io/csis/rss.xml": {
       "fetched": 10,
-      "passed_age": 3,
-      "capped": 3
+      "passed_age": 0,
+      "capped": 0
     },
     "https://evilgodfahim.github.io/intop/filtered.xml": {
       "fetched": 1000,
-      "passed_age": 34,
-      "capped": 34
+      "passed_age": 35,
+      "capped": 35
     },
     "https://politepaul.com/fd/M8QukWfUPWR4.xml": {
       "fetched": 0,
@@ -42,8 +42,8 @@
     },
     "https://rusi.org/rss/latest-publications.xml": {
       "fetched": 20,
-      "passed_age": 1,
-      "capped": 1
+      "passed_age": 0,
+      "capped": 0
     },
     "https://www.spytalk.co/feed/": {
       "fetched": 20,
@@ -62,8 +62,8 @@
     },
     "https://www.globalpolicyjournal.com/blog/author/%2A/feed": {
       "fetched": 10,
-      "passed_age": 1,
-      "capped": 1
+      "passed_age": 0,
+      "capped": 0
     },
     "https://www.e-ir.info/feed/": {
       "fetched": 0,
@@ -127,8 +127,8 @@
     },
     "https://zeihan.com/feed/": {
       "fetched": 10,
-      "passed_age": 2,
-      "capped": 2
+      "passed_age": 1,
+      "capped": 1
     },
     "https://politepaul.com/fd/ELc5hcluIkDO.xml": {
       "fetched": 0,
@@ -137,8 +137,8 @@
     },
     "https://original.antiwar.com/feed/": {
       "fetched": 10,
-      "passed_age": 4,
-      "capped": 4
+      "passed_age": 1,
+      "capped": 1
     },
     "https://www.atlanticcouncil.org/feed/": {
       "fetched": 100,
@@ -167,8 +167,8 @@
     },
     "https://evilgodfahim.github.io/nytop/combined.xml": {
       "fetched": 68,
-      "passed_age": 17,
-      "capped": 17
+      "passed_age": 16,
+      "capped": 16
     },
     "https://theconversation.com/global/home-page.atom": {
       "fetched": 25,
@@ -236,9 +236,9 @@
       "capped": 1
     },
     "https://ipdefenseforum.com/feed/": {
-      "fetched": 4,
-      "passed_age": 1,
-      "capped": 1
+      "fetched": 0,
+      "passed_age": 0,
+      "capped": 0
     },
     "https://www.nytimes.com/svc/collections/v1/publish/": {
       "fetched": 0,
@@ -382,8 +382,8 @@
     },
     "https://www.theguardian.com/us/commentisfree/rss": {
       "fetched": 36,
-      "passed_age": 13,
-      "capped": 13
+      "passed_age": 12,
+      "capped": 12
     },
     "https://blogs.timesofindia.indiatimes.com/feed/defaultrss": {
       "fetched": 20,
@@ -443,14 +443,14 @@
   },
   "per_method": {
     "KL": 0,
-    "DIRECT": 2349
+    "DIRECT": 2345
   },
-  "total_fetched": 2349,
-  "total_passed_age": 265,
-  "total_new": 51,
-  "total_signal": 18,
+  "total_fetched": 2345,
+  "total_passed_age": 253,
+  "total_new": 12,
+  "total_signal": 2,
   "total_longread": 16,
-  "timestamp": "2026-10-28T23:43:09.972689",
-  "total_signal_deduped": 11,
+  "timestamp": "2026-10-29T02:54:39.355590",
+  "total_signal_deduped": 2,
   "total_longread_deduped": 16
 }
