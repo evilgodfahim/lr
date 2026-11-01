@@ -245218,5 +245218,39 @@
     "source": "https://www.lowyinstitute.org/the-interpreter/rss.xml",
     "thumbnail": "https://cdn.sanity.io/images/5dcouzig/production/5cda855ae676289d61334cb00d6e0bf895108be7-5867x3911.jpg?rect=0,416,5867,3080&w=1200&h=630&fm=webp&q=85&fit=crop",
     "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "https://www.theguardian.com/world/2026/nov/01/ukraine-defies-trump-resumes-attacks-russian-oil",
+    "title": "Ukraine defies Trump to resume attacks on Russian oil refineries",
+    "link": "https://www.theguardian.com/world/2026/nov/01/ukraine-defies-trump-resumes-attacks-russian-oil",
+    "description": "",
+    "published": "Sun, 01 Nov 2026 17:20:18 +0000",
+    "source": "https://evilgodfahim.github.io/intop/filtered.xml"
+  },
+  {
+    "id": "article-71654007",
+    "title": "Dwindling support: On the U.S. and the Cuban embargo",
+    "link": "https://www.thehindu.com/opinion/editorial/the-hindu-editorial-dwindling-support-on-the-us-and-the-cuban-embargo/article71654007.ece",
+    "description": "India and the world must stand up against the bullying of Cuba by the U.S.",
+    "published": "Sun, 01 Nov 2026 19:16:50 +0000",
+    "source": "https://www.thehindu.com/opinion/editorial/?service=rss"
+  },
+  {
+    "id": "https://www.ft.com/content/e1f6ac62-d677-4a50-94c5-25605ae71eb7",
+    "title": "France and the UK require a new entente",
+    "link": "https://archive.is/qWySo/https://www.ft.com/content/e1f6ac62-d677-4a50-94c5-25605ae71eb7",
+    "description": "The Suez crisis offers valuable lessons on troubled relations since the birth of the European project",
+    "published": "Sun, 01 Nov 2026 16:00:02 +0000",
+    "source": "https://evilgodfahim.github.io/fto/combined.xml"
+  },
+  {
+    "id": "https://medium.com/p/e3b939005b43",
+    "title": "Putin, Trump and Xi Are Playing a Game Their Countries Could Lose",
+    "link": "https://medium.com/@elvirabary/putin-trump-and-xi-are-playing-a-game-their-countries-could-lose-e3b939005b43?source=rss------foreign_policy-5",
+    "description": "<div class=\"medium-feed-item\"><p class=\"medium-feed-image\"><a href=\"https://medium.com/@elvirabary/putin-trump-and-xi-are-playing-a-game-their-countries-could-lose-e3b939005b43?source=rss------foreign_policy-5\"><img src=\"https://cdn-images-1.medium.com/max/1923/0*iTRCSZlW0rl0sOrh.jpg\" width=\"1923\" /></a></p><p class=\"medium-feed-snippet\">Putin, Trump and Xi are playing a dangerous game: each is trying to increase his own power by gaining leverage over everyone else.</p><p class=\"medium-feed-link\"><a href=\"https://medium.com/@elvirabary/putin-trump-and-xi-are-playing-a-game-their-countries-could-lose-e3b939005b43?source=rss------foreign_policy-5\">Continue reading on Medium »</a></p></div>",
+    "published": "Sun, 01 Nov 2026 17:50:26 +0000",
+    "source": "https://medium.com/feed/tag/foreign-policy",
+    "thumbnail": "https://cdn-images-1.medium.com/max/1923/0*iTRCSZlW0rl0sOrh.jpg",
+    "thumbnail_type": "image/jpeg"
   }
 ]
