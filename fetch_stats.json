@@ -2,8 +2,8 @@
   "per_feed": {
     "https://asiatimes.com/feed/": {
       "fetched": 20,
-      "passed_age": 5,
-      "capped": 5
+      "passed_age": 3,
+      "capped": 3
     },
     "https://politepaul.com/fd/TefnRxuxFzO0.xml": {
       "fetched": 0,
@@ -17,8 +17,8 @@
     },
     "https://evilgodfahim.github.io/intop/filtered.xml": {
       "fetched": 1000,
-      "passed_age": 16,
-      "capped": 16
+      "passed_age": 20,
+      "capped": 20
     },
     "https://politepaul.com/fd/M8QukWfUPWR4.xml": {
       "fetched": 0,
@@ -167,8 +167,8 @@
     },
     "https://evilgodfahim.github.io/nytop/combined.xml": {
       "fetched": 69,
-      "passed_age": 24,
-      "capped": 24
+      "passed_age": 17,
+      "capped": 17
     },
     "https://theconversation.com/global/home-page.atom": {
       "fetched": 25,
@@ -237,8 +237,8 @@
     },
     "https://ipdefenseforum.com/feed/": {
       "fetched": 4,
-      "passed_age": 2,
-      "capped": 2
+      "passed_age": 1,
+      "capped": 1
     },
     "https://www.nytimes.com/svc/collections/v1/publish/": {
       "fetched": 0,
@@ -382,8 +382,8 @@
     },
     "https://www.theguardian.com/us/commentisfree/rss": {
       "fetched": 36,
-      "passed_age": 8,
-      "capped": 8
+      "passed_age": 7,
+      "capped": 7
     },
     "https://blogs.timesofindia.indiatimes.com/feed/defaultrss": {
       "fetched": 20,
@@ -407,11 +407,11 @@
     },
     "https://www.thehindu.com/opinion/?service=rss": {
       "fetched": 60,
-      "passed_age": 5,
-      "capped": 5
+      "passed_age": 6,
+      "capped": 6
     },
     "https://www.hindustantimes.com/feeds/rss/opinion/rssfeed.xml": {
-      "fetched": 7,
+      "fetched": 4,
       "passed_age": 3,
       "capped": 3
     },
@@ -443,14 +443,14 @@
   },
   "per_method": {
     "KL": 0,
-    "DIRECT": 2347
+    "DIRECT": 2344
   },
-  "total_fetched": 2347,
-  "total_passed_age": 119,
-  "total_new": 14,
-  "total_signal": 6,
+  "total_fetched": 2344,
+  "total_passed_age": 117,
+  "total_new": 13,
+  "total_signal": 3,
   "total_longread": 16,
-  "timestamp": "2026-10-31T21:07:28.745895",
-  "total_signal_deduped": 5,
+  "timestamp": "2026-11-01T00:06:46.301538",
+  "total_signal_deduped": 2,
   "total_longread_deduped": 16
 }
