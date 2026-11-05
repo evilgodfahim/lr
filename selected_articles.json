@@ -247098,5 +247098,123 @@
     "source": "https://www.lowyinstitute.org/the-interpreter/rss.xml",
     "thumbnail": "https://cdn.sanity.io/images/5dcouzig/production/41c903908079c952708ce8b9b8315dc7dc4e2934-4056x2689.jpg?rect=0,281,4056,2129&w=1200&h=630&fm=webp&q=85&fit=crop",
     "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/11/explainer-five-ways-us-foreign-policy-may-change-democratic-congress",
+    "title": "Explainer-Five ways US foreign policy may change with a Democratic Congress",
+    "link": "https://www.al-monitor.com/originals/2026/11/explainer-five-ways-us-foreign-policy-may-change-democratic-congress",
+    "description": "",
+    "published": "Wed, 04 Nov 2026 18:46:43 +0000",
+    "source": "https://evilgodfahim.github.io/intop/filtered.xml"
+  },
+  {
+    "id": "https://www.middleeastmonitor.com/20261104-a-historic-arab-vote-can-palestinians-disrupt-israels-apartheid-system/",
+    "title": "A historic Arab vote: Can Palestinians disrupt Israel’s apartheid system?",
+    "link": "https://www.middleeastmonitor.com/20261104-a-historic-arab-vote-can-palestinians-disrupt-israels-apartheid-system/",
+    "description": "",
+    "published": "Wed, 04 Nov 2026 19:28:31 +0000",
+    "source": "https://evilgodfahim.github.io/intop/filtered.xml"
+  },
+  {
+    "id": "https://www.nytimes.com/2026/11/04/world/asia/midterms-trump-foreign-policy-world.html",
+    "title": "What Trump’s Midterm Defeat Means for Iran and Oil Prices",
+    "link": "https://www.nytimes.com/2026/11/04/world/asia/midterms-trump-foreign-policy-world.html",
+    "description": "",
+    "published": "Wed, 04 Nov 2026 21:20:36 +0000",
+    "source": "https://evilgodfahim.github.io/intop/filtered.xml"
+  },
+  {
+    "id": "https://www.middleeastmonitor.com/20261104-from-public-opinion-to-political-pressure-gaza-and-the-us-midterm-elections/",
+    "title": "From public opinion to political pressure: Gaza and the US midterm elections",
+    "link": "https://www.middleeastmonitor.com/20261104-from-public-opinion-to-political-pressure-gaza-and-the-us-midterm-elections/",
+    "description": "",
+    "published": "Wed, 04 Nov 2026 19:09:41 +0000",
+    "source": "https://evilgodfahim.github.io/intop/filtered.xml"
+  },
+  {
+    "id": "https://www.spytalk.co/p/brett-mcgurk-longtime-us-middle-east",
+    "title": "Brett McGurk, Longtime U.S. Middle East Envoy, Recalls His Frustrations and Pain Over Gaza",
+    "link": "https://www.spytalk.co/p/brett-mcgurk-longtime-us-middle-east",
+    "description": "In a SpyTalk interview, McGurk details maddening dealings with Netanyahu, Hamas and the Biden White House",
+    "published": "Wed, 04 Nov 2026 22:45:45 +0000",
+    "source": "https://www.spytalk.co/feed/",
+    "thumbnail": "https://substackcdn.com/image/fetch/$s_!r4Mh!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4ba3943b-ad42-4d17-8a07-7864cf654b62_1920x1080.webp",
+    "thumbnail_type": "image/webp"
+  },
+  {
+    "id": "https://www.defenseone.com/policy/2026/11/democrats-midterm-sweep-puts-cisa-cuts-intelligence-disputes-under-scrutiny/417058/",
+    "title": "Dem lawmakers vow inquest into CISA cuts, intel policy",
+    "link": "https://www.defenseone.com/policy/2026/11/democrats-midterm-sweep-puts-cisa-cuts-intelligence-disputes-under-scrutiny/417058/",
+    "description": "House Democrats will investigate the administration's cyberdefense cuts, while Senate Dems will control confirmation hearings for the officials who lead the nation’s security agencies.",
+    "published": "Wed, 04 Nov 2026 22:00:00 +0000",
+    "source": "https://www.defenseone.com/rss/all/",
+    "thumbnail": "https://cdn.defenseone.com/media/img/cd/2026/11/04/110426CongressNG-1/thumb.jpg",
+    "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/11/saudi-syrian-defence-ministries-sign-cooperation-agreement-spa-reports",
+    "title": "Saudi, Syrian defence ministries sign cooperation agreement, SPA reports",
+    "link": "https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/11/saudi-syrian-defence-ministries-sign-cooperation-agreement-spa-reports",
+    "description": "<p>CAIRO, Nov 4 (Reuters) - Saudi Arabia and Syria signed a cooperation agreement between the two countries' defense ministries on Wednesday, Saudi state news agency SPA reported, as Yemen's Iran-alignedHouthi group continues its missile and drone attacks on the kingdom.</p><p>• The agreement was signed during a visit by Syrian President Ahmed al-Sharaa to Riyadh, where he met Saudi Crown Prince Mohammed bin Salman. It was their second meeting in Saudi Arabia in less than a month.</p>",
+    "published": "Wed, 04 Nov 2026 20:46:39 +0000",
+    "source": "https://evilgodfahim.github.io/alm/combined.xml"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/11/democratic-congress-could-test-decades-us-support-israel",
+    "title": "Democratic Congress could test decades of US support for Israel",
+    "link": "https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/11/democratic-congress-could-test-decades-us-support-israel",
+    "description": "<p>By Patricia Zengerle</p><p>WASHINGTON, Nov 4 (Reuters) - Democrats’ takeover of Congress and growing Republican unease over Israel could trigger the biggest reassessment of US support for its closest Middle East ally in decades, after an election shaped in part by anger over the Iran war. </p><p>Democrats won both the Senate and House in Tuesday’s midterms. Many winning candidates were progressives who campaigned against military aid to Israel and the US-Israeli war on Iran.</p>",
+    "published": "Wed, 04 Nov 2026 20:46:39 +0000",
+    "source": "https://evilgodfahim.github.io/alm/combined.xml"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/11/morocco-says-it-will-uphold-western-sahara-ceasefire-after-un-mission-ends",
+    "title": "Morocco says it will uphold Western Sahara ceasefire after UN mission ends",
+    "link": "https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/11/morocco-says-it-will-uphold-western-sahara-ceasefire-after-un-mission-ends",
+    "description": "<p>By Ahmed Eljechtimi</p><p>RABAT, Nov 4 (Reuters) - Morocco will stay committed to the ceasefire in Western Sahara despite the end of the United Nations peacekeeping mission in the territory, the Royal Palace said on Wednesday.</p><p>The 35-year-old UN peacekeeping mission came to an end after the Security Council did not renew its mandate last week, the UN said on Sunday, removing the international presence that has monitored the ceasefire in the decades-old dispute.</p>",
+    "published": "Wed, 04 Nov 2026 19:47:08 +0000",
+    "source": "https://evilgodfahim.github.io/alm/combined.xml"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/11/us-slaps-sanctions-indian-turkish-firms-and-people-aiding-iran-0",
+    "title": "US slaps sanctions on Indian, Turkish firms and people for aiding Iran",
+    "link": "https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/11/us-slaps-sanctions-indian-turkish-firms-and-people-aiding-iran-0",
+    "description": "<p>By Andrea Shalal</p><p>WASHINGTON, Nov 4 (Reuters) - The US Treasury issued fresh sanctions on Wednesday against companies and individuals based in India and Turkey for their support of Iran, warning that it would continue to go after anyone who supported the Iranian government.</p><p>The sanctions are part of the Trump administration's \"Operation Economic Outcast,\" which aims to cut off Iran's ability to sell oil to fund the war with the US and Israel.</p>",
+    "published": "Wed, 04 Nov 2026 19:47:08 +0000",
+    "source": "https://evilgodfahim.github.io/alm/combined.xml"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/11/zelenskiy-spain-meet-sanchez-other-leaders-ibero-american-summit",
+    "title": "Zelenskiy in Spain to meet Sanchez, other leaders at Ibero-American summit",
+    "link": "https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/11/zelenskiy-spain-meet-sanchez-other-leaders-ibero-american-summit",
+    "description": "<p>Nov 4 (Reuters) - Ukrainian PresidentVolodymyr Zelenskiy arrived in Spain on Wednesday for talks on boosting Kyiv's air defences and top-level meetings during the Ibero-American summit, the Ukrainian president said on the Telegram messaging app.</p><p>Zelenskiy, shown online being greeted as he stepped off his aircraft, also said he planned to speak with US officials in the run-up to planned three-way talks in Abu Dhabi next week, which will include Russia.</p>",
+    "published": "Wed, 04 Nov 2026 17:46:52 +0000",
+    "source": "https://evilgodfahim.github.io/alm/combined.xml"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/11/red-cross-delivers-essential-medical-supplies-yemens-besieged-taiz-city",
+    "title": "Red Cross delivers essential medical supplies to Yemen's besieged Taiz city",
+    "link": "https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/11/red-cross-delivers-essential-medical-supplies-yemens-besieged-taiz-city",
+    "description": "<p>By Olivia Le Poidevin</p><p>GENEVA, Nov 4 (Reuters) - The Red Cross said on Wednesday it had delivered four truckloads of essential medical supplies to the besieged Yemeni city of Taiz after renewed fighting cut off access for weeks.</p><p>Taiz has been largely isolated for a month, with fighting preventing humanitarian supplies from entering the city and restricting the movement of civilians, after an escalation in clashes between the Saudi-backed government and the Iran-aligned Houthi movement.</p>",
+    "published": "Wed, 04 Nov 2026 16:46:38 +0000",
+    "source": "https://evilgodfahim.github.io/alm/combined.xml"
+  },
+  {
+    "id": "https://www.al-monitor.com/originals/2026/11/turkey-says-eu-comments-its-rights-record-judiciary-are-prejudiced-unfair",
+    "title": "Turkey says EU comments on its rights record, judiciary are 'prejudiced, unfair'",
+    "link": "https://archive.is/o/11Q8k/https://www.al-monitor.com/originals/2026/11/turkey-says-eu-comments-its-rights-record-judiciary-are-prejudiced-unfair",
+    "description": "<p>ANKARA, Nov 4 (Reuters) - Ankara rejected on Wednesday what it called the \"prejudiced and unfair\" stance of the European Union towards fundamental rights and the judiciary in Turkey, and regarding Cyprus, contained in the bloc's report on EU membership candidates.</p><p>In its annualenlargement policy report, the European Commission said that while the EU had advanced ties with Turkey in areas of mutual interest, legal action by Turkish authorities against elected officials, opposition figures and civil society hadraised concerns about Ankara's \"adherence to core democratic principles\".</p>",
+    "published": "Wed, 04 Nov 2026 16:46:38 +0000",
+    "source": "https://evilgodfahim.github.io/alm/combined.xml"
+  },
+  {
+    "id": "https://www.lowyinstitute.org/the-interpreter/apec-2026-let-s-get-back-to-the-future-on-trade",
+    "title": "APEC 2026: Let’s get back to the future on trade",
+    "link": "https://www.lowyinstitute.org/the-interpreter/apec-2026-let-s-get-back-to-the-future-on-trade",
+    "description": "Global trade rules are stuck, but a 1990s APEC model offers Australia a practical way to build trust and momentum.",
+    "published": "Thu, 05 Nov 2026 00:00:00 +0000",
+    "source": "https://www.lowyinstitute.org/the-interpreter/rss.xml",
+    "thumbnail": "https://cdn.sanity.io/images/5dcouzig/production/fc404efad7eb669a8f9f5a2e25bbe6f13aa799ad-6192x4128.jpg?rect=0,439,6192,3251&w=1200&h=630&fm=webp&q=85&fit=crop",
+    "thumbnail_type": "image/jpeg"
   }
 ]
