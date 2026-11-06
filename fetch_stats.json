@@ -2,8 +2,8 @@
   "per_feed": {
     "https://asiatimes.com/feed/": {
       "fetched": 20,
-      "passed_age": 6,
-      "capped": 6
+      "passed_age": 8,
+      "capped": 8
     },
     "https://politepaul.com/fd/TefnRxuxFzO0.xml": {
       "fetched": 0,
@@ -11,14 +11,14 @@
       "capped": 0
     },
     "https://evilgodfahim.github.io/csis/rss.xml": {
-      "fetched": 9,
-      "passed_age": 3,
-      "capped": 3
+      "fetched": 8,
+      "passed_age": 0,
+      "capped": 0
     },
     "https://evilgodfahim.github.io/intop/filtered.xml": {
       "fetched": 1000,
-      "passed_age": 28,
-      "capped": 28
+      "passed_age": 40,
+      "capped": 40
     },
     "https://politepaul.com/fd/M8QukWfUPWR4.xml": {
       "fetched": 0,
@@ -42,18 +42,18 @@
     },
     "https://rusi.org/rss/latest-publications.xml": {
       "fetched": 20,
-      "passed_age": 3,
-      "capped": 3
+      "passed_age": 0,
+      "capped": 0
     },
     "https://www.spytalk.co/feed/": {
       "fetched": 20,
-      "passed_age": 1,
-      "capped": 1
+      "passed_age": 0,
+      "capped": 0
     },
     "https://www.defenseone.com/rss/all/": {
       "fetched": 20,
-      "passed_age": 4,
-      "capped": 4
+      "passed_age": 3,
+      "capped": 3
     },
     "https://politepaul.com/fd/9RMAFvRRGLst.xml": {
       "fetched": 0,
@@ -137,13 +137,13 @@
     },
     "https://original.antiwar.com/feed/": {
       "fetched": 10,
-      "passed_age": 3,
-      "capped": 3
+      "passed_age": 0,
+      "capped": 0
     },
     "https://www.atlanticcouncil.org/feed/": {
       "fetched": 100,
-      "passed_age": 6,
-      "capped": 6
+      "passed_age": 5,
+      "capped": 5
     },
     "https://warontherocks.com/feed/": {
       "fetched": 100,
@@ -162,18 +162,18 @@
     },
     "https://evilgodfahim.github.io/fto/combined.xml": {
       "fetched": 25,
-      "passed_age": 15,
-      "capped": 15
-    },
-    "https://evilgodfahim.github.io/nytop/combined.xml": {
-      "fetched": 70,
       "passed_age": 18,
       "capped": 18
     },
+    "https://evilgodfahim.github.io/nytop/combined.xml": {
+      "fetched": 70,
+      "passed_age": 20,
+      "capped": 20
+    },
     "https://theconversation.com/global/home-page.atom": {
       "fetched": 25,
-      "passed_age": 3,
-      "capped": 3
+      "passed_age": 9,
+      "capped": 9
     },
     "https://politepaul.com/fd/R39To2fYhqqO.xml": {
       "fetched": 0,
@@ -417,8 +417,8 @@
     },
     "https://feeds.feedburner.com/Consortiumnewscom": {
       "fetched": 10,
-      "passed_age": 5,
-      "capped": 5
+      "passed_age": 4,
+      "capped": 4
     },
     "https://evilgodfahim.github.io/org/daily_feed.xml": {
       "fetched": 11,
@@ -443,14 +443,14 @@
   },
   "per_method": {
     "KL": 0,
-    "DIRECT": 2355
+    "DIRECT": 2354
   },
-  "total_fetched": 2355,
-  "total_passed_age": 253,
-  "total_new": 106,
-  "total_signal": 60,
+  "total_fetched": 2354,
+  "total_passed_age": 277,
+  "total_new": 69,
+  "total_signal": 28,
   "total_longread": 16,
-  "timestamp": "2026-11-05T21:48:57.286850",
-  "total_signal_deduped": 42,
+  "timestamp": "2026-11-06T01:53:45.093868",
+  "total_signal_deduped": 14,
   "total_longread_deduped": 16
 }
