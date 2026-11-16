@@ -249932,5 +249932,59 @@
     "source": "https://www.thehindu.com/opinion/?service=rss",
     "thumbnail": "https://th-i.thgim.com/public/incoming/qzmk5q/article71705790.ece/alternates/LANDSCAPE_1200/PTI10_26_2025_000261B.jpg",
     "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "https://www.channelnewsasia.com/commentary/nvidia-jensen-huang-affair-us-china-ai-tech-decoupling-6552516",
+    "title": "Commentary: Jensen Huang’s downfall will accelerate US-China ‘great decoupling’",
+    "link": "https://www.channelnewsasia.com/commentary/nvidia-jensen-huang-affair-us-china-ai-tech-decoupling-6552516",
+    "description": "",
+    "published": "Sun, 15 Nov 2026 22:00:00 +0000",
+    "source": "https://evilgodfahim.github.io/intop/filtered.xml"
+  },
+  {
+    "id": "https://www.ft.com/content/3c2197fc-9618-4838-91e6-522ce1a96a22?syn-25a6b1a6=1",
+    "title": "US and allies sign accord to protect AI supply chains from China",
+    "link": "https://www.ft.com/content/3c2197fc-9618-4838-91e6-522ce1a96a22?syn-25a6b1a6=1",
+    "description": "",
+    "published": "Sun, 15 Nov 2026 17:47:43 +0000",
+    "source": "https://evilgodfahim.github.io/intop/filtered.xml"
+  },
+  {
+    "id": "https://tass.com/world/2218377",
+    "title": "US investigates if Nvidia was selling chis to China bypassing restrictions — Bessent",
+    "link": "https://tass.com/world/2218377",
+    "description": "",
+    "published": "Sun, 15 Nov 2026 18:16:39 +0000",
+    "source": "https://evilgodfahim.github.io/intop/filtered.xml"
+  },
+  {
+    "id": "https://www.spytalk.co/p/new-in-spyweek-nvidia-case-roils",
+    "title": "New in SpyWeek: Nvidia Case Roils Capital, Alice Huang Disappears, Israeli Kidnappers Went Awry, New CIA Oversight, Iran Plots",
+    "link": "https://www.spytalk.co/p/new-in-spyweek-nvidia-case-roils",
+    "description": "Also his week: Scott Bessent flees DC home, CIA spy plane traced to Fla. oldsters town, US soldier in Russia spy web, What OSS found in Hitler&#8217;s mind, Brennan son&#8217;s arrest",
+    "published": "Sun, 15 Nov 2026 22:57:43 +0000",
+    "source": "https://www.spytalk.co/feed/",
+    "thumbnail": "https://substackcdn.com/image/fetch/$s_!IoMN!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F42e73aff-8b69-42dc-9da3-88d2f9209736_1024x682.jpeg",
+    "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "https://www.hindustantimes.com/opinion/india-and-asean-share-strategic-trust-101794767316759.html",
+    "title": "India and ASEAN share strategic trust",
+    "link": "https://www.hindustantimes.com/opinion/india-and-asean-share-strategic-trust-101794767316759.html",
+    "description": "Translating trust into shared prosperity — through safer seas, more resilient supply chains, digital connectivity, and more — is the central objective",
+    "published": "Mon, 16 Nov 2026 00:35:52 +0000",
+    "source": "https://www.hindustantimes.com/feeds/rss/opinion/rssfeed.xml",
+    "thumbnail": "https://www.hindustantimes.com/ht-img/img/2026/11/15/1600x900/logo/The-Philippines-has-placed-maritime-cooperation--r_1794767311432_qGiC.jpg",
+    "thumbnail_type": "image/jpeg"
+  },
+  {
+    "id": "https://www.lowyinstitute.org/the-interpreter/japan-wants-satellite-sovereignty",
+    "title": "Japan wants satellite sovereignty",
+    "link": "https://www.lowyinstitute.org/the-interpreter/japan-wants-satellite-sovereignty",
+    "description": "Public funding and Japanese control underpin Rakuten’s new satellite venture. American technology will make it work.",
+    "published": "Mon, 16 Nov 2026 00:00:00 +0000",
+    "source": "https://www.lowyinstitute.org/the-interpreter/rss.xml",
+    "thumbnail": "https://cdn.sanity.io/images/5dcouzig/production/5276dfa29871359b6cfafe72de5403dfef4f9b49-3341x2227.jpg?rect=0,237,3341,1754&w=1200&h=630&fm=webp&q=85&fit=crop",
+    "thumbnail_type": "image/jpeg"
   }
 ]
